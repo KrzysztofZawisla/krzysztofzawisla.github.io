@@ -1,6 +1,12 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
-import { Configuration, HotModuleReplacementPlugin } from "webpack";
+import {
+  Configuration,
+  HotModuleReplacementPlugin,
+  WebpackPluginInstance,
+} from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
@@ -81,7 +87,7 @@ const setupConfig = (
     resolve: {
       extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
     },
-    plugins: [
+    plugins: ([
       new CleanWebpackPlugin({
         dry: true,
         dangerouslyAllowCleanPatternsOutsideProject: true,
@@ -129,7 +135,7 @@ const setupConfig = (
       }),
       mode === "development" && new HotModuleReplacementPlugin(),
       mode === "development" && new ReactRefreshWebpackPlugin(),
-    ].filter(Boolean) as any,
+    ].filter(Boolean) as unknown) as WebpackPluginInstance[],
   };
 };
 
