@@ -59,6 +59,9 @@ const App: FC = (): JSX.Element => {
       removeEventListener("resize", resizeLinstenerHandler);
     };
   }, [setIsMobileLocal]);
+  useEffect(() => {
+    !isMobileLocal && setIsMenuOpenOnMobileLocal(false);
+  }, [isMobileLocal, setIsMenuOpenOnMobileLocal]);
   return (
     <StrictMode>
       <HelmetProvider>
@@ -74,11 +77,7 @@ const App: FC = (): JSX.Element => {
           >
             <GlobalStyle />
             <Navbar />
-            <div
-              onClick={() =>
-                setIsMenuOpenOnMobileLocal(!isMenuOpenOnMobileLocal)
-              }
-            >
+            <div onClick={() => setIsMenuOpenOnMobileLocal(false)}>
               <MainWrapper>
                 <Suspense fallback={<></>}>
                   <Switch>
