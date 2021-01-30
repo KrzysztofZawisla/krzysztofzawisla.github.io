@@ -12,6 +12,7 @@ import GlobalContext, {
   IsMenuOpenOnMobileDispatcher,
   IsMobileDispatcher,
 } from "../../context/globalContext";
+import { useTranslation } from "react-i18next";
 
 const Navbar: FC = (): JSX.Element => {
   const {
@@ -28,6 +29,7 @@ const Navbar: FC = (): JSX.Element => {
     isMobile && ((NavbarReference?.current as unknown) as HTMLElement).blur();
     window.scrollTo(0, 0);
   };
+  const { t } = useTranslation();
   return (
     <header>
       <NavbarWrapper
@@ -48,7 +50,7 @@ const Navbar: FC = (): JSX.Element => {
             <Link to="/projects">Projects</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/skills">Skills</Link>
+            <Link to="/skills">{t("menu.skills")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
             <Link to="/experience">Experience</Link>
