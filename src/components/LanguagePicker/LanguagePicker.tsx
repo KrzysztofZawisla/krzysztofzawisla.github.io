@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useRef, useState } from "react";
+import { FC, useContext, useRef, useState } from "react";
 import LanguagePickerWrapper from "./LanguagePickerWrapper";
 import { CircleFlag } from "react-circle-flags";
 import GlobalContext from "../../context/globalContext";
@@ -6,7 +6,7 @@ import GlobalContext from "../../context/globalContext";
 const LanguagePicker: FC = (): JSX.Element => {
   const { languageDispatcher, isMobileDispatcher } = useContext(GlobalContext);
   const [isMobile] = isMobileDispatcher;
-  const [language] = languageDispatcher;
+  const [language, setLanguage] = languageDispatcher;
   const [isLanguageMenuOpen, setIsMenuOpenOnMobileLocal] = useState(false);
   const [isEnglish, setIsEnglish] = useState(language !== "pl" ? true : false);
   const languagePickerWrapperReference = useRef(null);
@@ -14,6 +14,7 @@ const LanguagePicker: FC = (): JSX.Element => {
   const changeLanguage = (setEnglish: boolean) => {
     setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen);
     setIsEnglish(setEnglish);
+    setLanguage(setEnglish ? "en" : "pl");
   };
   return (
     <LanguagePickerWrapper

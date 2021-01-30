@@ -26,6 +26,8 @@ import {
 } from "./context/globalContext";
 import { debounce } from "lodash";
 import LanguagePicker from "./components/LanguagePicker/LanguagePicker";
+import { i18n } from "i18next";
+import { I18nextProvider } from "react-i18next";
 
 const Home: LazyExoticComponent<FC> = lazy(() => import("./pages/Home"));
 const Projects: LazyExoticComponent<FC> = lazy(
@@ -43,7 +45,12 @@ const {
   language,
 }: GlobalContextValues = initialGlobalStoreValue;
 
-const App: FC = (): JSX.Element => {
+interface AppProperties {
+  translation: i18n;
+}
+
+// eslint-disable-next-line react/prop-types
+const App: FC<AppProperties> = ({ translation }): JSX.Element => {
   const [isMobileLocal, setIsMobileLocal]: IsMobileDispatcher = useState(
     isMobile,
   );
@@ -70,38 +77,40 @@ const App: FC = (): JSX.Element => {
   }, [isMobileLocal, setIsMenuOpenOnMobileLocal]);
   return (
     <StrictMode>
-      <HelmetProvider>
-        <BrowserRouter>
-          <GlobalContextProvider
-            value={{
-              isMobileDispatcher: [isMobileLocal, setIsMobileLocal],
-              isMenuOpenOnMobileDispatcher: [
-                isMenuOpenOnMobileLocal,
-                setIsMenuOpenOnMobileLocal,
-              ],
-              languageDispatcher: [languageLocal, setLanguageLocal],
-            }}
-          >
-            <GlobalStyle />
-            <Navbar />
-            <div onClick={() => setIsMenuOpenOnMobileLocal(false)}>
-              <MainWrapper>
-                <Suspense fallback={<></>}>
-                  <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/projects" component={Projects} />
-                    <Route exact path="/skills" component={Skills} />
-                    <Route exact path="/experience" component={Experience} />
-                    <Route exact path="/contact" component={Contact} />
-                  </Switch>
-                </Suspense>
-              </MainWrapper>
-              <Footer />
-            </div>
-            <LanguagePicker />
-          </GlobalContextProvider>
-        </BrowserRouter>
-      </HelmetProvider>
+      <I18nextProvider i18n={translation}>
+        <HelmetProvider>
+          <BrowserRouter>
+            <GlobalContextProvider
+              value={{
+                isMobileDispatcher: [isMobileLocal, setIsMobileLocal],
+                isMenuOpenOnMobileDispatcher: [
+                  isMenuOpenOnMobileLocal,
+                  setIsMenuOpenOnMobileLocal,
+                ],
+                languageDispatcher: [languageLocal, setLanguageLocal],
+              }}
+            >
+              <GlobalStyle />
+              <Navbar />
+              <div onClick={() => setIsMenuOpenOnMobileLocal(false)}>
+                <MainWrapper>
+                  <Suspense fallback={<></>}>
+                    <Switch>
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/projects" component={Projects} />
+                      <Route exact path="/skills" component={Skills} />
+                      <Route exact path="/experience" component={Experience} />
+                      <Route exact path="/contact" component={Contact} />
+                    </Switch>
+                  </Suspense>
+                </MainWrapper>
+                <Footer />
+              </div>
+              <LanguagePicker />
+            </GlobalContextProvider>
+          </BrowserRouter>
+        </HelmetProvider>
+      </I18nextProvider>
     </StrictMode>
   );
 };

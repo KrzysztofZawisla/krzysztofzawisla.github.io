@@ -1,11 +1,12 @@
 import { render } from "react-dom";
-
 import App from "./App";
+import initTranslations from "./other/translation";
 
 const root: HTMLElement | null = document.querySelector("#root");
 
 (async () => {
-  render(<App />, root);
+  const translation = await initTranslations();
+  render(<App translation={translation} />, root);
 })();
 
 if ("serviceWorker" in navigator) {
