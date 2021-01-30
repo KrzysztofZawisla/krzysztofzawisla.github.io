@@ -8,6 +8,9 @@
   },
   "languageSelector": {
     "hoverTip": "Hover to change language",
-    "clickTip": "Click to change language"
+    "clickTip": "Click to change language",
+    "greatBritainFlag": "Great Britain flag",
+    "polishFlag": "Polish flag",
+    "changeToPolish": "Change language to Polish"
   }
 }

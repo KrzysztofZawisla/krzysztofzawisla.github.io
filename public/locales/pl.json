@@ -8,6 +8,9 @@
   },
   "languageSelector": {
     "hoverTip": "Najedź by zmienić język",
-    "clickTip": "Kliknij by zmienić język"
+    "clickTip": "Kliknij by zmienić język",
+    "greatBritainFlag": "Flaga Wielkiej Brytanii",
+    "polishFlag": "Flaga Polski",
+    "changeToEnglish": "Zmień język na angielski"
   }
 }

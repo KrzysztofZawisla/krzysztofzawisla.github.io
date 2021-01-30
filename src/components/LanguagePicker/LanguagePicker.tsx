@@ -45,10 +45,6 @@ const LanguagePicker: FC = (): JSX.Element => {
     <LanguagePickerWrapper
       ref={languagePickerWrapperReference}
       isLanguageMenuOpen={isLanguageMenuOpen}
-      onMouseEnter={() => {
-        setIsMouseOverLanguageMenu(true);
-        !isMobile && setIsMenuOpenOnMobileLocal(true);
-      }}
       onMouseLeave={() => {
         setIsMouseOverLanguageMenu(false);
         !isMobile && setIsMenuOpenOnMobileLocal(false);
@@ -58,17 +54,33 @@ const LanguagePicker: FC = (): JSX.Element => {
       <CircleFlag
         countryCode={isEnglish ? "gb" : "pl"}
         height="50px"
+        width="50px"
+        loading="lazy"
         ref={mainFlagReference}
         onClick={() => setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen)}
-        alt={`${isEnglish ? "English" : "Polish"} flag`}
+        onMouseEnter={() => {
+          setIsMouseOverLanguageMenu(true);
+          !isMobile && setIsMenuOpenOnMobileLocal(true);
+        }}
+        alt={t(
+          `languageSelector.${isEnglish ? "greatBritainFlag" : "polishFlag"}`,
+        )}
         title={t(`languageSelector.${isMobile ? "clickTip" : "hoverTip"}`)}
       />
       <CircleFlag
         countryCode={isEnglish ? "pl" : "gb"}
         onClick={() => changeLanguage(isEnglish ? false : true)}
         height="50px"
-        title={`Change language to ${isEnglish ? "Polish" : "English"}`}
-        alt={`${isEnglish ? "Polish" : "English"} flag`}
+        width="50px"
+        loading="lazy"
+        title={t(
+          `languageSelector.${
+            isEnglish ? "changeToPolish" : "changeToEnglish"
+          }`,
+        )}
+        alt={t(
+          `languageSelector.${isEnglish ? "polishFlag" : "greatBritainFlag"}`,
+        )}
       />
     </LanguagePickerWrapper>
   );
