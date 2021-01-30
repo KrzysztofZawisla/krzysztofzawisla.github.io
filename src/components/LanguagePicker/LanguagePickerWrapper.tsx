@@ -38,8 +38,8 @@ const LanguagePickerWrapper = styled.div<LanguagePickerWrapperProperties>`
     &:not(:first-child) {
       transition: all 0.3s;
       margin: 7.5px 0;
-      display: ${({ isLanguageMenuOpen }) =>
-        isLanguageMenuOpen ? "inherit" : "none"};
+      visibility: ${({ isLanguageMenuOpen }) =>
+        isLanguageMenuOpen ? "visible" : "hidden"};
     }
   }
 `;
