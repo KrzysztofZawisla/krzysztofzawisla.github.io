@@ -22,8 +22,10 @@ import {
   GlobalContextProvider,
   IsMobileDispatcher,
   IsMenuOpenOnMobileDispatcher,
+  LanguageDispatcher,
 } from "./context/globalContext";
 import { debounce } from "lodash";
+import LanguagePicker from "./components/LanguagePicker/LanguagePicker";
 
 const Home: LazyExoticComponent<FC> = lazy(() => import("./pages/Home"));
 const Projects: LazyExoticComponent<FC> = lazy(
@@ -38,6 +40,7 @@ const Contact: LazyExoticComponent<FC> = lazy(() => import("./pages/Contact"));
 const {
   isMobile,
   isMenuOpenOnMobile,
+  language,
 }: GlobalContextValues = initialGlobalStoreValue;
 
 const App: FC = (): JSX.Element => {
@@ -48,6 +51,9 @@ const App: FC = (): JSX.Element => {
     isMenuOpenOnMobileLocal,
     setIsMenuOpenOnMobileLocal,
   ]: IsMenuOpenOnMobileDispatcher = useState(isMenuOpenOnMobile);
+  const [languageLocal, setLanguageLocal]: LanguageDispatcher = useState(
+    language,
+  );
   useEffect(() => {
     const resizeHandler = (): void => {
       const isMobile: boolean = window.innerWidth < 768 ? true : false;
@@ -73,6 +79,7 @@ const App: FC = (): JSX.Element => {
                 isMenuOpenOnMobileLocal,
                 setIsMenuOpenOnMobileLocal,
               ],
+              languageDispatcher: [languageLocal, setLanguageLocal],
             }}
           >
             <GlobalStyle />
@@ -81,26 +88,17 @@ const App: FC = (): JSX.Element => {
               <MainWrapper>
                 <Suspense fallback={<></>}>
                   <Switch>
-                    <Route exact path="/">
-                      <Home />
-                    </Route>
-                    <Route exact path="/projects">
-                      <Projects />
-                    </Route>
-                    <Route exact path="/skills">
-                      <Skills />
-                    </Route>
-                    <Route exact path="/experience">
-                      <Experience />
-                    </Route>
-                    <Route exact path="/contact">
-                      <Contact />
-                    </Route>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/skills" component={Skills} />
+                    <Route exact path="/experience" component={Experience} />
+                    <Route exact path="/contact" component={Contact} />
                   </Switch>
                 </Suspense>
               </MainWrapper>
               <Footer />
             </div>
+            <LanguagePicker />
           </GlobalContextProvider>
         </BrowserRouter>
       </HelmetProvider>
