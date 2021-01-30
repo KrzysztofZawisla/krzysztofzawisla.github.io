@@ -1,7 +1,7 @@
 import { FC, useContext, useRef, useState } from "react";
 import LanguagePickerWrapper from "./LanguagePickerWrapper";
 import { CircleFlag } from "react-circle-flags";
-import GlobalContext from "../../context/globalContext";
+import GlobalContext from "../../contextes/globalContext";
 
 const LanguagePicker: FC = (): JSX.Element => {
   const { languageDispatcher, isMobileDispatcher } = useContext(GlobalContext);
