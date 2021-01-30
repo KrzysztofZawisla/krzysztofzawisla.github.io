@@ -1,5 +1,13 @@
 {
   "menu": {
-    "skills": "Skills"
+    "skills": "Skills",
+    "home": "Home",
+    "contact": "Contact",
+    "projects": "Projects",
+    "experience": "Experience"
+  },
+  "languageSelector": {
+    "hoverTip": "Hover to change language",
+    "clickTip": "Click to change language"
   }
 }

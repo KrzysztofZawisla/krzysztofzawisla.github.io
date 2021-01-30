@@ -1,5 +1,13 @@
 {
   "menu": {
-    "skills": "Umiejętności"
+    "skills": "Umiejętności",
+    "home": "Strona główna",
+    "contact": "Kontakt",
+    "projects": "Projekty",
+    "experience": "Doświadczenie"
+  },
+  "languageSelector": {
+    "hoverTip": "Najedź by zmienić język",
+    "clickTip": "Kliknij by zmienić język"
   }
 }

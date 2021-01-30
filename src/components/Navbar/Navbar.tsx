@@ -44,19 +44,19 @@ const Navbar: FC = (): JSX.Element => {
         <NavbarTitle>Menu</NavbarTitle>
         <NavbarMenu>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/">Home</Link>
+            <Link to="/">{t("menu.home")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects">{t("menu.projects")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
             <Link to="/skills">{t("menu.skills")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/experience">Experience</Link>
+            <Link to="/experience">{t("menu.experience")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{t("menu.contact")}</Link>
           </NavbarItem>
         </NavbarMenu>
       </NavbarWrapper>

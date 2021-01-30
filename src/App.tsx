@@ -75,6 +75,10 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
   useEffect(() => {
     !isMobileLocal && setIsMenuOpenOnMobileLocal(false);
   }, [isMobileLocal, setIsMenuOpenOnMobileLocal]);
+  useEffect(() => {
+    // eslint-disable-next-line react/prop-types
+    translation.changeLanguage(languageLocal);
+  }, [languageLocal, setLanguageLocal, translation]);
   return (
     <StrictMode>
       <I18nextProvider i18n={translation}>
