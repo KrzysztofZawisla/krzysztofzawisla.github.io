@@ -23,7 +23,7 @@ import {
   IsMobileDispatcher,
   IsMenuOpenOnMobileDispatcher,
   LanguageDispatcher,
-} from "./contextes/globalContext";
+} from "./contexts/globalContext";
 import { debounce } from "lodash";
 import LanguagePicker from "./components/LanguagePicker/LanguagePicker";
 import { i18n } from "i18next";

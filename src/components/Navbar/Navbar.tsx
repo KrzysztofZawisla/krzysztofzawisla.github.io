@@ -11,7 +11,7 @@ import GlobalContext, {
   GlobalContextCompleteValues,
   IsMenuOpenOnMobileDispatcher,
   IsMobileDispatcher,
-} from "../../contextes/globalContext";
+} from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
 
 const Navbar: FC = (): JSX.Element => {
