@@ -8,6 +8,7 @@ const FooterWrapper = styled.footer`
   left: 50px;
   a {
     font-size: 22px;
+    text-decoration: none;
   }
 `;
 

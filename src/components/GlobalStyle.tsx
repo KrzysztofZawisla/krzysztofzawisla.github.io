@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
   }
   a {
-    text-decoration: none;
     color: inherit;
     transition: all 0.3s;
     &:hover {

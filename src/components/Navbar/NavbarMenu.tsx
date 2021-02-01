@@ -5,6 +5,9 @@ const NavbarMenu = styled.ul`
   top: 50%;
   padding-left: 10px;
   transform: translateY(-50%);
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default NavbarMenu;
