@@ -107,10 +107,6 @@ const setupConfig = (
             from: path.join(__dirname, "public", "404.md"),
             to: path.join(__dirname, "dist"),
           },
-          {
-            from: path.join(__dirname, "public", "404.html"),
-            to: path.join(__dirname, "dist"),
-          },
         ],
         options: {
           concurrency: 100,
@@ -120,6 +116,12 @@ const setupConfig = (
         template: path.join(__dirname, "public", "index.html"),
         filename: path.join(__dirname, "dist", "index.html"),
         minify: mode !== "development",
+      }),
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, "public", "404.html"),
+        filename: path.join(__dirname, "dist", "404.html"),
+        minify: mode !== "development",
+        inject: false,
       }),
       new ScriptExtHtmlWebpackPlugin({
         defaultAttribute: "async",
