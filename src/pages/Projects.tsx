@@ -1,8 +1,197 @@
 import { FC } from "react";
 import Page from "../components/Page";
+import Section from "../components/Section";
+import Article from "../components/Article";
 
 const Projects: FC = (): JSX.Element => {
-  return <Page title="Projects">123</Page>;
+  return (
+    <Page title="Projects">
+      <h1>Projects:</h1>
+      <Article>
+        <a href="https://github.com/ZSBRybnik/ZSBRybnik">
+          <h2>ZSBRybnik</h2>
+        </a>
+        <Section>
+          Aplikacja PWA (Custom CMS) dla Zespołu Szkół Budowlanych w Rybniku.
+          Jest to mój największy projekt, który wciąż jest w budowie. Cała
+          aplikacja została skonteneryzowana z użyciem Dockera.
+        </Section>
+        <h3>Front-end</h3>
+        <Section>
+          Front-end strony jest napisany funkcyjnie w TypeScriptcie z
+          wykorzystaniem biblioteki do tworzenia aplikacji internetowych SPA
+          (React). Do ostylowania strony wykorzystałem bibliotekę
+          Styled-components.
+        </Section>
+        <h4>
+          Used technologies: TypeScript, React, React Context, Docker, i18next,
+          Styled-components, ThreeJS, Github Actions and many others.
+        </h4>
+        <h3>Back-end</h3>
+        <Section>
+          Back-end strony jest podzielony na dwie części. Pierwsza to CDN
+          napisany w Rustcie z użyciem Rocket.rs. Natomiast druga część to
+          serwer wystawiający API. Serwer został napisany w Go z wykorzystaniem
+          biblioteki Gin-gonic.
+        </Section>
+        <h4>
+          Used technologies: Golang, Rust, Rocket.rs, Gin-gonic, Redis, MySQL,
+          Docker, Github Actions and many others.
+        </h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/graspd/electron-react-neon-typescript-graspd-like-quick-start">
+          <h2>electron-react-neon-typescript-graspd-like-quick-start</h2>
+        </a>
+        Szablon pod aplikacje desktopowe napisane w TypeScriptcie z
+        wykorzystaniem Electrona. Konfiguracja została stworzona tak, aby
+        umożliwić bindowanie funkcji z Rusta oraz umożliwić pisanie Front-endu w
+        aplikacji z wykorzystaniem Reacta. Cały codebase został dostosowany do
+        zachowania przejrzystości kodu przez zastosowanie ESLinta, Prettiera i
+        Husky.
+        <h3>Front-end</h3>
+        <h4>
+          Used technologies: Webpack, Babel, TypeScript, React, Docker, ESLint,
+          Prettier, Github Actions, Husky and many others.
+        </h4>
+        <h3>Back-end</h3>
+        <h4>
+          Used technologies: Webpack, Babel, ESLint, Prettier, TypeScript,
+          Electron, Express, Rust, Neon-bindings, Docker, Github Actions, Husky
+          and many others.
+        </h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/krzysztofzawisla.github.io">
+          <h2>Portfolio</h2>
+        </a>
+        <h3>Front-end</h3>
+        <h4>
+          Used technologies: Webpack, Babel, TypeScript, React, React Context,
+          Styled-components, Docker, ESLint, Prettier, Github Actions, Husky,
+          JSDoc, TSDoc, i18next and many others.
+        </h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>WasmQuery</h2>
+        </a>
+        Eksperymentalna biblioteka wzorowana na jQuery napisana w Go i
+        skompilowana na moduł WebAssembly. Biblioteka ma na celu ułatwienie
+        pisania kodu JavaScript i udostępnienie funkcji z standardowej
+        biblioteki Golanga.
+        <h4>Used technologies: Golang, WebAssembly, TypeScript</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>SnowyMonitor</h2>
+        </a>
+        <h3>Front-end</h3>
+        <h4>Used technologies: JavaScript, SCSS, Docker</h4>
+        <h3>Back-end</h3>
+        <h4>Used technologies: JavaScript, Electron, Docker, NeDB</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>SnowyRecorder</h2>
+        </a>
+        <h3>Front-end</h3>
+        <h4>Used technologies: JavaScript, SCSS, Docker</h4>
+        <h3>Back-end</h3>
+        <h4>Used technologies: JavaScript, Electron, SoX</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>SnowyTicTacToe</h2>
+        </a>
+        <h3>Front-end</h3>
+        <h4>Used technologies: JavaScript, SCSS</h4>
+        <h3>Back-end</h3>
+        <h4>Used technologies: JavaScript, Electron</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>PlanLekcjiZSB</h2>
+        </a>
+        <h3>Front-end</h3>
+        <h4>Used technologies: TypeScript, NextJS, Docker, Axios</h4>
+        <h3>Back-end</h3>
+        <h4>Used technologies: PHP, Simple HTML DOM</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>SnowyResizer</h2>
+        </a>
+        1KB biblioteka napisana do Electrona służąca przywracaniu rozmiaru okna
+        przed jego zamknięciem.
+        <h4>Used technologies: TypeScript, Electron, NeDB</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>BrotliCompressor in Python</h2>
+        </a>
+        Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
+        Kompresor napisany w Pythonie.
+        <h4>Used technologies: Python, Brotli</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>BrotliCompressor in Golang</h2>
+        </a>
+        Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
+        Kompresor napisany w Golangu.
+        <h4>Used technologies: Golang, Brotli</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>levenshtein.js</h2>
+        </a>
+        Biblioteka udostępniająca do NodeJS funkcję na wykluczanie elementów z
+        tablicy, które posiadają za duży levenshtein distance względem wyrazu do
+        którego porównujemy listę. Biblioteka została napisana w Rustcie.
+        <h4>Used technologies: TypeScript, Rust, Neon-bindings</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>levenshtein_py</h2>
+        </a>
+        Biblioteka udostępniająca do Pythona funkcję na wykluczanie elementów z
+        tablicy, które posiadają za duży levenshtein distance względem wyrazu do
+        którego porównujemy listę. Biblioteka została napisana w Rustcie.
+        <h4>Used technologies: PyO3, Rust</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>snowy_simple_logger_python</h2>
+        </a>
+        Biblioteka udostępniająca do Pythona proste i szybkie logger API.
+        Biblioteka została napisana w Rustcie.
+        <h4>Used technologies: PyO3, Rust</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>snowy_simple_logger_nodejs</h2>
+        </a>
+        Biblioteka udostępniająca do NodeJS proste i szybkie logger API.
+        Biblioteka została napisana w Rustcie.
+        <h4>Used technologies: TypeScript, Rust, Neon-bindings</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/WasmQuery">
+          <h2>SnowyUpdater</h2>
+        </a>
+        Mocno ograniczony aktualizator aplikacji napisany w Rustcie.
+        <h4>Used technologies: Rust</h4>
+      </Article>
+      <Article>
+        <a href="https://github.com/KrzysztofZawisla/SnowyYouTubeDownloader">
+          <h2>SnowyYouTubeDownloader</h2>
+          Przestarzały downloader do filmów z YouTube napisany w Pythonie.
+        </a>
+        <h4>Used technologies: Python, ffmpeg, pytube</h4>
+      </Article>
+    </Page>
+  );
 };
 
 export default Projects;

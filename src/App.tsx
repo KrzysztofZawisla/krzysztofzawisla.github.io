@@ -29,7 +29,7 @@ import LanguagePicker from "./components/LanguagePicker/LanguagePicker";
 import { i18n } from "i18next";
 import { I18nextProvider } from "react-i18next";
 
-const Home: LazyExoticComponent<FC> = lazy(() => import("./pages/Home"));
+const AboutMe: LazyExoticComponent<FC> = lazy(() => import("./pages/AboutMe"));
 const Projects: LazyExoticComponent<FC> = lazy(
   () => import("./pages/Projects"),
 );
@@ -100,7 +100,7 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
                 <MainWrapper>
                   <Suspense fallback={<></>}>
                     <Switch>
-                      <Route exact path="/" component={Home} />
+                      <Route exact path="/" component={AboutMe} />
                       <Route exact path="/projects" component={Projects} />
                       <Route exact path="/skills" component={Skills} />
                       <Route exact path="/experience" component={Experience} />

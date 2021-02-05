@@ -3,11 +3,14 @@ import Page from "../components/Page";
 import ProfilePicture from "../components/ProfilePicture";
 import Article from "../components/Article";
 import Section from "../components/Section";
+import { useTranslation } from "react-i18next";
 
-const Home: FC = (): JSX.Element => {
+const AboutMe: FC = (): JSX.Element => {
+  const { t } = useTranslation();
+  const heading: string = t("pages.aboutMe.heading");
   return (
-    <Page title="Home">
-      <h2>About me:</h2>
+    <Page title={heading}>
+      <h2>{heading}:</h2>
       <Article>
         <h3>Who am I?</h3>
         <ProfilePicture
@@ -24,4 +27,4 @@ const Home: FC = (): JSX.Element => {
   );
 };
 
-export default Home;
+export default AboutMe;

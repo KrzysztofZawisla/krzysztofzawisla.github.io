@@ -1,7 +1,7 @@
 {
   "menu": {
     "skills": "Umiejętności",
-    "home": "Strona główna",
+    "aboutMe": "O mnie",
     "contact": "Kontakt",
     "projects": "Projekty",
     "experience": "Doświadczenie"
@@ -37,6 +37,9 @@
       "andManyOther": "i wiele innych",
       "nativeLanguage": "Język natywny",
       "acquaintedWithBasics": "Zaznajomiony z podstawami"
+    },
+    "aboutMe": {
+      "heading": "O mnie"
     }
   }
 }

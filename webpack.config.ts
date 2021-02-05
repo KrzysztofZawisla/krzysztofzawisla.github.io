@@ -82,6 +82,7 @@ const setupConfig = (
     },
     output: {
       path: path.join(__dirname, "dist", "src"),
+      publicPath: "/",
       filename: "index.js",
     },
     resolve: {
@@ -136,6 +137,12 @@ const setupConfig = (
       mode === "development" && new HotModuleReplacementPlugin(),
       mode === "development" && new ReactRefreshWebpackPlugin(),
     ].filter(Boolean) as unknown) as WebpackPluginInstance[],
+    devServer: {
+      historyApiFallback: true,
+      contentBase: path.join(__dirname, "dist"),
+      compress: true,
+      hot: true,
+    },
   };
 };
 

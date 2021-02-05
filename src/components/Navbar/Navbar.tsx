@@ -44,7 +44,7 @@ const Navbar: FC = (): JSX.Element => {
         <NavbarTitle>Menu</NavbarTitle>
         <NavbarMenu>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
-            <Link to="/">{t("menu.home")}</Link>
+            <Link to="/">{t("menu.aboutMe")}</Link>
           </NavbarItem>
           <NavbarItem onClick={adjustWebsiteOnMenuItemClick}>
             <Link to="/projects">{t("menu.projects")}</Link>

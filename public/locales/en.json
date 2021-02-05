@@ -1,7 +1,7 @@
 {
   "menu": {
     "skills": "Skills",
-    "home": "Home",
+    "aboutMe": "About Me",
     "contact": "Contact",
     "projects": "Projects",
     "experience": "Experience"
@@ -21,7 +21,7 @@
       "heading": "Experience",
       "bulldogjob": "Bulldogjob article writer",
       "vacations": "vacations",
-      "schoolPractice": "school practice"
+      "schoolPractice": "school internship"
     },
     "skills": {
       "heading": "Skills",
@@ -37,6 +37,9 @@
       "andManyOther": "and many other",
       "nativeLanguage": "Native language",
       "acquaintedWithBasics": "Acquainted with basics"
+    },
+    "aboutMe": {
+      "heading": "About Me"
     }
   }
 }
