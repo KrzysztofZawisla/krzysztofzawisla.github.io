@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "lint": "eslint --fix -f unix \"src/**/*.{ts,tsx}\" && prettier --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
@@ -13,13 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KrzysztofZawisla/tempPortfiolio.git"
+    "url": "git+https://github.com/KrzysztofZawisla/krzysztofzawisla.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KrzysztofZawisla/tempPortfiolio/issues"
+    "url": "https://github.com/KrzysztofZawisla/krzysztofzawisla.github.io/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "homepage": "https://github.com/KrzysztofZawisla/tempPortfiolio#readme",
   "devDependencies": {
