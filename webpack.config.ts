@@ -82,7 +82,6 @@ const setupConfig = (
     },
     output: {
       path: path.join(__dirname, "dist", "src"),
-      publicPath: "/",
       filename: "index.js",
     },
     resolve: {
@@ -141,6 +140,7 @@ const setupConfig = (
       contentBase: path.join(__dirname, "dist"),
       compress: true,
       hot: true,
+      writeToDisk: true,
     },
   };
 };
