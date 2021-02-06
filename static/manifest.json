@@ -1,9 +1,39 @@
 {
   "short_name": "Portfolio",
   "name": "Krzysztof Zawisła - Portfolio",
-  "start_url": ".",
+  "start_url": "https://krzysztofzawisla.github.io/",
   "display": "standalone",
   "theme_color": "#111",
   "background_color": "#fff",
-  "orientation": "portrait-primary"
+  "orientation": "portrait-primary",
+  "description": "Web page with important information about me and my projects.",
+  "icons": [{
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "48x48",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "72x72",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "96x96",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "144x144",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "168x168",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "192x192",
+    "type": "image/jpg"
+  }, {
+    "src": "https://avatars0.githubusercontent.com/u/32432944?s=460&v=4",
+    "sizes": "512x512",
+    "type": "image/jpg"
+  }]
 }

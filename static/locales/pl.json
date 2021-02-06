@@ -1,0 +1,45 @@
+{
+  "menu": {
+    "skills": "Umiejętności",
+    "aboutMe": "O mnie",
+    "contact": "Kontakt",
+    "projects": "Projekty",
+    "experience": "Doświadczenie"
+  },
+  "languageSelector": {
+    "hoverTip": "Najedź by zmienić język",
+    "clickTip": "Kliknij by zmienić język",
+    "greatBritainFlag": "Flaga Wielkiej Brytanii",
+    "polishFlag": "Flaga Polski",
+    "changeToEnglish": "Zmień język na angielski"
+  },
+  "pages": {
+    "contact": {
+      "heading": "Kontakt"
+    },
+    "experience": {
+      "heading": "Doświadczenie",
+      "bulldogjob": "Autor artykułów dla Bulldogjob",
+      "vacations": "wakacje",
+      "schoolPractice": "praktyki szkolne"
+    },
+    "skills": {
+      "heading": "Umiejętności",
+      "programmingLanguages": "Języki programowania",
+      "databases": "Bazy danych",
+      "queryLanguages": "Języki zapytań",
+      "runtimesAndImplementations": "Środowiska wykonywania i implementacje",
+      "descriptiveLanguages": "Języki opisowe",
+      "versionControlSystemsAndContainerization": "Systemy kontroli wersji, konteneryzacja i rzeczy powiązane",
+      "quantumProgrammingLanguages": "Kwantowe języki programowania",
+      "languages": "Języki",
+      "frameworksAndLibraries": "Frameworki, biblioteki, itp.",
+      "andManyOther": "i wiele innych",
+      "nativeLanguage": "Język natywny",
+      "acquaintedWithBasics": "Zaznajomiony z podstawami"
+    },
+    "aboutMe": {
+      "heading": "O mnie"
+    }
+  }
+}
