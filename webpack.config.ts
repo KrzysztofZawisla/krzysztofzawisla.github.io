@@ -15,7 +15,6 @@ import CaseSensitivePathsPlugin from "case-sensitive-paths-webpack-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
-//import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
 
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const { AggressiveMergingPlugin } = optimize;
