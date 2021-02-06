@@ -36,6 +36,7 @@ const setupConfig = (
       optimization: {
         minimize: mode !== "development",
         minimizer: [new TerserPlugin()],
+        usedExports: true,
       },
       devtool: "source-map",
       module: {
@@ -58,11 +59,11 @@ const setupConfig = (
                       "@babel/env",
                       {
                         targets: targetToModern
-                          ? "last 2 versions"
+                          ? "last 2 Chrome versions, last 2 Firefox versions"
                           : "> 0.25%, not dead",
+                        bugfixes: true,
                         useBuiltIns: "usage",
-                        corejs: "3.8.3",
-                        shippedProposals: true,
+                        corejs: "3",
                       },
                     ],
                     "@babel/preset-typescript",
