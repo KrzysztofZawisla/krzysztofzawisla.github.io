@@ -25,7 +25,6 @@ import {
   LanguageDispatcher,
 } from "./contexts/globalContext";
 import { debounce } from "lodash";
-import LanguagePicker from "./components/LanguagePicker/LanguagePicker";
 import { i18n } from "i18next";
 import { I18nextProvider } from "react-i18next";
 
@@ -38,6 +37,9 @@ const Experience: LazyExoticComponent<FC> = lazy(
   () => import("./pages/Experience"),
 );
 const Contact: LazyExoticComponent<FC> = lazy(() => import("./pages/Contact"));
+const LanguagePicker: LazyExoticComponent<FC> = lazy(
+  () => import("./components/LanguagePicker/LanguagePicker"),
+);
 
 const {
   isMobile,
@@ -110,7 +112,9 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
                 </MainWrapper>
                 <Footer />
               </div>
-              <LanguagePicker />
+              <Suspense fallback={<></>}>
+                <LanguagePicker />
+              </Suspense>
             </GlobalContextProvider>
           </BrowserRouter>
         </HelmetProvider>
