@@ -89,10 +89,7 @@ const setupConfig = (
       extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
     },
     plugins: ([
-      new CleanWebpackPlugin({
-        dry: true,
-        dangerouslyAllowCleanPatternsOutsideProject: true,
-      }),
+      new CleanWebpackPlugin(),
       new CopyPlugin({
         patterns: [
           {
@@ -134,7 +131,7 @@ const setupConfig = (
       }),
       new CaseSensitivePathsPlugin(),
       new RobotstxtPlugin({
-        filePath: "../robots.txt",
+        filePath: "./robots.txt",
       }),
       mode === "development" && new HotModuleReplacementPlugin(),
       mode === "development" && new ReactRefreshWebpackPlugin(),

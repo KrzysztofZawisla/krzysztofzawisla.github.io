@@ -6,6 +6,7 @@
     "lint": "eslint --fix -f unix \"src/**/*.{ts,tsx}\" && prettier --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "build": "tsc && webpack --config webpack.config.ts",
+    "build-dev": "tsc && webpack --config webpack.config.ts --mode development",
     "start": "serve -s dist",
     "publish": "gh-pages -b deploy -d dist",
     "watch": "webpack serve --config webpack.config.ts --mode development"
