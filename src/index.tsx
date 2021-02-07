@@ -13,10 +13,14 @@ const root: HTMLElement | null = document.querySelector("#root");
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     try {
-      navigator.serviceWorker.register("./src/sw.js");
+      navigator.serviceWorker.register("./src/modern/sw.js");
     } catch {
-      // eslint-disable-next-line no-console
-      console.error("Can't install service worker");
+      try {
+        navigator.serviceWorker.register("./src/legacy/sw.js");
+      } catch {
+        // eslint-disable-next-line no-console
+        console.error("Can't install service worker");
+      }
     }
   });
 }

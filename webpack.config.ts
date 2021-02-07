@@ -25,6 +25,9 @@ const setupConfig = (
 ): Configuration[] => {
   const getConfig = (targetToModern: boolean): Configuration => {
     const entryPoint: string[] = [path.join(__dirname, "src", "index.tsx")];
+    const babelTarget: string = targetToModern
+      ? "last 2 Chrome versions, last 2 Firefox versions"
+      : "> 0.25%, not dead";
     if (!targetToModern) {
       entryPoint.unshift("babel-polyfill");
     }
@@ -57,9 +60,7 @@ const setupConfig = (
                     [
                       "@babel/env",
                       {
-                        targets: targetToModern
-                          ? "last 2 Chrome versions, last 2 Firefox versions"
-                          : "> 0.25%, not dead",
+                        targets: babelTarget,
                         bugfixes: true,
                         useBuiltIns: "usage",
                         corejs: "3",
@@ -138,7 +139,8 @@ const setupConfig = (
           extensions: ["ts", "tsx"],
         }),
         new GenerateSW({
-          swDest: "../sw.js",
+          babelPresetEnvTargets: [babelTarget],
+          swDest: "./sw.js",
         }),
         new CaseSensitivePathsPlugin(),
         targetToModern &&
