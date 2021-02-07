@@ -139,6 +139,7 @@ const setupConfig = (
           extensions: ["ts", "tsx"],
         }),
         new GenerateSW({
+          exclude: [/\.md$/],
           babelPresetEnvTargets: [babelTarget],
           swDest: "./sw.js",
         }),
