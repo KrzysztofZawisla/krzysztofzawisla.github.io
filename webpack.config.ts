@@ -17,6 +17,7 @@ import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
 
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
 const { AggressiveMergingPlugin } = optimize;
 
 const setupConfig = (
@@ -128,6 +129,14 @@ const setupConfig = (
             filename: path.join(__dirname, "dist", "index.html"),
             minify: mode !== "development",
             inject: false,
+          }),
+        targetToModern &&
+          new SitemapPlugin({
+            base: "https://krzysztofzawisla.github.io/",
+            paths: ["/", "/skills", "/projects", "/experience", "/contact"],
+            options: {
+              filename: "../../map.xml",
+            },
           }),
         targetToModern &&
           new HtmlWebpackPlugin({
