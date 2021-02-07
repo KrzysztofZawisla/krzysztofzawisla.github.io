@@ -95,6 +95,7 @@ const setupConfig = (
         ),
         publicPath: `/src/${targetToModern ? "modern" : "legacy"}/`,
         filename: `index.${targetToModern ? "mjs" : "js"}`,
+        chunkFilename: "[id].js",
       },
       resolve: {
         extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
