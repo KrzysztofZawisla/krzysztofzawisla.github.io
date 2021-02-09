@@ -1,8 +1,8 @@
 import { FC } from "react";
 import Page from "../components/Page";
-import ProfilePicture from "../components/ProfilePicture";
-import Article from "../components/Article";
-import Section from "../components/Section";
+import ProfilePicture from "../components/ProfilePicture/ProfilePicture";
+import Article from "../components/Article/Article";
+import Section from "../components/Section/Section";
 import { useTranslation } from "react-i18next";
 
 const AboutMe: FC = (): JSX.Element => {

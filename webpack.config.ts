@@ -77,6 +77,7 @@ const setupConfig = (
                   ],
                   plugins: [
                     "lodash",
+                    "styled-components",
                     targetToModern &&
                       mode === "development" &&
                       require.resolve("react-refresh/babel"),

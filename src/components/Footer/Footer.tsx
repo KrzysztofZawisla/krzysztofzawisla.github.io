@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Spliter from "../Spliter";
-import FooterWrapper from "./FooterWrapper";
+import FooterWrapper from "../FooterWrapper/FooterWrapper";
 
 const Footer: FC = (): JSX.Element => {
   return (

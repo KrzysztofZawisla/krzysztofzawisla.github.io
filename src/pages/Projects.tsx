@@ -1,8 +1,8 @@
 import { FC } from "react";
 import Page from "../components/Page";
-import Section from "../components/Section";
-import Article from "../components/Article";
-import Bold from "../components/Bold";
+import Section from "../components/Section/Section";
+import Article from "../components/Article/Article";
+import Bold from "../components/Bold/Bold";
 
 const Projects: FC = (): JSX.Element => {
   return (
