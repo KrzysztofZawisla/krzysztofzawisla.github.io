@@ -1,7 +1,7 @@
 import { FC, ReactNode, useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import GlobalContext from "../contexts/globalContext";
-import Wrapper from "./Wrapper";
+import Wrapper from "./Wrapper/Wrapper";
 
 interface PageProperties {
   title: string;

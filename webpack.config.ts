@@ -52,7 +52,7 @@ const setupConfig = (
           {
             test: /\.(ts|tsx)$/,
             include: path.join(__dirname, "src"),
-            exclude: /(node_modules|bower_components)/,
+            exclude: [/(node_modules|bower_components)/, /\.test\.(ts|tsx)$/],
             use: [
               {
                 loader: "babel-loader",
