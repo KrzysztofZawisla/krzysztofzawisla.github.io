@@ -11,7 +11,6 @@ describe("Bold", (): void => {
   it("renders component properly", async (): Promise<void> => {
     const { container }: RenderResult = render(TestComponent);
     expect(container).toMatchSnapshot();
-    expect(await screen.findByText(testText)).toBeInTheDocument();
   });
   it("is bold", async (): Promise<void> => {
     render(TestComponent);
