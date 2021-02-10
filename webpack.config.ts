@@ -21,18 +21,23 @@ const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
 const { AggressiveMergingPlugin } = optimize;
 
+const getEntryPoint = (targetToModern: boolean): string[] => {
+  const entryPoint: string[] = [path.join(__dirname, "src", "index.tsx")];
+  if (!targetToModern) {
+    entryPoint.unshift("babel-polyfill");
+  }
+  return entryPoint;
+};
+
 const setupConfig = (
   _environment: unknown,
   { mode }: { mode: string },
 ): Configuration[] => {
   const getConfig = (targetToModern: boolean): Configuration => {
-    const entryPoint: string[] = [path.join(__dirname, "src", "index.tsx")];
+    const entryPoint = getEntryPoint(targetToModern);
     const babelTarget: string = targetToModern
       ? "last 2 Chrome versions, last 2 Firefox versions"
       : "> 0.25%, not dead";
-    if (!targetToModern) {
-      entryPoint.unshift("babel-polyfill");
-    }
     return {
       mode: mode === "development" ? mode : "production",
       entry: entryPoint,
