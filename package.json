@@ -13,7 +13,8 @@
     "watch": "webpack serve --config webpack.config.ts --mode development",
     "check": "ncu",
     "update": "ncu -u && npm i",
-    "audit-ci": "audit-ci"
+    "audit-ci": "audit-ci",
+    "audit": "npm run start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view"
   },
   "repository": {
     "type": "git",
