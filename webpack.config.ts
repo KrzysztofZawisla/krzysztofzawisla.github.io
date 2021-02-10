@@ -15,6 +15,7 @@ import CaseSensitivePathsPlugin from "case-sensitive-paths-webpack-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
@@ -104,6 +105,13 @@ const setupConfig = (
       },
       plugins: ([
         new CleanWebpackPlugin(),
+        new BundleAnalyzerPlugin({
+          openAnalyzer: false,
+          analyzerMode: "static",
+          reportFilename: `../../../${
+            targetToModern ? "modern" : "legacy"
+          }-analyzer-report.html`,
+        }),
         targetToModern &&
           new CopyPlugin({
             patterns: [

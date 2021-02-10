@@ -2,3 +2,5 @@ dist
 node_modules
 __snapshots__
 lighthouse.html
+legacy-analyzer-report.html
+modern-analyzer-report.html
