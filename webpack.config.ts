@@ -110,13 +110,14 @@ const setupConfig = (
       },
       plugins: ([
         new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin({
-          openAnalyzer: false,
-          analyzerMode: "static",
-          reportFilename: `../../../${
-            targetToModern ? "modern" : "legacy"
-          }-analyzer-report.html`,
-        }),
+        mode !== "development" &&
+          new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+            analyzerMode: "static",
+            reportFilename: `../../../${
+              targetToModern ? "modern" : "legacy"
+            }-analyzer-report.html`,
+          }),
         targetToModern &&
           new CopyPlugin({
             patterns: [
@@ -144,7 +145,8 @@ const setupConfig = (
             minify: mode !== "development",
             inject: false,
           }),
-        targetToModern &&
+        mode !== "development" &&
+          targetToModern &&
           new SitemapPlugin({
             base: "https://krzysztofzawisla.github.io/",
             paths: ["/", "/skills", "/projects", "/experience", "/contact"],
@@ -168,7 +170,8 @@ const setupConfig = (
           swDest: "./sw.js",
         }),
         new CaseSensitivePathsPlugin(),
-        targetToModern &&
+        mode !== "development" &&
+          targetToModern &&
           new RobotstxtPlugin({
             filePath: "../../robots.txt",
           }),
