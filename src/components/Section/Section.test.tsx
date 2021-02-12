@@ -1,6 +1,11 @@
 import Section from "./Section";
-import { render } from "@testing-library/react";
+import { cleanup, render, RenderResult } from "@testing-library/react";
 
-test("Render Section component", async (): Promise<void> => {
-  render(<Section>test</Section>);
+afterEach(cleanup);
+
+describe("Section", (): void => {
+  it("renders component properly", async (): Promise<void> => {
+    const { container }: RenderResult = render(<Section>test</Section>);
+    expect(container).toMatchSnapshot();
+  });
 });
