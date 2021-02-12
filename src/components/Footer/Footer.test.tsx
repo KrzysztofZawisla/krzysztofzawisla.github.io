@@ -1,6 +1,11 @@
 import Footer from "./Footer";
-import { render } from "@testing-library/react";
+import { cleanup, render, RenderResult } from "@testing-library/react";
 
-test("Render Footer component", async (): Promise<void> => {
-  render(<Footer />);
+afterEach(cleanup);
+
+describe("Footer", (): void => {
+  it("renders component properly", async (): Promise<void> => {
+    const { container }: RenderResult = render(<Footer />);
+    expect(container).toMatchSnapshot();
+  });
 });

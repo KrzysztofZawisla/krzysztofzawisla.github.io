@@ -1,6 +1,13 @@
 import FooterWrapper from "./FooterWrapper";
-import { render } from "@testing-library/react";
+import { cleanup, render, RenderResult } from "@testing-library/react";
 
-test("Render FooterWrapper component", async (): Promise<void> => {
-  render(<FooterWrapper>test</FooterWrapper>);
+afterEach(cleanup);
+
+describe("FooterWrapper", (): void => {
+  it("renders component properly", async (): Promise<void> => {
+    const { container }: RenderResult = render(
+      <FooterWrapper>test</FooterWrapper>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

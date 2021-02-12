@@ -14,7 +14,8 @@
     "check": "ncu",
     "update": "ncu -u && npm i",
     "audit-ci": "audit-ci",
-    "audit": "npm run start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view"
+    "audit": "npm run start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view",
+    "build-and-start": "npm run build && npm run start"
   },
   "repository": {
     "type": "git",
