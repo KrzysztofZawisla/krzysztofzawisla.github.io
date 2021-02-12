@@ -3,6 +3,7 @@ import Page from "../components/Page";
 import Article from "../components/Article/Article";
 import Section from "../components/Section/Section";
 import { useTranslation } from "react-i18next";
+import ExternalLink from "../components/ExternalLink";
 
 const Experience: FC = (): JSX.Element => {
   const { t } = useTranslation();
@@ -24,12 +25,14 @@ const Experience: FC = (): JSX.Element => {
         <Section>COIG S.A. - {vacations} 2019</Section>
       </Article>
       <Article>
-        <a
-          href="https://bulldogjob.pl/blog/authors/krzysztof-zawisla"
-          title="BulldogJob"
-        >
-          <h3>{t("pages.experience.bulldogjob")}</h3>
-        </a>
+        <h3>
+          <ExternalLink
+            href="https://bulldogjob.pl/blog/authors/krzysztof-zawisla"
+            title="BulldogJob"
+          >
+            {t("pages.experience.bulldogjob")}
+          </ExternalLink>
+        </h3>
       </Article>
     </Page>
   );

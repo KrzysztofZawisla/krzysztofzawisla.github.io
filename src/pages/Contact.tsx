@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Page from "../components/Page";
 import Article from "../components/Article/Article";
 import Section from "../components/Section/Section";
+import ExternalLink from "../components/ExternalLink";
 
 const Contact: FC = (): JSX.Element => {
   const { t } = useTranslation();
@@ -13,30 +14,36 @@ const Contact: FC = (): JSX.Element => {
       <Article>
         <Section>
           <h3>Email</h3>
-          <a href="mailto:zawislakrzysztof.zk@gmail.com">
+          <ExternalLink href="mailto:zawislakrzysztof.zk@gmail.com">
             zawislakrzysztof.zk@gmail.com
-          </a>
+          </ExternalLink>
         </Section>
       </Article>
       <Article>
         <Section>
-          <a href="https://twitter.com/Krzysztof_zaw">
-            <h3>Twitter</h3>
-          </a>
+          <h3>
+            <ExternalLink href="https://twitter.com/Krzysztof_zaw">
+              Twitter
+            </ExternalLink>
+          </h3>
         </Section>
       </Article>
       <Article>
         <Section>
-          <a href="https://www.facebook.com/profile.php?id=100006723130084">
-            <h3>Facebook</h3>
-          </a>
+          <h3>
+            <ExternalLink href="https://www.facebook.com/profile.php?id=100006723130084">
+              Facebook
+            </ExternalLink>
+          </h3>
         </Section>
       </Article>
       <Article>
         <Section>
-          <a href="https://www.instagram.com/krzysztof_zawisla/">
-            <h3>Instagram</h3>
-          </a>
+          <h3>
+            <ExternalLink href="https://www.instagram.com/krzysztof_zawisla/">
+              Instagram
+            </ExternalLink>
+          </h3>
         </Section>
       </Article>
     </Page>
