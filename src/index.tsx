@@ -1,6 +1,6 @@
 import { i18n } from "i18next";
 import { render } from "react-dom";
-import App from "./App";
+import App from "./components/App/App";
 import initTranslations from "./other/translation";
 
 const root: HTMLElement | null = document.querySelector("#root");

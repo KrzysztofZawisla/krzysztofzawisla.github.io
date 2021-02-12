@@ -12,10 +12,10 @@ import {
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { StrictMode } from "react";
-import GlobalStyle from "./components/GlobalStyle";
-import Navbar from "./components/Navbar/Navbar";
-import MainWrapper from "./components/MainWrapper";
-import Footer from "./components/Footer/Footer";
+import GlobalStyle from "../GlobalStyle";
+import Navbar from "../Navbar/Navbar";
+import MainWrapper from "../MainWrapper";
+import Footer from "../Footer/Footer";
 import {
   GlobalContextValues,
   initialGlobalStoreValue,
@@ -23,22 +23,28 @@ import {
   IsMobileDispatcher,
   IsMenuOpenOnMobileDispatcher,
   LanguageDispatcher,
-} from "./contexts/globalContext";
+} from "../../contexts/globalContext";
 import { debounce } from "lodash";
 import { i18n } from "i18next";
 import { I18nextProvider } from "react-i18next";
 
-const AboutMe: LazyExoticComponent<FC> = lazy(() => import("./pages/AboutMe"));
+const AboutMe: LazyExoticComponent<FC> = lazy(
+  () => import("../../pages/AboutMe"),
+);
 const Projects: LazyExoticComponent<FC> = lazy(
-  () => import("./pages/Projects"),
+  () => import("../../pages/Projects"),
 );
-const Skills: LazyExoticComponent<FC> = lazy(() => import("./pages/Skills"));
+const Skills: LazyExoticComponent<FC> = lazy(
+  () => import("../../pages/Skills"),
+);
 const Experience: LazyExoticComponent<FC> = lazy(
-  () => import("./pages/Experience"),
+  () => import("../../pages/Experience"),
 );
-const Contact: LazyExoticComponent<FC> = lazy(() => import("./pages/Contact"));
+const Contact: LazyExoticComponent<FC> = lazy(
+  () => import("../../pages/Contact"),
+);
 const LanguagePicker: LazyExoticComponent<FC> = lazy(
-  () => import("./components/LanguagePicker/LanguagePicker"),
+  () => import("../LanguagePicker/LanguagePicker"),
 );
 
 const {
