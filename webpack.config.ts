@@ -108,6 +108,7 @@ const setupConfig = (
         ),
         publicPath: `/src/${targetToModern ? "modern" : "legacy"}/`,
         filename: `index.${targetToModern ? "mjs" : "js"}`,
+        module: targetToModern,
         chunkFilename: `[id].${targetToModern ? "mjs" : "js"}`,
       },
       resolve: {
@@ -115,6 +116,7 @@ const setupConfig = (
       },
       experiments: {
         topLevelAwait: true,
+        outputModule: targetToModern,
       },
       plugins: ([
         new CompressionPlugin({
