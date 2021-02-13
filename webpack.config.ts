@@ -84,6 +84,7 @@ const setupConfig = (
                   plugins: [
                     "lodash",
                     "styled-components",
+                    "@babel/plugin-syntax-top-level-await",
                     targetToModern &&
                       mode === "development" &&
                       require.resolve("react-refresh/babel"),
@@ -107,6 +108,9 @@ const setupConfig = (
       },
       resolve: {
         extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
+      },
+      experiments: {
+        topLevelAwait: true,
       },
       plugins: ([
         new CleanWebpackPlugin(),

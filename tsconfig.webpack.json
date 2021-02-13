@@ -8,7 +8,7 @@
     "strict": true,
     "sourceMap": true,
     "alwaysStrict": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "strictNullChecks": true,
