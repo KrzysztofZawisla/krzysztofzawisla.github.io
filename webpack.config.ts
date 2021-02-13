@@ -115,6 +115,11 @@ const setupConfig = (
         topLevelAwait: true,
       },
       plugins: ([
+        new CompressionPlugin({
+          filename: "[path][base].gz",
+          test: /\.(js|mjs|css|html|svg)$/,
+          deleteOriginalAssets: false,
+        }),
         targetToModern &&
           new CompressionPlugin({
             filename: "[path][base].br",
