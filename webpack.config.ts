@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 /* eslint-disable @typescript-eslint/no-var-requires */
+///<reference path="webpack.d.ts" />
 
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
@@ -17,10 +19,10 @@ import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import zlib from "zlib";
+import RobotstxtPlugin from "robotstxt-webpack-plugin";
+import SitemapPlugin from "sitemap-webpack-plugin";
+import CompressionPlugin from "compression-webpack-plugin";
 
-const RobotstxtPlugin = require("robotstxt-webpack-plugin");
-const SitemapPlugin = require("sitemap-webpack-plugin").default;
-const CompressionPlugin = require("compression-webpack-plugin");
 const { AggressiveMergingPlugin } = optimize;
 
 const getEntryPoint = (targetToModern: boolean): string[] => {
