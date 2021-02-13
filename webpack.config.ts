@@ -16,9 +16,11 @@ import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+import zlib from "zlib";
 
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
+const CompressionPlugin = require("compression-webpack-plugin");
 const { AggressiveMergingPlugin } = optimize;
 
 const getEntryPoint = (targetToModern: boolean): string[] => {
@@ -113,6 +115,20 @@ const setupConfig = (
         topLevelAwait: true,
       },
       plugins: ([
+        targetToModern &&
+          new CompressionPlugin({
+            filename: "[path][base].br",
+            algorithm: "brotliCompress",
+            test: /\.(js|mjs|css|html|svg)$/,
+            compressionOptions: {
+              params: {
+                [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+              },
+            },
+            threshold: 10240,
+            minRatio: 0.8,
+            deleteOriginalAssets: false,
+          }),
         new CleanWebpackPlugin(),
         mode !== "development" &&
           new BundleAnalyzerPlugin({
