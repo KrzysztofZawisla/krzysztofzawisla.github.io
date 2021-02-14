@@ -18,7 +18,7 @@ import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-import zlib from "zlib";
+import { constants } from "zlib";
 import RobotstxtPlugin from "robotstxt-webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
 import CompressionPlugin from "compression-webpack-plugin";
@@ -131,7 +131,7 @@ const setupConfig = (
             test: /\.(js|mjs|css|html|svg)$/,
             compressionOptions: {
               params: {
-                [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+                [constants.BROTLI_PARAM_QUALITY]: 11,
               },
             },
             threshold: 10240,
