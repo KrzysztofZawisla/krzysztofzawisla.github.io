@@ -1,6 +1,6 @@
 import { i18n } from "i18next";
 import App from "./App";
-import initTranslations from "../../other/translation";
+import initTranslations from "../../other/translation/translation";
 import { cleanup, render } from "@testing-library/react";
 
 afterEach(cleanup);
