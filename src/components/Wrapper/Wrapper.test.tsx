@@ -1,6 +1,11 @@
 import Wrapper from "./Wrapper";
-import { render } from "@testing-library/react";
+import { cleanup, render, RenderResult } from "@testing-library/react";
 
-test("Render Wrapper component", async (): Promise<void> => {
-  render(<Wrapper>test</Wrapper>);
+afterEach(cleanup);
+
+describe("Wrapper", (): void => {
+  it("renders component properly", async (): Promise<void> => {
+    const { container }: RenderResult = render(<Wrapper>test</Wrapper>);
+    expect(container).toMatchSnapshot();
+  });
 });
