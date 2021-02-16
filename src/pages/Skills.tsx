@@ -64,7 +64,7 @@ const Skills: FC = (): JSX.Element => {
           React, React Context, NextJS, Electron, Express, Jest, Puppeteer,
           React Native, Babel, Webpack, Styled-components, ESLint, SWC, Husky,
           JSDoc, Lodash, Prettier, Spectron, i18next, AnimeJS, Socket.io,
-          ThreeJS, WebAssembly{` ${andManyOther}`}.
+          ThreeJS, WebAssembly, tsd{` ${andManyOther}`}.
         </Section>
         <h3>Python ecosystem:</h3>
         <Section>Selenium, Numba{` ${andManyOther}`}.</Section>

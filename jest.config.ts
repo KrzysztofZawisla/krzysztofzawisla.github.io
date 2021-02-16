@@ -1,6 +1,6 @@
 const config = {
   preset: "ts-jest",
-  setupFilesAfterEnv: ["./src/setupTests.ts"],
+  setupFilesAfterEnv: ["jest-extended", "./src/setupTests.ts"],
   testEnvironment: "jsdom",
 };
 
