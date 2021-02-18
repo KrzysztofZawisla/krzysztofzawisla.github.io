@@ -48,7 +48,7 @@ const setupConfig = (
       target: "web",
       optimization: {
         minimize: mode !== "development",
-        minimizer: [new TerserPlugin()],
+        minimizer: [(new TerserPlugin() as unknown) as WebpackPluginInstance],
         usedExports: true,
       },
       devtool: "source-map",
