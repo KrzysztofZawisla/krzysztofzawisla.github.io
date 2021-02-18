@@ -18,6 +18,10 @@ yarn run
   build-and-start
 ```
 
+## Lighthouse score
+
+![lighthouse score](https://i.imgur.com/vVZ7KWg.png)
+
 ## Licenses
 
 Information about used packages and their license you can find under this path src/(modern|legacy)/index.(mjs|js).LICENSE.txt on deploy branch.
