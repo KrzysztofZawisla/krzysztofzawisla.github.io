@@ -14,8 +14,8 @@
     "check": "ncu",
     "update": "ncu -u && yarn",
     "audit-ci": "audit-ci",
-    "audit": "yarn run start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view",
-    "build-and-start": "yarn run build && yarn run start"
+    "audit": "yarn start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view",
+    "build-and-start": "yarn run build && yarn start"
   },
   "repository": {
     "type": "git",
