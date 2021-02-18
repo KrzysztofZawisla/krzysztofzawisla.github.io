@@ -51,7 +51,7 @@ const {
   language,
 }: GlobalContextValues = initialGlobalStoreValue;
 
-interface AppProperties {
+export interface AppProperties {
   translation: i18n;
 }
 

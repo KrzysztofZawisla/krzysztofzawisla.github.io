@@ -14,7 +14,6 @@ const LanguagePicker: FC = (): JSX.Element => {
   const [childElementCount, setChildElementCount] = useState(0);
   const [isMouseOverLanguageMenu, setIsMouseOverLanguageMenu] = useState(false);
   const languagePickerWrapperReference = useRef(null);
-  const mainFlagReference = useRef(null);
   const changeLanguage = (setEnglish: boolean) => {
     setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen);
     setIsEnglish(setEnglish);
@@ -56,7 +55,6 @@ const LanguagePicker: FC = (): JSX.Element => {
         height="50px"
         width="50px"
         loading="lazy"
-        ref={mainFlagReference}
         onClick={() => setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen)}
         onMouseEnter={() => {
           setIsMouseOverLanguageMenu(true);
