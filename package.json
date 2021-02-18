@@ -15,7 +15,11 @@
     "update": "ncu -u && yarn",
     "audit-ci": "audit-ci",
     "audit": "yarn start | lighthouse http://localhost:5000 --output-path ./lighthouse.html --view",
-    "build-and-start": "yarn run build && yarn start"
+    "build-and-start": "yarn run build && yarn start",
+    "build-img": "docker build . -t portfolio",
+    "start-img": "docker run -p 5000:5000 portfolio",
+    "build-dev-img": "docker build . -t portfolio-dev -f Dockerfile.dev",
+    "start-dev-img": "docker run -p 5000:5000 -it portfolio-dev"
   },
   "repository": {
     "type": "git",

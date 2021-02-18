@@ -1,5 +1,7 @@
 # Portfiolio
 
+This repository contains fully containerized portfolio created with TypeScript, React and many others.
+
 ## Scripts
 
 ```txt
@@ -16,6 +18,10 @@ yarn run
   audit-ci
   audit
   build-and-start
+  build-img
+  start-img
+  build-dev-img
+  start-dev-img
 ```
 
 ## Lighthouse score

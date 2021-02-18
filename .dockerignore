@@ -3,3 +3,9 @@ dist
 .gitignore
 README.md
 .git
+.github
+.gitattributes
+Dockerfile
+Dockerfile.dev
+LICENSE
+yarn-error.log
