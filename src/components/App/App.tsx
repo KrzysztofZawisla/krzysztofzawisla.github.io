@@ -15,6 +15,7 @@ import { StrictMode } from "react";
 import GlobalStyle from "../GlobalStyle";
 import Navbar from "../Navbar/Navbar";
 import MainWrapper from "../MainWrapper";
+import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import Footer from "../Footer/Footer";
 import {
   GlobalContextValues,
@@ -42,9 +43,6 @@ const Experience: LazyExoticComponent<FC> = lazy(
 );
 const Contact: LazyExoticComponent<FC> = lazy(
   () => import("../../pages/Contact"),
-);
-const LanguagePicker: LazyExoticComponent<FC> = lazy(
-  () => import("../LanguagePicker/LanguagePicker"),
 );
 
 const {
@@ -118,9 +116,7 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
                 </MainWrapper>
                 <Footer />
               </div>
-              <Suspense fallback={<></>}>
-                <LanguagePicker />
-              </Suspense>
+              <LanguagePicker />
             </GlobalContextProvider>
           </BrowserRouter>
         </HelmetProvider>
