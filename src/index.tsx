@@ -1,6 +1,7 @@
 import { i18n } from "i18next";
 import { render } from "react-dom";
 import App from "./components/App/App";
+import consoleGreetings from "./other/consoleGreetings/consoleGreetings";
 import initTranslations from "./other/translation/translation";
 
 if (process.env.DEVELOPMENT) {
@@ -9,6 +10,8 @@ if (process.env.DEVELOPMENT) {
   getFID(console.log);
   getCLS(console.log);
 }
+
+consoleGreetings();
 
 const root: HTMLElement | null = document.querySelector("#root");
 
