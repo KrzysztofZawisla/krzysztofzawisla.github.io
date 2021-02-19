@@ -46,7 +46,7 @@
       content="Krzysztof Zawisła Portfolio. Web page with important information about me and my projects."
     />
     <meta name="og:email" content="zawislakrzysztof.zk@gmail.com" />
-    <link rel="manifest" href="./static/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="canonical" href="https://krzysztofzawisla.github.io/" />
     <link rel="preconnect" href="https://avatars0.githubusercontent.com" />
     <link
@@ -60,7 +60,7 @@
       <span>You need to enable JavaScript to watch my portfolio :(</span>
     </noscript>
     <div id="root"></div>
-    <script type="module" src="./src/modern/index.mjs" async></script>
-    <script nomodule src="./src/legacy/index.js" defer></script>
+    <script type="module" src="%MODERN_SCRIPT%" async></script>
+    <script nomodule src="%LEGACY_SCRIPT%" defer></script>
   </body>
 </html>

@@ -22,6 +22,7 @@ import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { constants } from "zlib";
 import RobotstxtPlugin from "robotstxt-webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
+import InterpolateHtmlPlugin from "interpolate-html-plugin";
 import CompressionPlugin from "compression-webpack-plugin";
 
 const { AggressiveMergingPlugin } = optimize;
@@ -55,6 +56,14 @@ const setupConfig = (
       devtool: "source-map",
       module: {
         rules: [
+          {
+            test: /\.(png|jpg|gif)$/i,
+            use: [
+              {
+                loader: "url-loader",
+              },
+            ],
+          },
           {
             test: /\.svg$/,
             use: ["@svgr/webpack"],
@@ -127,6 +136,12 @@ const setupConfig = (
         outputModule: targetToModern,
       },
       plugins: ([
+        targetToModern &&
+          new InterpolateHtmlPlugin({
+            PUBLIC_URL: "./static",
+            MODERN_SCRIPT: "./src/modern/index.mjs",
+            LEGACY_SCRIPT: "./src/legacy/index.js",
+          }),
         new DefinePlugin({
           "process.env.DEVELOPMENT": JSON.stringify(mode === "development"),
         }),
