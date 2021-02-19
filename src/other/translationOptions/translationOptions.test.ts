@@ -20,7 +20,7 @@ describe("Translation Options", () => {
   it("Has correct loadPath", () => {
     const { backend }: InitOptions = translationsOptions;
     const { loadPath }: BackendObject = backend as BackendObject;
-    expect(loadPath).toBe("./static/locales/{{lng}}.json");
+    expect(loadPath).toBe(`${process.env.PUBLIC_URL}/locales/{{lng}}.json`);
   });
   it("Has disabled escapeValue interpolation", () => {
     const { interpolation }: InitOptions = translationsOptions;

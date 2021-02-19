@@ -144,6 +144,7 @@ const setupConfig = (
           }),
         new DefinePlugin({
           "process.env.DEVELOPMENT": JSON.stringify(mode === "development"),
+          "process.env.PUBLIC_URL": JSON.stringify("./static"),
         }),
         new CompressionPlugin({
           filename: "[path][base].gz",
