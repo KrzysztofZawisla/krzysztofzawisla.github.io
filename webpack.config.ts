@@ -9,6 +9,7 @@ import {
   HotModuleReplacementPlugin,
   WebpackPluginInstance,
   optimize,
+  DefinePlugin,
 } from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -54,6 +55,10 @@ const setupConfig = (
       devtool: "source-map",
       module: {
         rules: [
+          {
+            test: /\.svg$/,
+            use: ["@svgr/webpack"],
+          },
           {
             test: /\.(js|mjs)$/,
             enforce: "pre",
@@ -122,6 +127,9 @@ const setupConfig = (
         outputModule: targetToModern,
       },
       plugins: ([
+        new DefinePlugin({
+          "process.env.DEVELOPMENT": JSON.stringify(mode === "development"),
+        }),
         new CompressionPlugin({
           filename: "[path][base].gz",
           test: /\.(js|mjs|css|html|svg)$/,
@@ -226,7 +234,11 @@ const setupConfig = (
         : undefined,
     };
   };
-  return [getConfig(true), getConfig(false)];
+  const config: Configuration[] = [getConfig(true)];
+  if (mode !== "development") {
+    config.push(getConfig(false));
+  }
+  return config;
 };
 
 export default setupConfig;

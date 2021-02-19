@@ -3,6 +3,13 @@ import { render } from "react-dom";
 import App from "./components/App/App";
 import initTranslations from "./other/translation/translation";
 
+if (process.env.DEVELOPMENT) {
+  const { getLCP, getFID, getCLS } = await import("web-vitals");
+  getLCP(console.log);
+  getFID(console.log);
+  getCLS(console.log);
+}
+
 const root: HTMLElement | null = document.querySelector("#root");
 
 const translation: i18n = await initTranslations();
