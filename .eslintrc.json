@@ -5,6 +5,7 @@
     "jest/globals": true
   },
   "extends": [
+    "plugin:testing-library/react",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -23,6 +24,7 @@
     "sourceType": "module"
   },
   "plugins": [
+    "testing-library",
     "react",
     "@typescript-eslint",
     "eslint-plugin-tsdoc",
