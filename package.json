@@ -7,7 +7,7 @@
     "lint": "eslint --fix -f unix \"src/**/*.{ts,tsx}\" && prettier --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "build": "tsc && cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack --config webpack.config.ts",
-    "build-dev": "tsc && cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack --config webpack.config.ts --mode development",
+    "build-dev": "yarn run build --mode development",
     "start": "serve -s dist",
     "publish": "gh-pages -b deploy -d dist",
     "watch": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack serve --config webpack.config.ts --mode development",
