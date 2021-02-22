@@ -165,7 +165,10 @@ const setupConfig = (
             minRatio: 0.8,
             deleteOriginalAssets: false,
           }),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+          dry: true,
+          dangerouslyAllowCleanPatternsOutsideProject: true,
+        }),
         mode !== "development" &&
           new BundleAnalyzerPlugin({
             openAnalyzer: false,
