@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = memo(createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +20,6 @@ const GlobalStyle = createGlobalStyle`
       color: #aaa;
     }
   }
-`;
+`);
 
 export default GlobalStyle;

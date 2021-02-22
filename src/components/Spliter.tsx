@@ -1,6 +1,7 @@
+import { memo } from "react";
 import styled from "styled-components";
 
-const Spliter = styled.div`
+const Spliter = memo(styled.div`
   background: linear-gradient(
     to right,
     #ffdc7d,
@@ -10,6 +11,6 @@ const Spliter = styled.div`
     #c32aa3
   );
   height: 1.75px;
-`;
+`);
 
 export default Spliter;

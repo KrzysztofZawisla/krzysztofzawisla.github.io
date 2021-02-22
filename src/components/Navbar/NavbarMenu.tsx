@@ -1,6 +1,7 @@
+import { memo } from "react";
 import styled from "styled-components";
 
-const NavbarMenu = styled.ul`
+const NavbarMenu = memo(styled.ul`
   position: absolute;
   top: 50%;
   padding-left: 10px;
@@ -8,6 +9,6 @@ const NavbarMenu = styled.ul`
   a {
     text-decoration: none;
   }
-`;
+`);
 
 export default NavbarMenu;

@@ -1,6 +1,7 @@
+import { memo } from "react";
 import styled from "styled-components";
 
-const FooterWrapper = styled.footer`
+const FooterWrapper = memo(styled.footer`
   background: $fff;
   text-align: center;
   position: relative;
@@ -10,6 +11,6 @@ const FooterWrapper = styled.footer`
     font-size: 22px;
     text-decoration: none;
   }
-`;
+`);
 
 export default FooterWrapper;
