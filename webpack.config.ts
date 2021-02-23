@@ -236,7 +236,7 @@ const setupConfig = (
           ],
           exclude: [/\.md$/],
           babelPresetEnvTargets: [babelTarget],
-          swDest: "./sw.js",
+          swDest: `../../sw-${targetToModern ? "modern" : "legacy"}.js`,
         }),
         new CaseSensitivePathsPlugin(),
         mode !== "development" &&

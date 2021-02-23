@@ -24,10 +24,10 @@ render(<App translation={translation} />, root);
 
 if ("serviceWorker" in navigator) {
   try {
-    registerServiceWorker("./src/modern/sw.js");
+    registerServiceWorker("./sw-modern.js");
   } catch {
     try {
-      registerServiceWorker("./src/legacy/sw.js");
+      registerServiceWorker("./sw-legacy.js");
     } catch {
       // eslint-disable-next-line no-console
       console.error("Can't install service worker");
