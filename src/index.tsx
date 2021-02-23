@@ -23,16 +23,14 @@ const translation: i18n = await initTranslations();
 render(<App translation={translation} />, root);
 
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+  try {
+    registerServiceWorker("./src/modern/sw.js");
+  } catch {
     try {
-      registerServiceWorker("./src/modern/sw.js");
+      registerServiceWorker("./src/legacy/sw.js");
     } catch {
-      try {
-        registerServiceWorker("./src/legacy/sw.js");
-      } catch {
-        // eslint-disable-next-line no-console
-        console.error("Can't install service worker");
-      }
+      // eslint-disable-next-line no-console
+      console.error("Can't install service worker");
     }
-  });
+  }
 }
