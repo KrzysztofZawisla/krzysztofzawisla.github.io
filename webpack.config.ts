@@ -224,6 +224,16 @@ const setupConfig = (
           extensions: ["ts", "tsx"],
         }),
         new GenerateSW({
+          cleanupOutdatedCaches: true,
+          sourcemap: true,
+          clientsClaim: true,
+          skipWaiting: true,
+          runtimeCaching: [
+            {
+              handler: "CacheFirst",
+              urlPattern: /.(?:png|jpg|jpeg|svg|html|js|mjs)$/,
+            },
+          ],
           exclude: [/\.md$/],
           babelPresetEnvTargets: [babelTarget],
           swDest: "./sw.js",
