@@ -1,7 +1,8 @@
 {
   "short_name": "Portfolio",
   "name": "Krzysztof Zawisła - Portfolio",
-  "start_url": "https://krzysztofzawisla.github.io/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#111",
   "background_color": "#fff",
