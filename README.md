@@ -17,6 +17,8 @@ yarn run
   update
   audit-ci
   audit
+  remove-build
+  build-and-publish
   build-and-start
   build-img
   start-img

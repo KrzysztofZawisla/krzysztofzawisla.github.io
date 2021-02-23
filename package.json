@@ -11,6 +11,7 @@
     "build-dev": "yarn run build --mode development",
     "start": "serve -s dist",
     "publish": "gh-pages -b deploy -d dist",
+    "build-and-publish": "yarn run build && yarn run publish",
     "watch": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack serve --config webpack.config.ts --mode development",
     "check": "ncu",
     "update": "ncu -u && yarn",
