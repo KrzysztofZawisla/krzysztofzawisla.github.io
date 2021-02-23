@@ -28,7 +28,7 @@ yarn run
 
 ## Lighthouse score
 
-![lighthouse score](https://i.imgur.com/vVZ7KWg.png)
+![lighthouse score](https://i.imgur.com/3tGS43F.png)
 
 ## Licenses
 
