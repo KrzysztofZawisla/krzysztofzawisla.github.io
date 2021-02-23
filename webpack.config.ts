@@ -24,23 +24,16 @@ import RobotstxtPlugin from "robotstxt-webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
 import InterpolateHtmlPlugin from "interpolate-html-plugin";
 import CompressionPlugin from "compression-webpack-plugin";
+import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
 
 const { AggressiveMergingPlugin } = optimize;
-
-const getEntryPoint = (targetToModern: boolean): string[] => {
-  const entryPoint: string[] = [path.join(__dirname, "src", "index.tsx")];
-  if (!targetToModern) {
-    entryPoint.unshift("babel-polyfill");
-  }
-  return entryPoint;
-};
 
 const setupConfig = (
   _environment: unknown,
   { mode }: { mode: string },
 ): Configuration[] => {
   const getConfig = (targetToModern: boolean): Configuration => {
-    const entryPoint = getEntryPoint(targetToModern);
+    const entryPoint: string = path.join(__dirname, "src", "index.tsx");
     const babelTarget: string = targetToModern
       ? "last 2 Chrome versions, last 2 Firefox versions"
       : "> 0.25%, not dead";
@@ -136,6 +129,7 @@ const setupConfig = (
         outputModule: targetToModern,
       },
       plugins: ([
+        new DuplicatePackageCheckerPlugin(),
         targetToModern &&
           new InterpolateHtmlPlugin({
             PUBLIC_URL: "./static",
