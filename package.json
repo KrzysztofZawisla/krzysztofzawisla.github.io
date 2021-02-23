@@ -50,7 +50,7 @@
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
+    "@testing-library/user-event": "^12.7.3",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.4",
     "@types/copy-webpack-plugin": "^6.4.0",
     "@types/i18next-xhr-backend": "^1.4.2",
@@ -140,6 +140,7 @@
     "react-i18next": "^11.8.7",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
-    "web-vitals": "^1.1.0"
+    "web-vitals": "^1.1.0",
+    "workbox-window": "^6.1.1"
   }
 }
