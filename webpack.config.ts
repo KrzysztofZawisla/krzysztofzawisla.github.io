@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
-/* eslint-disable @typescript-eslint/no-var-requires */
 ///<reference path="webpack.d.ts" />
 
 import path from "path";
