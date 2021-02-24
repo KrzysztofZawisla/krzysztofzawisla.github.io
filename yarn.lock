@@ -5376,10 +5376,10 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.0.0.tgz#024d661444319686c588c8849c8da33815dbdb1c"
-  integrity sha512-5EaAVPsIHu+grmm5WKjxUia4yHgRrbkd8I0ffqUSwixCPMVBrbS97UnzlEY/Q7OWo584vgixefM0kJnUfo/VjA==
+eslint-config-prettier@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
+  integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
 eslint-formatter-pretty@^4.0.0:
   version "4.0.0"
@@ -9085,10 +9085,10 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^11.1.8:
-  version "11.1.8"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.1.8.tgz#051dc26026446e8b592218dae8aa9a7e47673449"
-  integrity sha512-gybEBcquU0Ll/Y4CMOJPukFUx6QykctUbciO1tBLN2c1Xdz+1vo9BWEvL4jHFirEJQA6Jn0H4w7l/ciI7dFfTg==
+npm-check-updates@^11.1.9:
+  version "11.1.9"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.1.9.tgz#7b3a3e2a86b204f382ac24739258c653a191db77"
+  integrity sha512-Ztl5q785Hw+yiUUnlhN/lmrYdzDpH6Mopr0xtijb9t6ltS4RwkIU9qZXuYlOJtPyEXNdmEdmSc2NpfFFs/Nreg==
   dependencies:
     chalk "^4.1.0"
     cint "^8.2.1"
@@ -12731,10 +12731,10 @@ webpack@^5.1.0:
     watchpack "^2.0.0"
     webpack-sources "^2.1.1"
 
-webpack@^5.24.1:
-  version "5.24.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.24.1.tgz#6b7730bfba1ee94b05d05ef7c32743a35105a744"
-  integrity sha512-eg+6OIt6npUSwbhRQY6XffAixEUSARBf+WAWOxrZwOB4jRbbpMXlridFy/Yt7N0U20Ry1vp/nnDbtN7l1rUdIA==
+webpack@^5.24.2:
+  version "5.24.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.24.2.tgz#33790dad631e8b639f4246d762e257720875fe54"
+  integrity sha512-uxxKYEY4kMNjP+D2Y+8aw5Vd7ar4pMuKCNemxV26ysr1nk0YDiQTylg9U3VZIdkmI0YHa0uC8ABxL+uGxGWWJg==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.46"
