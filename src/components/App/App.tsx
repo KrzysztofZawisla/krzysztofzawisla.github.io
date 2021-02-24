@@ -17,7 +17,7 @@ import Navbar from "../Navbar/Navbar";
 import MainWrapper from "../MainWrapper";
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import Footer from "../Footer/Footer";
-import { useErrorBoundary } from "use-error-boundary";
+import { useErrorBoundary, UseErrorBoundaryState } from "use-error-boundary";
 import ErrorLoading from "../../pages/ErrorLoading";
 import {
   GlobalContextValues,
@@ -62,7 +62,7 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
   const [isMobileLocal, setIsMobileLocal]: IsMobileDispatcher = useState(
     isMobile,
   );
-  const { ErrorBoundary, didCatch } = useErrorBoundary();
+  const { ErrorBoundary, didCatch }: UseErrorBoundaryState = useErrorBoundary();
   const [
     isMenuOpenOnMobileLocal,
     setIsMenuOpenOnMobileLocal,
