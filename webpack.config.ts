@@ -25,6 +25,8 @@ import InterpolateHtmlPlugin from "interpolate-html-plugin";
 import MinifyJSONWebpackPlugin from "minify-json-webpack-plugin";
 import CompressionPlugin from "compression-webpack-plugin";
 import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
+import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
+import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
 
 const { AggressiveMergingPlugin } = optimize;
 
@@ -129,16 +131,24 @@ const setupConfig = (
         outputModule: targetToModern,
       },
       plugins: ([
+        targetToModern &&
+          new PreloadWebpackPlugin({
+            rel: "prefetch",
+          }),
+        targetToModern &&
+          new ScriptExtHtmlWebpackPlugin({
+            async: "index.mjs",
+            module: "index.mjs",
+          }),
         new DuplicatePackageCheckerPlugin(),
         targetToModern &&
           new InterpolateHtmlPlugin({
-            PUBLIC_URL: "./static",
-            MODERN_SCRIPT: "./src/modern/index.mjs",
-            LEGACY_SCRIPT: "./src/legacy/index.js",
+            PUBLIC_URL: "/static",
+            LEGACY_SCRIPT: "/src/legacy/index.js",
           }),
         new DefinePlugin({
           "process.env.DEVELOPMENT": JSON.stringify(mode === "development"),
-          "process.env.PUBLIC_URL": JSON.stringify("./static"),
+          "process.env.PUBLIC_URL": JSON.stringify("/static"),
           "process.env.MODERN": JSON.stringify(targetToModern),
         }),
         new CompressionPlugin({
@@ -196,8 +206,9 @@ const setupConfig = (
           new HtmlWebpackPlugin({
             template: path.join(__dirname, "public", "index.html"),
             filename: path.join(__dirname, "dist", "index.html"),
+            scriptLoading: "blocking",
             minify: mode !== "development",
-            inject: false,
+            inject: true,
           }),
         mode !== "development" &&
           targetToModern &&
