@@ -40,6 +40,10 @@
     },
     "aboutMe": {
       "heading": "O mnie"
+    },
+    "errorLoading": {
+      "heading": "Błąd ładowania",
+      "error": "Wystąpił błąd ładowania strony"
     }
   }
 }
