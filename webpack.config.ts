@@ -22,6 +22,7 @@ import { constants } from "zlib";
 import RobotstxtPlugin from "robotstxt-webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
 import InterpolateHtmlPlugin from "interpolate-html-plugin";
+import MinifyJSONWebpackPlugin from "minify-json-webpack-plugin";
 import CompressionPlugin from "compression-webpack-plugin";
 import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
 
@@ -245,6 +246,7 @@ const setupConfig = (
           mode === "development" &&
           new ReactRefreshWebpackPlugin(),
         new AggressiveMergingPlugin(),
+        new MinifyJSONWebpackPlugin(),
       ].filter(Boolean) as unknown) as WebpackPluginInstance[],
       devServer: targetToModern
         ? {
