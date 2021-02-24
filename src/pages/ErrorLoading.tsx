@@ -2,10 +2,10 @@ import { FC } from "react";
 import Page from "../components/Page";
 import Article from "../components/Article/Article";
 import Section from "../components/Section/Section";
-import { useTranslation } from "react-i18next";
+import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const ErrorLoading: FC = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t }: UseTranslationResponse<string> = useTranslation();
   const heading: string = t("pages.errorLoading.heading");
   return (
     <Page title={heading}>
