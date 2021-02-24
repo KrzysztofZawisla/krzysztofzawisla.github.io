@@ -41,6 +41,9 @@
     "aboutMe": {
       "heading": "About Me"
     },
+    "projects": {
+      "usedTechnologies": "Used technologies"
+    },
     "errorLoading": {
       "heading": "Loading error",
       "error": "Error has occurred during loading page"

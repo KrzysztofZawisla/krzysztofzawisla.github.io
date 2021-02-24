@@ -41,6 +41,9 @@
     "aboutMe": {
       "heading": "O mnie"
     },
+    "projects": {
+      "usedTechnologies": "Użyte technologie"
+    },
     "errorLoading": {
       "heading": "Błąd ładowania",
       "error": "Wystąpił błąd ładowania strony"

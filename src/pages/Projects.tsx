@@ -4,8 +4,11 @@ import Section from "../components/Section/Section";
 import Article from "../components/Article/Article";
 import Bold from "../components/Bold/Bold";
 import ExternalLink from "../components/ExternalLink";
+import { useTranslation } from "react-i18next";
 
 const Projects: FC = (): JSX.Element => {
+  const { t } = useTranslation();
+  const usedTechnologies = t("pages.projects.usedTechnologies");
   return (
     <Page title="Projects">
       <h1>Projects:</h1>
@@ -29,7 +32,7 @@ const Projects: FC = (): JSX.Element => {
         </Section>
         <div>
           <Bold>
-            Used technologies: TypeScript, React, React Context, Docker,
+            {usedTechnologies}: TypeScript, React, React Context, Docker,
             i18next, Styled-components, ThreeJS, Github Actions and many others.
           </Bold>
         </div>
@@ -42,8 +45,8 @@ const Projects: FC = (): JSX.Element => {
         </Section>
         <div>
           <Bold>
-            Used technologies: Golang, Rust, Rocket.rs, Gin-gonic, Redis, MySQL,
-            Docker, Github Actions and many others.
+            {usedTechnologies}: Golang, Rust, Rocket.rs, Gin-gonic, Redis,
+            MySQL, Docker, Github Actions and many others.
           </Bold>
         </div>
       </Article>
@@ -62,14 +65,14 @@ const Projects: FC = (): JSX.Element => {
         <h3>Front-end</h3>
         <div>
           <Bold>
-            Used technologies: Webpack, Babel, TypeScript, React, Docker,
+            {usedTechnologies}: Webpack, Babel, TypeScript, React, Docker,
             ESLint, Prettier, Github Actions, Husky and many others.
           </Bold>
         </div>
         <h3>Back-end</h3>
         <div>
           <Bold>
-            Used technologies: Webpack, Babel, ESLint, Prettier, TypeScript,
+            {usedTechnologies}: Webpack, Babel, ESLint, Prettier, TypeScript,
             Electron, Express, Rust, Neon-bindings, Docker, Github Actions,
             Husky and many others.
           </Bold>
@@ -84,9 +87,9 @@ const Projects: FC = (): JSX.Element => {
         <h3>Front-end</h3>
         <div>
           <Bold>
-            Used technologies: Webpack, Babel, TypeScript, React, React Context,
-            Styled-components, Docker, ESLint, Prettier, Github Actions, Husky,
-            JSDoc, TSDoc, i18next and many others.
+            {usedTechnologies}: Webpack, Babel, TypeScript, React, React
+            Context, Styled-components, Docker, ESLint, Prettier, Github
+            Actions, Husky, JSDoc, TSDoc, i18next and many others.
           </Bold>
         </div>
       </Article>
@@ -101,7 +104,7 @@ const Projects: FC = (): JSX.Element => {
         pisania kodu JavaScript i udostępnienie funkcji z standardowej
         biblioteki Golanga.
         <div>
-          <Bold>Used technologies: Golang, WebAssembly, TypeScript</Bold>
+          <Bold>{usedTechnologies}: Golang, WebAssembly, TypeScript</Bold>
         </div>
       </Article>
       <Article>
@@ -112,11 +115,11 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         <h3>Front-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, SCSS, Docker</Bold>
+          <Bold>{usedTechnologies}: JavaScript, SCSS, Docker</Bold>
         </div>
         <h3>Back-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, Electron, Docker, NeDB</Bold>
+          <Bold>{usedTechnologies}: JavaScript, Electron, Docker, NeDB</Bold>
         </div>
       </Article>
       <Article>
@@ -127,11 +130,11 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         <h3>Front-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, SCSS, Docker</Bold>
+          <Bold>{usedTechnologies}: JavaScript, SCSS, Docker</Bold>
         </div>
         <h3>Back-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, Electron, SoX</Bold>
+          <Bold>{usedTechnologies}: JavaScript, Electron, SoX</Bold>
         </div>
       </Article>
       <Article>
@@ -142,11 +145,11 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         <h3>Front-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, SCSS</Bold>
+          <Bold>{usedTechnologies}: JavaScript, SCSS</Bold>
         </div>
         <h3>Back-end</h3>
         <div>
-          <Bold>Used technologies: JavaScript, Electron</Bold>
+          <Bold>{usedTechnologies}: JavaScript, Electron</Bold>
         </div>
       </Article>
       <Article>
@@ -157,11 +160,11 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         <h3>Front-end</h3>
         <div>
-          <Bold>Used technologies: TypeScript, NextJS, Docker, Axios</Bold>
+          <Bold>{usedTechnologies}: TypeScript, NextJS, Docker, Axios</Bold>
         </div>
         <h3>Back-end</h3>
         <div>
-          <Bold>Used technologies: PHP, Simple HTML DOM</Bold>
+          <Bold>{usedTechnologies}: PHP, Simple HTML DOM</Bold>
         </div>
       </Article>
       <Article>
@@ -173,7 +176,7 @@ const Projects: FC = (): JSX.Element => {
         1KB biblioteka napisana do Electrona służąca przywracaniu rozmiaru okna
         przed jego zamknięciem.
         <div>
-          <Bold>Used technologies: TypeScript, Electron, NeDB</Bold>
+          <Bold>{usedTechnologies}: TypeScript, Electron, NeDB</Bold>
         </div>
       </Article>
       <Article>
@@ -185,7 +188,7 @@ const Projects: FC = (): JSX.Element => {
         Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
         Kompresor napisany w Pythonie.
         <div>
-          <Bold>Used technologies: Python, Brotli</Bold>
+          <Bold>{usedTechnologies}: Python, Brotli</Bold>
         </div>
       </Article>
       <Article>
@@ -197,7 +200,7 @@ const Projects: FC = (): JSX.Element => {
         Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
         Kompresor napisany w Golangu.
         <div>
-          <Bold>Used technologies: Golang, Brotli</Bold>
+          <Bold>{usedTechnologies}: Golang, Brotli</Bold>
         </div>
       </Article>
       <Article>
@@ -210,7 +213,7 @@ const Projects: FC = (): JSX.Element => {
         tablicy, które posiadają za duży levenshtein distance względem wyrazu do
         którego porównujemy listę. Biblioteka została napisana w Rustcie.
         <div>
-          <Bold>Used technologies: TypeScript, Rust, Neon-bindings</Bold>
+          <Bold>{usedTechnologies}: TypeScript, Rust, Neon-bindings</Bold>
         </div>
       </Article>
       <Article>
@@ -223,7 +226,7 @@ const Projects: FC = (): JSX.Element => {
         tablicy, które posiadają za duży levenshtein distance względem wyrazu do
         którego porównujemy listę. Biblioteka została napisana w Rustcie.
         <div>
-          <Bold>Used technologies: PyO3, Rust</Bold>
+          <Bold>{usedTechnologies}: PyO3, Rust</Bold>
         </div>
       </Article>
       <Article>
@@ -235,7 +238,7 @@ const Projects: FC = (): JSX.Element => {
         Biblioteka udostępniająca do Pythona proste i szybkie logger API.
         Biblioteka została napisana w Rustcie.
         <div>
-          <Bold>Used technologies: PyO3, Rust</Bold>
+          <Bold>{usedTechnologies}: PyO3, Rust</Bold>
         </div>
       </Article>
       <Article>
@@ -247,7 +250,7 @@ const Projects: FC = (): JSX.Element => {
         Biblioteka udostępniająca do NodeJS proste i szybkie logger API.
         Biblioteka została napisana w Rustcie.
         <div>
-          <Bold>Used technologies: TypeScript, Rust, Neon-bindings</Bold>
+          <Bold>{usedTechnologies}: TypeScript, Rust, Neon-bindings</Bold>
         </div>
       </Article>
       <Article>
@@ -258,7 +261,7 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         Mocno ograniczony aktualizator aplikacji napisany w Rustcie.
         <div>
-          <Bold>Used technologies: Rust</Bold>
+          <Bold>{usedTechnologies}: Rust</Bold>
         </div>
       </Article>
       <Article>
@@ -269,7 +272,7 @@ const Projects: FC = (): JSX.Element => {
         </h2>
         Przestarzały downloader do filmów z YouTube napisany w Pythonie.
         <div>
-          <Bold>Used technologies: Python, ffmpeg, pytube</Bold>
+          <Bold>{usedTechnologies}: Python, ffmpeg, pytube</Bold>
         </div>
       </Article>
     </Page>
