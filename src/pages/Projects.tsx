@@ -112,6 +112,8 @@ const Projects: FC = (): JSX.Element => {
           <ExternalLink href="https://github.com/KrzysztofZawisla/SnowyMonitor">
             SnowyMonitor
           </ExternalLink>
+          Aplikacja desktopowa napisana w Electronie do sprawdzania informacji
+          na temat podzespołów komputera oraz wersji oprogramowania.
         </h2>
         <h3>Front-end</h3>
         <div>
@@ -127,6 +129,7 @@ const Projects: FC = (): JSX.Element => {
           <ExternalLink href="https://github.com/KrzysztofZawisla/SnowyRecorder">
             SnowyRecorder
           </ExternalLink>
+          Prosty widżet napisany w Electronie do nagrywania głosu.
         </h2>
         <h3>Front-end</h3>
         <div>
@@ -142,6 +145,7 @@ const Projects: FC = (): JSX.Element => {
           <ExternalLink href="https://github.com/KrzysztofZawisla/SnowyTicTacToe">
             SnowyTicTacToe
           </ExternalLink>
+          Prosty widżet napisany w Electronie do gry w kółko i krzyżyk.
         </h2>
         <h3>Front-end</h3>
         <div>
@@ -157,6 +161,7 @@ const Projects: FC = (): JSX.Element => {
           <ExternalLink href="https://github.com/KrzysztofZawisla/PlanLekcjiZSBNextJS">
             PlanLekcjiZSB
           </ExternalLink>
+          Strona internetowa z lepiej prezentującym się wizualnie planem lekcji.
         </h2>
         <h3>Front-end</h3>
         <div>
