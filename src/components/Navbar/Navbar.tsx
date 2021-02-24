@@ -37,7 +37,7 @@ const Navbar: FC = (): JSX.Element => {
         isMenuOpenOnMobile={isMenuOpenOnMobile}
         ref={NavbarReference}
         onClick={() => {
-          setIsMenuOpenOnMobile(!isMenuOpenOnMobile);
+          isMobile && setIsMenuOpenOnMobile(!isMenuOpenOnMobile);
         }}
       >
         <NavbarSpliter />

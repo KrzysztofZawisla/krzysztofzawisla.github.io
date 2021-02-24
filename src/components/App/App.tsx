@@ -70,6 +70,7 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
   useEffect(() => {
     const resizeHandler = (): void => {
       const isMobile: boolean = window.innerWidth < 768 ? true : false;
+      !isMobile && setIsMenuOpenOnMobileLocal(false);
       setIsMobileLocal(isMobile);
     };
     const resizeLinstenerHandler = debounce(resizeHandler, 25);
