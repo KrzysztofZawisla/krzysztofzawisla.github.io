@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint --fix -f unix \"src/**/*.{ts,tsx}\" && prettier --write \"src/**/*.{ts,tsx}\"",
     "test": "jest",
+    "clean-yarn-cache": "yarn cache clean",
     "remove-build": "rimraf dist",
     "build": "tsc && yarn run remove-build && cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack --config webpack.config.ts",
     "build-dev": "yarn run build --mode development",
