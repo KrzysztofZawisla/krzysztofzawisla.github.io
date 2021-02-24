@@ -21,7 +21,14 @@ const AboutMe: FC = (): JSX.Element => {
           height="100px"
           width="100px"
         />
-        <Section>123</Section>
+        <Section>
+          Jestem 19-letnim programistą, który specjalizuje się w wielu
+          przyszłościowych technologiach. Programuje od 3 gimnazjum, a główne
+          języki programowania, jakie mnie interesują to TypeScript oraz Rust.
+          Nie skupiam się na jednym odłamie związanym z programowanie.
+          Interesuje mnie zarówno praca z front-endem stron jak i budową wysoko
+          skalownego serwera czy pisanie obrazów dockerowych.
+        </Section>
       </Article>
     </Page>
   );

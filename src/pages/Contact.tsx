@@ -22,6 +22,15 @@ const Contact: FC = (): JSX.Element => {
       <Article>
         <Section>
           <h3>
+            <ExternalLink href="https://www.linkedin.com/in/krzysztof-zawis%C5%82a-520a06199/">
+              LinkedIn
+            </ExternalLink>
+          </h3>
+        </Section>
+      </Article>
+      <Article>
+        <Section>
+          <h3>
             <ExternalLink href="https://twitter.com/Krzysztof_zaw">
               Twitter
             </ExternalLink>

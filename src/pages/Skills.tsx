@@ -53,7 +53,7 @@ const Skills: FC = (): JSX.Element => {
       <Article>
         <h2>{t("pages.skills.versionControlSystemsAndContainerization")}:</h2>
         <h3>Advanced:</h3>
-        <Section>Docker</Section>
+        <Section>Docker, Podman</Section>
         <h3>Regular:</h3>
         <Section>Git, Github, Gitlab, Github Actions</Section>
       </Article>
@@ -72,7 +72,8 @@ const Skills: FC = (): JSX.Element => {
         <Section>Gin-gonic, WebAssembly{` ${andManyOther}`}.</Section>
         <h3>Rust ecosystem:</h3>
         <Section>
-          PyO3, Neon-bindings, Rocket.rs, Yew, Diesel, WebAssembly
+          PyO3, Neon-bindings, Rocket.rs, Yew, Diesel, Tokio, wasm-pack,
+          WebAssembly
           {` ${andManyOther}`}.
         </Section>
       </Article>
