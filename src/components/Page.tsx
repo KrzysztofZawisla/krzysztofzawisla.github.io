@@ -19,7 +19,12 @@ const Page: FC<PageProperties> = ({
   }`;
   return (
     <>
-      <Helmet htmlAttributes={{ lang: language }}>
+      <Helmet
+        htmlAttributes={{
+          lang: language,
+          translate: language === ("pl" || "en") ? "no" : "yes",
+        }}
+      >
         <title>{fixedTitle}</title>
         <meta name="og:title" content={fixedTitle} />
       </Helmet>
