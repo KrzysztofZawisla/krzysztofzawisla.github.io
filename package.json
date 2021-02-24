@@ -141,6 +141,7 @@
     "react-i18next": "^11.8.8",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
+    "use-error-boundary": "^2.0.4",
     "web-vitals": "^1.1.0",
     "workbox-window": "^6.1.1"
   }

@@ -17,6 +17,8 @@ import Navbar from "../Navbar/Navbar";
 import MainWrapper from "../MainWrapper";
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import Footer from "../Footer/Footer";
+import { useErrorBoundary } from "use-error-boundary";
+import ErrorLoading from "../../pages/ErrorLoading";
 import {
   GlobalContextValues,
   initialGlobalStoreValue,
@@ -60,6 +62,7 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
   const [isMobileLocal, setIsMobileLocal]: IsMobileDispatcher = useState(
     isMobile,
   );
+  const { ErrorBoundary, didCatch } = useErrorBoundary();
   const [
     isMenuOpenOnMobileLocal,
     setIsMenuOpenOnMobileLocal,
@@ -105,15 +108,25 @@ const App: FC<AppProperties> = ({ translation }): JSX.Element => {
               <Navbar />
               <div onClick={() => setIsMenuOpenOnMobileLocal(false)}>
                 <MainWrapper>
-                  <Suspense fallback={<></>}>
-                    <Switch>
-                      <Route exact path="/" component={AboutMe} />
-                      <Route exact path="/projects" component={Projects} />
-                      <Route exact path="/skills" component={Skills} />
-                      <Route exact path="/experience" component={Experience} />
-                      <Route exact path="/contact" component={Contact} />
-                    </Switch>
-                  </Suspense>
+                  {didCatch ? (
+                    <ErrorLoading />
+                  ) : (
+                    <ErrorBoundary>
+                      <Suspense fallback={<></>}>
+                        <Switch>
+                          <Route exact path="/" component={AboutMe} />
+                          <Route exact path="/projects" component={Projects} />
+                          <Route exact path="/skills" component={Skills} />
+                          <Route
+                            exact
+                            path="/experience"
+                            component={Experience}
+                          />
+                          <Route exact path="/contact" component={Contact} />
+                        </Switch>
+                      </Suspense>
+                    </ErrorBoundary>
+                  )}
                 </MainWrapper>
                 <Footer />
               </div>
