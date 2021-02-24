@@ -36,18 +36,18 @@ const Skills: FC = (): JSX.Element => {
       </Article>
       <Article>
         <h2>{t("pages.skills.runtimesAndImplementations")}:</h2>
-        <h4>Advanced:</h4>
+        <h3>Advanced:</h3>
         <Section>NodeJS</Section>
-        <h4>Regular:</h4>
+        <h3>Regular:</h3>
         <Section>PyPy</Section>
-        <h4>Junior:</h4>
+        <h3>Junior:</h3>
         <Section>Deno</Section>
       </Article>
       <Article>
         <h2>{t("pages.skills.descriptiveLanguages")}:</h2>
-        <h4>Advanced:</h4>
+        <h3>Advanced:</h3>
         <Section>HTML5</Section>
-        <h4>Regular:</h4>
+        <h3>Regular:</h3>
         <Section>SCSS, Less, CSS3, Markdown</Section>
       </Article>
       <Article>
