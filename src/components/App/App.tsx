@@ -29,11 +29,9 @@ import {
 } from "../../contexts/globalContext";
 import { debounce } from "lodash";
 import { i18n } from "i18next";
+import AboutMe from "../../pages/AboutMe";
 import { I18nextProvider } from "react-i18next";
 
-const AboutMe: LazyExoticComponent<FC> = lazy(
-  () => import("../../pages/AboutMe"),
-);
 const Projects: LazyExoticComponent<FC> = lazy(
   () => import("../../pages/Projects"),
 );
