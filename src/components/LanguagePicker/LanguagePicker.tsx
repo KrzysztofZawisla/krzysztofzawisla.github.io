@@ -1,4 +1,11 @@
-import { FC, useContext, useEffect, useRef, useState } from "react";
+import {
+  FC,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import LanguagePickerWrapper from "./LanguagePickerWrapper";
 import GlobalContext from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
@@ -20,18 +27,16 @@ const LanguagePicker: FC = (): JSX.Element => {
     setLanguage(setEnglish ? "en" : "pl");
   };
   const { t } = useTranslation();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const getChildElementCount = (): void => {
+  const getChildElementCount = useCallback((): void => {
     if (languagePickerWrapperReference.current !== null) {
       setChildElementCount(
         ((languagePickerWrapperReference.current as unknown) as HTMLElement)
           .childElementCount - 1,
       );
     } else {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       setTimeout(getChildElementCount, 10);
     }
-  };
+  }, []);
   useEffect(() => {
     getChildElementCount();
   }, [getChildElementCount]);
