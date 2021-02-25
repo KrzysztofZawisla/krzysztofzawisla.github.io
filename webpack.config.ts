@@ -102,6 +102,7 @@ const setupConfig = (
                         ssr: false,
                         displayName: mode === "development",
                         minify: mode !== "development",
+                        pure: true,
                       },
                     ],
                     "@babel/plugin-syntax-top-level-await",
