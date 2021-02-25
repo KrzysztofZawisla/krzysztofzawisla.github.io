@@ -15,9 +15,6 @@ const LanguagePickerWrapper = styled.div<LanguagePickerWrapperProperties>`
   align-items: center;
   flex-direction: column-reverse;
   > img {
-    border-radius: 100%;
-    border: solid 1px #eee;
-    position: relative;
     &:first-child {
       z-index: 1;
     }

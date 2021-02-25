@@ -1,8 +1,8 @@
 import { FC, useContext, useEffect, useRef, useState } from "react";
 import LanguagePickerWrapper from "./LanguagePickerWrapper";
-import { CircleFlag } from "react-circle-flags";
 import GlobalContext from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
+import Flag from "../Flag";
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 const LanguagePicker: FC = (): JSX.Element => {
@@ -50,12 +50,10 @@ const LanguagePicker: FC = (): JSX.Element => {
       }}
       numberOfNotMainFlags={childElementCount}
     >
-      <CircleFlag
-        countryCode={isEnglish ? "gb" : "pl"}
-        height="50px"
-        width="50px"
-        loading="lazy"
+      <Flag
         onClick={() => setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen)}
+        loading="lazy"
+        src={`${process.env.PUBLIC_URL}/images/${isEnglish ? "gb" : "pl"}.svg`}
         onMouseEnter={() => {
           setIsMouseOverLanguageMenu(true);
           !isMobile && setIsMenuOpenOnMobileLocal(true);
@@ -65,12 +63,14 @@ const LanguagePicker: FC = (): JSX.Element => {
         )}
         title={t(`languageSelector.${isMobile ? "clickTip" : "hoverTip"}`)}
       />
-      <CircleFlag
-        countryCode={isEnglish ? "pl" : "gb"}
+      <Flag
         onClick={() => changeLanguage(isEnglish ? false : true)}
-        height="50px"
-        width="50px"
         loading="lazy"
+        src={`${process.env.PUBLIC_URL}/images/${isEnglish ? "pl" : "gb"}.svg`}
+        onMouseEnter={() => {
+          setIsMouseOverLanguageMenu(true);
+          !isMobile && setIsMenuOpenOnMobileLocal(true);
+        }}
         title={t(
           `languageSelector.${
             isEnglish ? "changeToPolish" : "changeToEnglish"

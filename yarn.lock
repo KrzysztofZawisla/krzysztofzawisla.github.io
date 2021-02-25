@@ -10219,11 +10219,6 @@ react-ace@^6.5.0:
     lodash.isequal "^4.5.0"
     prop-types "^15.7.2"
 
-react-circle-flags@0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/react-circle-flags/-/react-circle-flags-0.0.11.tgz#01eab585409c3bec8d7e4770b25efe8a3aed6e57"
-  integrity sha512-gT2GFOzPR8ZvnhhgbrrSUvN47oGqIMeQtxzTd4v7FBD3rO/gEyXoemWWSgr19SBNFgmncNdimkobTUFgfnns7Q==
-
 react-docgen@^5.3.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-5.3.1.tgz#940b519646a6c285c2950b96512aed59e8f90934"

@@ -33,3 +33,5 @@ yarn run
 ## Licenses
 
 Information about used packages and their license you can find under this path src/(modern|legacy)/index.(mjs|js).LICENSE.txt on deploy branch.
+
+Flags used on website: <https://github.com/HatScripts/circle-flags>
