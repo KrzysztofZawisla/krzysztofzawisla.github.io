@@ -97,8 +97,12 @@ const setupConfig = (
                   plugins: [
                     "lodash",
                     [
-                      "styled-components",
-                      { ssr: false, displayName: mode === "development" },
+                      "babel-plugin-styled-components",
+                      {
+                        ssr: false,
+                        displayName: mode === "development",
+                        minify: mode !== "development",
+                      },
                     ],
                     "@babel/plugin-syntax-top-level-await",
                     targetToModern &&

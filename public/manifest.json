@@ -42,7 +42,7 @@
     "type": "image/png",
     "purpose": "any maskable"
   }, {
-    "src": "/images/fav_512.png",
+    "src": "/static/images/fav_512.png",
     "sizes": "512x512",
     "type": "image/png"
   }]
