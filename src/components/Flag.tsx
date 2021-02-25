@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 const Flag = memo(styled.img`
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;

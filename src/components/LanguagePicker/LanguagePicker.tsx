@@ -58,6 +58,8 @@ const LanguagePicker: FC = (): JSX.Element => {
       <Flag
         onClick={() => setIsMenuOpenOnMobileLocal(!isLanguageMenuOpen)}
         loading="lazy"
+        width="50px"
+        height="50px"
         src={`${process.env.PUBLIC_URL}/images/${isEnglish ? "gb" : "pl"}.svg`}
         onMouseEnter={() => {
           setIsMouseOverLanguageMenu(true);
@@ -71,6 +73,8 @@ const LanguagePicker: FC = (): JSX.Element => {
       <Flag
         onClick={() => changeLanguage(isEnglish ? false : true)}
         loading="lazy"
+        width="50px"
+        height="50px"
         src={`${process.env.PUBLIC_URL}/images/${isEnglish ? "pl" : "gb"}.svg`}
         onMouseEnter={() => {
           setIsMouseOverLanguageMenu(true);
