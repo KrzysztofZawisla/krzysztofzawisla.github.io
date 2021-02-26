@@ -40,7 +40,9 @@
     }
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", {
+      "endOfLine": "auto"
+    }],
     "@typescript-eslint/no-inferrable-types": "off",
     "no-invalid-this": "error",
     "react/react-in-jsx-scope": "off",
