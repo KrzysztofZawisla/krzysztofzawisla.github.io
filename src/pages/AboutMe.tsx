@@ -16,7 +16,7 @@ const AboutMe: FC = (): JSX.Element => {
         <ProfilePicture
           title="Krzysztof Zawisła"
           alt="Krzysztof Zawisła"
-          src="https://avatars0.githubusercontent.com/u/32432944?s=460&v=4"
+          src="https://avatars0.githubusercontent.com/u/32432944?s=100&v=4"
           loading="lazy"
           height="100px"
           width="100px"
