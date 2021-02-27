@@ -9,7 +9,7 @@ import {
 import LanguagePickerWrapper from "./LanguagePickerWrapper";
 import GlobalContext from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
-import Flag from "../Flag";
+import Flag from "../Flag/Flag";
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 const LanguagePicker: FC = (): JSX.Element => {
