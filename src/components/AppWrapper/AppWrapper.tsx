@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import {
   FC,
   Suspense,
@@ -52,8 +53,6 @@ const AppWrapper: FC = (): JSX.Element => {
           handleMenuClose(event, setIsMenuOpenOnMobile)
         }
         onClick={() => setIsMenuOpenOnMobile(false)}
-        role="button"
-        tabIndex={0}
       >
         <MainWrapper>
           {didCatch ? (
