@@ -1,6 +1,7 @@
-import Article from "./Article";
+import Article, { ArticleType } from "./Article";
 import { render, cleanup, RenderResult } from "@testing-library/react";
 import { ReactElement } from "react";
+import { expectType } from "tsd";
 
 afterEach(cleanup);
 
@@ -11,5 +12,8 @@ describe("Article", (): void => {
   it("renders component properly", async (): Promise<void> => {
     const { container }: RenderResult = render(TestComponent);
     expect(container).toMatchSnapshot();
+  });
+  it("Has correct type", () => {
+    expectType<ArticleType>(Article);
   });
 });

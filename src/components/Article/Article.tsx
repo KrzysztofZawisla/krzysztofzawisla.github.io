@@ -1,7 +1,12 @@
-import { memo } from "react";
-import styled from "styled-components";
+import { memo, MemoExoticComponent } from "react";
+import styled, { StyledComponent } from "styled-components";
 
-const Article = memo(styled.article`
+export type ArticleType = MemoExoticComponent<
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  StyledComponent<"article", never, {}, never>
+>;
+
+const Article: ArticleType = memo(styled.article`
   background: #eee;
   padding: 7.5px;
   border-radius: 7.5px;

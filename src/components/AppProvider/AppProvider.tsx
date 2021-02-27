@@ -13,7 +13,7 @@ import { I18nextProvider } from "react-i18next";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
-interface AppProviderProperties {
+export interface AppProviderProperties {
   children: ReactNode;
   translation: i18n;
 }

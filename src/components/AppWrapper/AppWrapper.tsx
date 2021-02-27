@@ -52,7 +52,7 @@ const AppWrapper: FC = (): JSX.Element => {
         onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) =>
           handleMenuClose(event, setIsMenuOpenOnMobile)
         }
-        onClick={() => setIsMenuOpenOnMobile(false)}
+        onClick={(): void => setIsMenuOpenOnMobile(false)}
       >
         <MainWrapper>
           {didCatch ? (
