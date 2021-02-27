@@ -1,5 +1,5 @@
 import { FC, memo, MemoExoticComponent } from "react";
-import Spliter from "../Spliter";
+import Spliter from "../Spliter/Spliter";
 import FooterWrapper from "../FooterWrapper/FooterWrapper";
 
 // eslint-disable-next-line react/display-name
