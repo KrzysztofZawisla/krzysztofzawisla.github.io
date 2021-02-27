@@ -43,6 +43,9 @@
     "prettier/prettier": ["error", {
       "endOfLine": "auto"
     }],
+    "jsx-a11y/aria-role": [2, {
+      "ignoreNonDOM": true
+    }],
     "@typescript-eslint/no-inferrable-types": "off",
     "no-invalid-this": "error",
     "react/react-in-jsx-scope": "off",

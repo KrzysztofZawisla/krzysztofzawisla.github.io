@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Page from "../components/Page";
-import Article from "../components/Article/Article";
-import Section from "../components/Section/Section";
+import Page from "../../components/Page";
+import Article from "../../components/Article/Article";
+import Section from "../../components/Section/Section";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const ErrorLoading: FC = (): JSX.Element => {

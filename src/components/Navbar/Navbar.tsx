@@ -1,6 +1,9 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import { FC, useContext, useRef } from "react";
+import {
+  FC,
+  useContext,
+  useRef,
+  KeyboardEvent as ReactKeyboardEvent,
+} from "react";
 import { Link } from "react-router-dom";
 import NavbarSpliter from "./NavbarSpliter";
 import NavbarWrapper from "./NavbarWrapper";
@@ -13,6 +16,7 @@ import GlobalContext, {
   IsMobileDispatcher,
 } from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
+import handleMenuClose from "../../other/handleMenuClose";
 
 const Navbar: FC = (): JSX.Element => {
   const {
@@ -39,6 +43,11 @@ const Navbar: FC = (): JSX.Element => {
         onClick={() => {
           isMobile && setIsMenuOpenOnMobile(!isMenuOpenOnMobile);
         }}
+        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) =>
+          handleMenuClose(event, setIsMenuOpenOnMobile)
+        }
+        role="nav"
+        tabIndex={0}
       >
         <NavbarSpliter />
         <NavbarTitle>Menu</NavbarTitle>

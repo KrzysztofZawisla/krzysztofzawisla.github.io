@@ -1,14 +1,14 @@
 import { FC } from "react";
-import Page from "../components/Page";
-import Section from "../components/Section/Section";
-import Article from "../components/Article/Article";
-import Bold from "../components/Bold/Bold";
-import ExternalLink from "../components/ExternalLink";
-import { useTranslation } from "react-i18next";
+import Page from "../../components/Page";
+import Section from "../../components/Section/Section";
+import Article from "../../components/Article/Article";
+import Bold from "../../components/Bold/Bold";
+import ExternalLink from "../../components/ExternalLink";
+import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const Projects: FC = (): JSX.Element => {
-  const { t } = useTranslation();
-  const usedTechnologies = t("pages.projects.usedTechnologies");
+  const { t }: UseTranslationResponse<string> = useTranslation();
+  const usedTechnologies: string = t("pages.projects.usedTechnologies");
   return (
     <Page title="Projects">
       <h1>Projects:</h1>

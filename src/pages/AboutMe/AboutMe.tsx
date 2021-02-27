@@ -1,12 +1,12 @@
 import { FC } from "react";
-import Page from "../components/Page";
-import ProfilePicture from "../components/ProfilePicture/ProfilePicture";
-import Article from "../components/Article/Article";
-import Section from "../components/Section/Section";
-import { useTranslation } from "react-i18next";
+import Page from "../../components/Page";
+import ProfilePicture from "../../components/ProfilePicture/ProfilePicture";
+import Article from "../../components/Article/Article";
+import Section from "../../components/Section/Section";
+import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const AboutMe: FC = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t }: UseTranslationResponse<string> = useTranslation();
   const heading: string = t("pages.aboutMe.heading");
   return (
     <Page title={heading}>
