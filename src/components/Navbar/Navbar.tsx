@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/tabindex-no-positive */
 import {
   FC,
   useContext,
@@ -43,9 +44,10 @@ const Navbar: FC = (): JSX.Element => {
         onClick={() => {
           isMobile && setIsMenuOpenOnMobile(!isMenuOpenOnMobile);
         }}
-        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) =>
-          handleMenuClose(event, setIsMenuOpenOnMobile)
-        }
+        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) => {
+          handleMenuClose(event, setIsMenuOpenOnMobile);
+        }}
+        tabIndex={1}
       >
         <NavbarSpliter />
         <NavbarTitle>Menu</NavbarTitle>

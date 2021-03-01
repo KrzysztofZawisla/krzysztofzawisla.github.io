@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import {
   FC,
@@ -49,9 +50,10 @@ const AppWrapper: FC = (): JSX.Element => {
       <GlobalStyle />
       <Navbar />
       <div
-        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) =>
-          handleMenuClose(event, setIsMenuOpenOnMobile)
-        }
+        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) => {
+          handleMenuClose(event, setIsMenuOpenOnMobile);
+        }}
+        tabIndex={0}
         onClick={(): void => setIsMenuOpenOnMobile(false)}
       >
         <MainWrapper>
