@@ -47,7 +47,7 @@ const Navbar: FC = (): JSX.Element => {
         onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) => {
           handleMenuClose(event, setIsMenuOpenOnMobile);
         }}
-        tabIndex={1}
+        tabIndex={0}
       >
         <NavbarSpliter />
         <NavbarTitle>Menu</NavbarTitle>
