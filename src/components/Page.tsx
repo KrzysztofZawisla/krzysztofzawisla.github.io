@@ -1,6 +1,9 @@
 import { FC, ReactNode, useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import GlobalContext from "../contexts/globalContext";
+import GlobalContext, {
+  GlobalContextCompleteValues,
+  LanguageDispatcher,
+} from "../contexts/globalContext";
 import Wrapper from "./Wrapper/Wrapper";
 
 interface PageProperties {
@@ -12,8 +15,10 @@ const Page: FC<PageProperties> = ({
   title,
   children,
 }: PageProperties): JSX.Element => {
-  const { languageDispatcher } = useContext(GlobalContext);
-  const [language] = languageDispatcher;
+  const { languageDispatcher }: GlobalContextCompleteValues = useContext(
+    GlobalContext,
+  );
+  const [language]: LanguageDispatcher = languageDispatcher;
   const fixedTitle: string = `Krzysztof Zawisła${
     title !== "" ? ` - ${title}` : ""
   }`;
