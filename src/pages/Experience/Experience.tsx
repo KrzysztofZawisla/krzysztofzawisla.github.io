@@ -3,7 +3,7 @@ import Page from "../../components/Page";
 import Article from "../../components/Article/Article";
 import Section from "../../components/Section/Section";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
-import ExternalLink from "../../components/ExternalLink";
+import ExternalLink from "../../components/ExternalLink/ExternalLink";
 
 const Experience: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();

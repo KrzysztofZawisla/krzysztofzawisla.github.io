@@ -18,7 +18,7 @@ import handleMenuClose from "../../other/handleMenuClose";
 import AboutMe from "../../pages/AboutMe/AboutMe";
 import ErrorLoading from "../../pages/ErrorLoading/ErrorLoading";
 import Footer from "../Footer/Footer";
-import GlobalStyle from "../GlobalStyle";
+import GlobalStyle from "../GlobalStyle/GlobalStyle";
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import MainWrapper from "../MainWrapper";
 import Navbar from "../Navbar/Navbar";

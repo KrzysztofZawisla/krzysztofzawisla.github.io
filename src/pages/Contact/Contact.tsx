@@ -3,7 +3,7 @@ import { useTranslation, UseTranslationResponse } from "react-i18next";
 import Page from "../../components/Page";
 import Article from "../../components/Article/Article";
 import Section from "../../components/Section/Section";
-import ExternalLink from "../../components/ExternalLink";
+import ExternalLink from "../../components/ExternalLink/ExternalLink";
 
 const Contact: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();

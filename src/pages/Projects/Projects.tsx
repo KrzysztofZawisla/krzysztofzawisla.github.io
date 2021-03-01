@@ -3,7 +3,7 @@ import Page from "../../components/Page";
 import Section from "../../components/Section/Section";
 import Article from "../../components/Article/Article";
 import Bold from "../../components/Bold/Bold";
-import ExternalLink from "../../components/ExternalLink";
+import ExternalLink from "../../components/ExternalLink/ExternalLink";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const Projects: FC = (): JSX.Element => {

@@ -1,7 +1,15 @@
-import { memo } from "react";
-import { createGlobalStyle } from "styled-components";
+import { memo, MemoExoticComponent } from "react";
+import {
+  createGlobalStyle,
+  DefaultTheme,
+  GlobalStyleComponent,
+} from "styled-components";
 
-const GlobalStyle = memo(createGlobalStyle`
+export type GlobalStyleType = MemoExoticComponent<
+  GlobalStyleComponent<unknown, DefaultTheme>
+>;
+
+const GlobalStyle: GlobalStyleType = memo(createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
