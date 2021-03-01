@@ -1,11 +1,18 @@
-import styled, { css } from "styled-components";
+import styled, { css, StyledComponent } from "styled-components";
 
 interface LanguagePickerWrapperProperties {
   isLanguageMenuOpen: boolean;
   numberOfNotMainFlags: number;
 }
 
-const LanguagePickerWrapper = styled.div<LanguagePickerWrapperProperties>`
+export type LanguagePickerWrapperType = StyledComponent<
+  "div",
+  never,
+  LanguagePickerWrapperProperties,
+  never
+>;
+
+const LanguagePickerWrapper: LanguagePickerWrapperType = styled.div<LanguagePickerWrapperProperties>`
   position: fixed;
   bottom: 25px;
   right: 25px;

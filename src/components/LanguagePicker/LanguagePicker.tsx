@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
-import LanguagePickerWrapper from "./LanguagePickerWrapper";
+import LanguagePickerWrapper from "../LanguagePickerWrapper/LanguagePickerWrapper";
 import GlobalContext from "../../contexts/globalContext";
 import { useTranslation } from "react-i18next";
 import Flag from "../Flag/Flag";
