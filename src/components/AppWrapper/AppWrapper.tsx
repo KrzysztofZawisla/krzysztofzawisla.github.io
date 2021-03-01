@@ -20,7 +20,7 @@ import ErrorLoading from "../../pages/ErrorLoading/ErrorLoading";
 import Footer from "../Footer/Footer";
 import GlobalStyle from "../GlobalStyle/GlobalStyle";
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
-import MainWrapper from "../MainWrapper";
+import MainWrapper from "../MainWrapper/MainWrapper";
 import Navbar from "../Navbar/Navbar";
 
 const Projects: LazyExoticComponent<FC> = lazy(
