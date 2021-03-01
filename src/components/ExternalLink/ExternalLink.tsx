@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
 
-interface ExternalLinkProperties
+export interface ExternalLinkProperties
   extends DetailedHTMLProps<
     AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
