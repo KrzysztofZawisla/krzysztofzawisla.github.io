@@ -23,7 +23,11 @@
     "build-img": "docker build . -t portfolio",
     "start-img": "docker run -p 5000:5000 portfolio",
     "build-dev-img": "docker build . -t portfolio-dev -f Dockerfile.dev",
-    "start-dev-img": "docker run -p 5000:5000 -it portfolio-dev"
+    "start-dev-img": "docker run -p 5000:5000 -it portfolio-dev",
+    "build-img-podman": "podman build . -t portfolio",
+    "start-img-podman": "podman run -p 5000:5000 portfolio",
+    "build-dev-img-podman": "podman build . -t portfolio-dev -f Dockerfile.dev",
+    "start-dev-img-podman": "podman run -p 5000:5000 -it portfolio-dev"
   },
   "repository": {
     "type": "git",
