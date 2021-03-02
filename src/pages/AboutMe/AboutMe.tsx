@@ -12,7 +12,7 @@ const AboutMe: FC = (): JSX.Element => {
     <Page title={heading}>
       <h2>{heading}:</h2>
       <Article>
-        <h3>Who am I?</h3>
+        <h3>{t("pages.aboutMe.whoAmI.heading")}</h3>
         <ProfilePicture
           title="Krzysztof Zawisła"
           alt="Krzysztof Zawisła"
@@ -21,14 +21,7 @@ const AboutMe: FC = (): JSX.Element => {
           height="100px"
           width="100px"
         />
-        <Section>
-          Jestem 19-letnim programistą, który specjalizuje się w wielu
-          przyszłościowych technologiach. Programuje od 3 gimnazjum, a główne
-          języki programowania, jakie mnie interesują to TypeScript oraz Rust.
-          Nie skupiam się na jednym odłamie związanym z programowanie.
-          Interesuje mnie zarówno praca z front-endem stron jak i budową wysoko
-          skalownego serwera czy pisanie obrazów dockerowych.
-        </Section>
+        <Section>{t("pages.aboutMe.whoAmI.content")}</Section>
       </Article>
     </Page>
   );
