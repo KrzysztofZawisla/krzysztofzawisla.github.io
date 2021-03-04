@@ -46,7 +46,21 @@
       }
     },
     "projects": {
-      "usedTechnologies": "Used technologies"
+      "usedTechnologies": "Used technologies",
+      "SnowyYouTubeDownloaderContent": "Outdated YouTube video downloader.",
+      "SnowyUpdaterContent": "Simple app updater.",
+      "SnowySimpleLoggerNodejsContent": "Library that shares to NodeJS simple and fast logger.",
+      "SnowySimpleLoggerPythonContent": "Library that shares to Python simple and fast logger.",
+      "LevenshteinPyContent": "Library that shares to Python function to exclude from array elements that have too big levenshtein distance related to input string.",
+      "LevenshteinJSContent": "Library that shares to NodeJS function to exclude from array elements that have too big levenshtein distance related to input string.",
+      "SnowyResizerContent": "1KB library to restore previous window size in Electron after close.",
+      "SnowyTicTacToeContent": "Widget created with Electron to play Tic Tac Toe.",
+      "SnowyRecorderContent": "Widget created with Electron to record voice.",
+      "SnowyMonitorContent": "Desktop application created with Electron to check information about hardware and version of software on computer.",
+      "WasmQueryContent": "Experimental library modeled on jQuery. Library is compiled to WebAssembly. The library goals are to simplify JavaScript and export some functions from Golang std library.",
+      "ElectronReactNeonTypescriptGraspdLikeQuickStartContent": "Boilerplate for desktop applications created with TypeScript and Electron. Project is configured to allow to binding Rust functions to TypeScript and write front-end with React. Whole codebase is formatted with ESlint, Prettier and Husky.",
+      "PlanLekcjiZSBContent": "Website with better-designed lesson plan.",
+      "ZSBRybnikContent": "PWA application (Custom CMS) for Zespół Szkół Budowlanych in Rybnik."
     },
     "errorLoading": {
       "heading": "Loading error",

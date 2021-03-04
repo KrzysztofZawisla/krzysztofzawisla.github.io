@@ -46,7 +46,21 @@
       }
     },
     "projects": {
-      "usedTechnologies": "Użyte technologie"
+      "usedTechnologies": "Użyte technologie",
+      "SnowyYouTubeDownloaderContent": "Przestarzały downloader do filmów z YouTube.",
+      "SnowyUpdaterContent": "Prosty aktualizator aplikacji.",
+      "SnowySimpleLoggerNodejsContent": "Biblioteka udostępniają do NodeJS prosty i szybki logger.",
+      "SnowySimpleLoggerPythonContent": "Biblioteka udostępniają do Pythona prosty i szybki logger.",
+      "LevenshteinPyContent": "Biblioteka udostępniająca do Pythona funkcję na wykluczanie elementów z tablicy, które posiadają za duży levenshtein distance względem wyrazu do którego porównujemy listę.",
+      "LevenshteinJSContent": "Biblioteka udostępniająca do NodeJS funkcję na wykluczanie elementów z tablicy, które posiadają za duży levenshtein distance względem wyrazu do którego porównujemy listę.",
+      "SnowyResizerContent": "1KB biblioteka napisana do Electrona służąca przywracaniu rozmiaru okna po jego zamknięciu.",
+      "SnowyTicTacToeContent": "Widżet stworzony w Electronie do gry w kółko i krzyżyk.",
+      "SnowyRecorderContent": "Widżet napisany w Electronie do nagrywania głosu.",
+      "SnowyMonitorContent": "Aplikacja desktopowa napisana w Electronie do sprawdzania informacji na temat podzespołów komputera oraz wersji oprogramowania.",
+      "WasmQueryContent": "Eksperymentalna biblioteka wzorowana na jQuery napisana w Go i skompilowana na moduł WebAssembly. Biblioteka ma na celu ułatwienie pisania kodu JavaScript i udostępnienie funkcji z standardowej biblioteki Golanga.",
+      "ElectronReactNeonTypescriptGraspdLikeQuickStartContent": "Szablon pod aplikacje desktopowe napisane w TypeScriptcie z wykorzystaniem Electrona. Konfiguracja została stworzona tak, aby umożliwić bindowanie funkcji z Rusta oraz umożliwić pisanie Front-endu w aplikacji z wykorzystaniem Reacta. Cały codebase został dostosowany do zachowania przejrzystości kodu przez zastosowanie ESLinta, Prettiera i Husky.",
+      "PlanLekcjiZSBContent": "Strona internetowa z lepiej prezentującym się wizualnie planem lekcji.",
+      "ZSBRybnikContent": "Aplikacja PWA (Custom CMS) dla Zespołu Szkół Budowlanych w Rybniku."
     },
     "errorLoading": {
       "heading": "Błąd ładowania",

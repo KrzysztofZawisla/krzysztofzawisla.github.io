@@ -18,18 +18,8 @@ const Projects: FC = (): JSX.Element => {
             ZSBRybnik
           </ExternalLink>
         </h2>
-        <Section>
-          Aplikacja PWA (Custom CMS) dla Zespołu Szkół Budowlanych w Rybniku.
-          Jest to mój największy projekt, który wciąż jest w budowie. Cała
-          aplikacja została skonteneryzowana z użyciem Dockera.
-        </Section>
+        <Section>{t("pages.projects.ZSBRybnikContent")}</Section>
         <h3>Front-end</h3>
-        <Section>
-          Front-end strony jest napisany funkcyjnie w TypeScriptcie z
-          wykorzystaniem biblioteki do tworzenia aplikacji internetowych SPA
-          (React). Do ostylowania strony wykorzystałem bibliotekę
-          Styled-components.
-        </Section>
         <div>
           <Bold>
             {usedTechnologies}: TypeScript, React, React Context, Docker,
@@ -37,12 +27,6 @@ const Projects: FC = (): JSX.Element => {
           </Bold>
         </div>
         <h3>Back-end</h3>
-        <Section>
-          Back-end strony jest podzielony na dwie części. Pierwsza to CDN
-          napisany w Rustcie z użyciem Rocket.rs. Natomiast druga część to
-          serwer wystawiający API. Serwer został napisany w Go z wykorzystaniem
-          biblioteki Gin-gonic.
-        </Section>
         <div>
           <Bold>
             {usedTechnologies}: Golang, Rust, Rocket.rs, Gin-gonic, Redis,
@@ -56,12 +40,9 @@ const Projects: FC = (): JSX.Element => {
             electron-react-neon-typescript-graspd-like-quick-start
           </ExternalLink>
         </h2>
-        Szablon pod aplikacje desktopowe napisane w TypeScriptcie z
-        wykorzystaniem Electrona. Konfiguracja została stworzona tak, aby
-        umożliwić bindowanie funkcji z Rusta oraz umożliwić pisanie Front-endu w
-        aplikacji z wykorzystaniem Reacta. Cały codebase został dostosowany do
-        zachowania przejrzystości kodu przez zastosowanie ESLinta, Prettiera i
-        Husky.
+        {t(
+          "pages.projects.ElectronReactNeonTypescriptGraspdLikeQuickStartContent",
+        )}
         <h3>Front-end</h3>
         <div>
           <Bold>
@@ -99,10 +80,7 @@ const Projects: FC = (): JSX.Element => {
             WasmQuery
           </ExternalLink>
         </h2>
-        Eksperymentalna biblioteka wzorowana na jQuery napisana w Go i
-        skompilowana na moduł WebAssembly. Biblioteka ma na celu ułatwienie
-        pisania kodu JavaScript i udostępnienie funkcji z standardowej
-        biblioteki Golanga.
+        {t("pages.projects.WasmQueryContent")}
         <div>
           <Bold>{usedTechnologies}: Golang, WebAssembly, TypeScript</Bold>
         </div>
@@ -113,8 +91,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyMonitor
           </ExternalLink>
         </h2>
-        Aplikacja desktopowa napisana w Electronie do sprawdzania informacji na
-        temat podzespołów komputera oraz wersji oprogramowania.
+        {t("pages.projects.SnowyMonitorContent")}
         <h3>Front-end</h3>
         <div>
           <Bold>{usedTechnologies}: JavaScript, SCSS, Docker</Bold>
@@ -130,7 +107,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyRecorder
           </ExternalLink>
         </h2>
-        Prosty widżet napisany w Electronie do nagrywania głosu.
+        {t("pages.projects.SnowyRecorderContent")}
         <h3>Front-end</h3>
         <div>
           <Bold>{usedTechnologies}: JavaScript, SCSS, Docker</Bold>
@@ -146,7 +123,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyTicTacToe
           </ExternalLink>
         </h2>
-        Prosty widżet napisany w Electronie do gry w kółko i krzyżyk.
+        {t("pages.projects.SnowyTicTacToeContent")}
         <h3>Front-end</h3>
         <div>
           <Bold>{usedTechnologies}: JavaScript, SCSS</Bold>
@@ -162,7 +139,7 @@ const Projects: FC = (): JSX.Element => {
             PlanLekcjiZSB
           </ExternalLink>
         </h2>
-        Strona internetowa z lepiej prezentującym się wizualnie planem lekcji.
+        {t("pages.projects.PlanLekcjiZSBContent")}
         <h3>Front-end</h3>
         <div>
           <Bold>{usedTechnologies}: TypeScript, NextJS, Docker, Axios</Bold>
@@ -178,8 +155,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyResizer
           </ExternalLink>
         </h2>
-        1KB biblioteka napisana do Electrona służąca przywracaniu rozmiaru okna
-        przed jego zamknięciem.
+        {t("pages.projects.SnowyResizerContent")}
         <div>
           <Bold>{usedTechnologies}: TypeScript, Electron, NeDB</Bold>
         </div>
@@ -190,8 +166,6 @@ const Projects: FC = (): JSX.Element => {
             BrotliCompressor in Python
           </ExternalLink>
         </h2>
-        Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
-        Kompresor napisany w Pythonie.
         <div>
           <Bold>{usedTechnologies}: Python, Brotli</Bold>
         </div>
@@ -202,8 +176,6 @@ const Projects: FC = (): JSX.Element => {
             BrotliCompressor in Golang
           </ExternalLink>
         </h2>
-        Kompresor do Brotli stworzony na potrzeby kompresji plików WASM.
-        Kompresor napisany w Golangu.
         <div>
           <Bold>{usedTechnologies}: Golang, Brotli</Bold>
         </div>
@@ -214,9 +186,7 @@ const Projects: FC = (): JSX.Element => {
             levenshtein.js
           </ExternalLink>
         </h2>
-        Biblioteka udostępniająca do NodeJS funkcję na wykluczanie elementów z
-        tablicy, które posiadają za duży levenshtein distance względem wyrazu do
-        którego porównujemy listę. Biblioteka została napisana w Rustcie.
+        {t("pages.projects.LevenshteinJSContent")}
         <div>
           <Bold>{usedTechnologies}: TypeScript, Rust, Neon-bindings</Bold>
         </div>
@@ -227,9 +197,7 @@ const Projects: FC = (): JSX.Element => {
             levenshtein_py
           </ExternalLink>
         </h2>
-        Biblioteka udostępniająca do Pythona funkcję na wykluczanie elementów z
-        tablicy, które posiadają za duży levenshtein distance względem wyrazu do
-        którego porównujemy listę. Biblioteka została napisana w Rustcie.
+        {t("pages.projects.LevenshteinPyContent")}
         <div>
           <Bold>{usedTechnologies}: PyO3, Rust</Bold>
         </div>
@@ -240,8 +208,7 @@ const Projects: FC = (): JSX.Element => {
             snowy_simple_logger_python
           </ExternalLink>
         </h2>
-        Biblioteka udostępniająca do Pythona proste i szybkie logger API.
-        Biblioteka została napisana w Rustcie.
+        {t("pages.projects.SnowySimpleLoggerPythonContent")}
         <div>
           <Bold>{usedTechnologies}: PyO3, Rust</Bold>
         </div>
@@ -252,8 +219,7 @@ const Projects: FC = (): JSX.Element => {
             snowy_simple_logger_nodejs
           </ExternalLink>
         </h2>
-        Biblioteka udostępniająca do NodeJS proste i szybkie logger API.
-        Biblioteka została napisana w Rustcie.
+        {t("pages.projects.SnowySimpleLoggerNodejsContent")}
         <div>
           <Bold>{usedTechnologies}: TypeScript, Rust, Neon-bindings</Bold>
         </div>
@@ -264,7 +230,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyUpdater
           </ExternalLink>
         </h2>
-        Mocno ograniczony aktualizator aplikacji napisany w Rustcie.
+        {t("pages.projects.SnowyUpdaterContent")}
         <div>
           <Bold>{usedTechnologies}: Rust</Bold>
         </div>
@@ -275,7 +241,7 @@ const Projects: FC = (): JSX.Element => {
             SnowyYouTubeDownloader
           </ExternalLink>
         </h2>
-        Przestarzały downloader do filmów z YouTube napisany w Pythonie.
+        {t("pages.projects.SnowyYouTubeDownloaderContent")}
         <div>
           <Bold>{usedTechnologies}: Python, ffmpeg, pytube</Bold>
         </div>
