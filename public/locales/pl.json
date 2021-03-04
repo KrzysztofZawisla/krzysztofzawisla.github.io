@@ -58,7 +58,7 @@
       "SnowyRecorderContent": "Widżet napisany w Electronie do nagrywania głosu.",
       "SnowyMonitorContent": "Aplikacja desktopowa napisana w Electronie do sprawdzania informacji na temat podzespołów komputera oraz wersji oprogramowania.",
       "WasmQueryContent": "Eksperymentalna biblioteka wzorowana na jQuery napisana w Go i skompilowana na moduł WebAssembly. Biblioteka ma na celu ułatwienie pisania kodu JavaScript i udostępnienie funkcji z standardowej biblioteki Golanga.",
-      "ElectronReactNeonTypescriptGraspdLikeQuickStartContent": "Szablon pod aplikacje desktopowe napisane w TypeScriptcie z wykorzystaniem Electrona. Konfiguracja została stworzona tak, aby umożliwić bindowanie funkcji z Rusta oraz umożliwić pisanie front-endu w aplikacji z wykorzystaniem Reacta. Cały codebase został dostosowany do zachowania przejrzystości kodu przez zastosowanie ESLinta, Prettiera i Husky.",
+      "ElectronReactNeonTypescriptGraspdLikeQuickStartContent": "Szablon pod aplikacje desktopowe napisane w TypeScriptcie z wykorzystaniem Electrona. Konfiguracja została stworzona tak, aby umożliwić bindowanie funkcji z Rusta oraz pisanie front-endu w aplikacji z wykorzystaniem Reacta. Cały codebase został dostosowany do zachowania przejrzystości kodu przez zastosowanie ESLinta, Prettiera i Husky.",
       "PlanLekcjiZSBContent": "Strona internetowa z lepiej prezentującym się wizualnie planem lekcji.",
       "ZSBRybnikContent": "Aplikacja PWA (Custom CMS) dla Zespołu Szkół Budowlanych w Rybniku."
     },
