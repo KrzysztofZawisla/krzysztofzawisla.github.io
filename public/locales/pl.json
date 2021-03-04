@@ -15,7 +15,10 @@
   },
   "pages": {
     "contact": {
-      "heading": "Kontakt"
+      "heading": "Kontakt",
+      "qrCodeHeading": "Chciałbyś udostępnić moje portofolio przez kod QR?",
+      "qrCodeContent": "Udostępnij ten kod QR lub wygeneruj na własną rękę przez menu kontekstowe Google Chrome."
+      
     },
     "experience": {
       "heading": "Doświadczenie",

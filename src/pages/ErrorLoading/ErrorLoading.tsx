@@ -9,7 +9,7 @@ const ErrorLoading: FC = (): JSX.Element => {
   const heading: string = t("pages.errorLoading.heading");
   return (
     <Page title={heading}>
-      <h2>{heading}:</h2>
+      <h1>{heading}:</h1>
       <Article>
         <Section>
           {`${t("pages.errorLoading.error")} `}

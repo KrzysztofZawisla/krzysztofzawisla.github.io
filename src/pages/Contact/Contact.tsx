@@ -4,13 +4,15 @@ import Page from "../../components/Page";
 import Article from "../../components/Article/Article";
 import Section from "../../components/Section/Section";
 import ExternalLink from "../../components/ExternalLink/ExternalLink";
+import Image from "../../components/Image/Image";
 
 const Contact: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();
   const heading: string = t("pages.contact.heading");
+  const qrCodePath: string = `${process.env.PUBLIC_URL}/images/qrcode.png`;
   return (
     <Page title={heading}>
-      <h2>{heading}:</h2>
+      <h1>{heading}:</h1>
       <Article>
         <Section>
           <h3>Email</h3>
@@ -54,6 +56,17 @@ const Contact: FC = (): JSX.Element => {
             </ExternalLink>
           </h3>
         </Section>
+      </Article>
+      <Article>
+        <h3>{t("pages.contact.qrCodeHeading")}</h3>
+        <Section>{t("pages.contact.qrCodeContent")}</Section>
+        <Image
+          src={qrCodePath}
+          loading="lazy"
+          width="200px"
+          height="200px"
+          alt="QR code"
+        />
       </Article>
     </Page>
   );

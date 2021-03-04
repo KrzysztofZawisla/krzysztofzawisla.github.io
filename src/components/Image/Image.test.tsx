@@ -1,11 +1,11 @@
-import ProfilePicture from "./ProfilePicture";
+import Image from "./Image";
 import { render, cleanup, RenderResult } from "@testing-library/react";
 
 afterEach(cleanup);
 
-describe("ProfilePicture", () => {
+describe("Image", () => {
   it("renders component properly", (): void => {
-    const { container }: RenderResult = render(<ProfilePicture />);
+    const { container }: RenderResult = render(<Image />);
     expect(container).toMatchSnapshot();
   });
 });

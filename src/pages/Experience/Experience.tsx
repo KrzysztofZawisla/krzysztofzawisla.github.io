@@ -11,7 +11,7 @@ const Experience: FC = (): JSX.Element => {
   const heading: string = t("pages.experience.heading");
   return (
     <Page title={heading}>
-      <h2>{heading}:</h2>
+      <h1>{heading}:</h1>
       <Article>
         <h3>Front-end Developer</h3>
         <Section>Euvic - {vacations} 2020</Section>

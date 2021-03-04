@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Page from "../../components/Page";
-import ProfilePicture from "../../components/ProfilePicture/ProfilePicture";
+import Image from "../../components/Image/Image";
 import Article from "../../components/Article/Article";
 import Section from "../../components/Section/Section";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
@@ -13,7 +13,7 @@ const AboutMe: FC = (): JSX.Element => {
       <h2>{heading}:</h2>
       <Article>
         <h3>{t("pages.aboutMe.whoAmI.heading")}</h3>
-        <ProfilePicture
+        <Image
           title="Krzysztof Zawisła"
           alt="Krzysztof Zawisła"
           src="https://avatars0.githubusercontent.com/u/32432944?s=100&v=4"

@@ -15,7 +15,9 @@
   },
   "pages": {
     "contact": {
-      "heading": "Contact"
+      "heading": "Contact",
+      "qrCodeHeading": "Would you like to share my portfolio via QR code?",
+      "qrCodeContent": "Just share this QR code or generate on your own via chrome context menu."
     },
     "experience": {
       "heading": "Experience",
