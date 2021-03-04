@@ -15,7 +15,7 @@ const Contact: FC = (): JSX.Element => {
       <h1>{heading}:</h1>
       <Article>
         <Section>
-          <h3>Email</h3>
+          <h2>Email</h2>
           <ExternalLink href="mailto:zawislakrzysztof.zk@gmail.com">
             zawislakrzysztof.zk@gmail.com
           </ExternalLink>
@@ -23,42 +23,42 @@ const Contact: FC = (): JSX.Element => {
       </Article>
       <Article>
         <Section>
-          <h3>
+          <h2>
             <ExternalLink href="https://www.linkedin.com/in/krzysztof-zawisła">
               LinkedIn
             </ExternalLink>
-          </h3>
+          </h2>
         </Section>
       </Article>
       <Article>
         <Section>
-          <h3>
+          <h2>
             <ExternalLink href="https://twitter.com/Krzysztof_zaw">
               Twitter
             </ExternalLink>
-          </h3>
+          </h2>
         </Section>
       </Article>
       <Article>
         <Section>
-          <h3>
+          <h2>
             <ExternalLink href="https://www.facebook.com/profile.php?id=100006723130084">
               Facebook
             </ExternalLink>
-          </h3>
+          </h2>
         </Section>
       </Article>
       <Article>
         <Section>
-          <h3>
+          <h2>
             <ExternalLink href="https://www.instagram.com/krzysztof_zawisla/">
               Instagram
             </ExternalLink>
-          </h3>
+          </h2>
         </Section>
       </Article>
       <Article>
-        <h3>{t("pages.contact.qrCodeHeading")}</h3>
+        <h2>{t("pages.contact.qrCodeHeading")}</h2>
         <Section>{t("pages.contact.qrCodeContent")}</Section>
         <Image
           src={qrCodePath}
