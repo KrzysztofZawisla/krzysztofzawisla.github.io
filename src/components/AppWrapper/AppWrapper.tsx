@@ -8,7 +8,7 @@ import {
   lazy,
   KeyboardEvent as ReactKeyboardEvent,
 } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import useErrorBoundary, { UseErrorBoundaryState } from "use-error-boundary";
 import GlobalContext, {
   GlobalContextCompleteValues,
@@ -68,6 +68,7 @@ const AppWrapper: FC = (): JSX.Element => {
                   <Route exact path="/skills" component={Skills} />
                   <Route exact path="/experience" component={Experience} />
                   <Route exact path="/contact" component={Contact} />
+                  <Route render={() => <Redirect to="/" />} />
                 </Switch>
               </Suspense>
             </ErrorBoundary>
