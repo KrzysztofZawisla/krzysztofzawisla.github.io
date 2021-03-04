@@ -241,7 +241,7 @@ const setupConfig = (
           skipWaiting: true,
           runtimeCaching: [
             {
-              handler: "CacheFirst",
+              handler: "NetworkFirst",
               urlPattern: /.(?:png|jpg|jpeg|svg|html|js|mjs)$/,
             },
           ],
