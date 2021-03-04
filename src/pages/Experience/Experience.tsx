@@ -13,26 +13,26 @@ const Experience: FC = (): JSX.Element => {
     <Page title={heading}>
       <h1>{heading}:</h1>
       <Article>
-        <h3>Front-end Developer</h3>
+        <h2>Front-end Developer</h2>
         <Section>Euvic - {vacations} 2020</Section>
       </Article>
       <Article>
-        <h3>Front-end Developer</h3>
+        <h2>Front-end Developer</h2>
         <Section>Ephp - {t("pages.experience.schoolPractice")}</Section>
       </Article>
       <Article>
-        <h3>Full-Stack Developer</h3>
+        <h2>Full-Stack Developer</h2>
         <Section>COIG S.A. - {vacations} 2019</Section>
       </Article>
       <Article>
-        <h3>
+        <h2>
           <ExternalLink
             href="https://bulldogjob.pl/blog/authors/krzysztof-zawisla"
             title="BulldogJob"
           >
             {t("pages.experience.bulldogjob")}
           </ExternalLink>
-        </h3>
+        </h2>
       </Article>
     </Page>
   );
