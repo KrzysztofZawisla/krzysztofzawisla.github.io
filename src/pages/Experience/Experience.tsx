@@ -21,7 +21,7 @@ const Experience: FC = (): JSX.Element => {
         <Section>Ephp - {t("pages.experience.schoolPractice")}</Section>
       </Article>
       <Article>
-        <h2>Full-Stack Developer</h2>
+        <h2>Full-stack Developer</h2>
         <Section>COIG S.A. - {vacations} 2019</Section>
       </Article>
       <Article>
