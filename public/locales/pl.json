@@ -26,6 +26,9 @@
       "vacations": "wakacje",
       "schoolPractice": "praktyki szkolne"
     },
+    "shared": {
+      "andManyOther": "i wiele innych"
+    },
     "skills": {
       "heading": "Umiejętności",
       "programmingLanguages": "Języki programowania",
@@ -37,7 +40,6 @@
       "quantumProgrammingLanguages": "Kwantowe języki programowania",
       "languages": "Języki",
       "frameworksAndLibraries": "Frameworki, biblioteki, itp.",
-      "andManyOther": "i wiele innych",
       "nativeLanguage": "Język natywny",
       "acquaintedWithBasics": "Zaznajomiony z podstawami"
     },

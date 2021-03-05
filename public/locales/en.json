@@ -25,6 +25,9 @@
       "vacations": "vacations",
       "schoolPractice": "school internship"
     },
+    "shared": {
+      "andManyOther": "and many others"
+    },
     "skills": {
       "heading": "Skills",
       "programmingLanguages": "Programming languages",
@@ -36,7 +39,6 @@
       "quantumProgrammingLanguages": "Quantum programming languages",
       "languages": "Languages",
       "frameworksAndLibraries": "Frameworks, libraries, etc.",
-      "andManyOther": "and many other",
       "nativeLanguage": "Native language",
       "acquaintedWithBasics": "Acquainted with basics"
     },

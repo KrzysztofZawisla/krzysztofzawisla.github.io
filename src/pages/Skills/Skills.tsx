@@ -7,7 +7,7 @@ import { useTranslation, UseTranslationResponse } from "react-i18next";
 const Skills: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();
   const heading: string = t("pages.skills.heading");
-  const andManyOther: string = t("pages.skills.andManyOther");
+  const andManyOther: string = t("pages.shared.andManyOther");
   return (
     <Page title={heading}>
       <h1>{heading}:</h1>

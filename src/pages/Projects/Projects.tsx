@@ -9,6 +9,7 @@ import { useTranslation, UseTranslationResponse } from "react-i18next";
 const Projects: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();
   const usedTechnologies: string = t("pages.projects.usedTechnologies");
+  const andManyOther: string = t("pages.shared.andManyOther");
   return (
     <Page title="Projects">
       <h1>Projects:</h1>
@@ -23,14 +24,14 @@ const Projects: FC = (): JSX.Element => {
         <div>
           <Bold>
             {usedTechnologies}: TypeScript, React, React Context, Docker,
-            i18next, Styled-components, ThreeJS, Github Actions and many others.
+            i18next, Styled-components, ThreeJS, Github Actions {andManyOther}.
           </Bold>
         </div>
         <h3>Back-end</h3>
         <div>
           <Bold>
             {usedTechnologies}: Golang, Rust, Rocket.rs, Gin-gonic, Redis,
-            MySQL, Docker, Github Actions and many others.
+            MySQL, Docker, Github Actions {andManyOther}.
           </Bold>
         </div>
       </Article>
@@ -47,7 +48,7 @@ const Projects: FC = (): JSX.Element => {
         <div>
           <Bold>
             {usedTechnologies}: Webpack, Babel, TypeScript, React, Docker,
-            ESLint, Prettier, Github Actions, Husky and many others.
+            ESLint, Prettier, Github Actions, Husky {andManyOther}.
           </Bold>
         </div>
         <h3>Back-end</h3>
@@ -55,7 +56,7 @@ const Projects: FC = (): JSX.Element => {
           <Bold>
             {usedTechnologies}: Webpack, Babel, ESLint, Prettier, TypeScript,
             Electron, Express, Rust, Neon-bindings, Docker, Github Actions,
-            Husky and many others.
+            Husky {andManyOther}.
           </Bold>
         </div>
       </Article>
@@ -70,7 +71,7 @@ const Projects: FC = (): JSX.Element => {
           <Bold>
             {usedTechnologies}: Webpack, Babel, TypeScript, React, React
             Context, Styled-components, Docker, ESLint, Prettier, Github
-            Actions, Husky, JSDoc, TSDoc, i18next and many others.
+            Actions, Husky, JSDoc, TSDoc, i18next {andManyOther}.
           </Bold>
         </div>
       </Article>
