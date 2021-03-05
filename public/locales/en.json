@@ -46,7 +46,7 @@
       "heading": "About Me",
       "whoAmI": {
         "heading": "Who Am I?",
-        "content": "I'm 19 yo programmer, who specializes in a lot of future technologies. I've been programming since 3rd class of the middle school. Main programming languages that I'm interested in are: TypeScript and Rust. I don't focus on one branch related with programming. I'm interested both in working with the front-end, building high scalable server or writing docker images."
+        "content": "I'm 19 yo programmer, who specializes in a lot of future technologies. I've been programming since 3rd class of the middle school. The main programming languages that I'm interested in are: TypeScript and Rust. I don't focus on one branch related with programming. I'm interested both in working with the front-end, building high scalable server or writing docker images."
       }
     },
     "projects": {
