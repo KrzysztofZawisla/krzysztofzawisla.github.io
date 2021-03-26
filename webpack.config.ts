@@ -4,7 +4,7 @@
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import {
-  Configuration,
+  Configuration as WebpackConfiguration,
   HotModuleReplacementPlugin,
   WebpackPluginInstance,
   optimize,
@@ -27,6 +27,11 @@ import CompressionPlugin from "compression-webpack-plugin";
 import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
 import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
 import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
+import { Configuration as WebpackDevelopmentServerConfiguration } from "webpack-dev-server";
+
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevelopmentServerConfiguration;
+}
 
 const { AggressiveMergingPlugin } = optimize;
 
