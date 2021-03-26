@@ -30,15 +30,23 @@ import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
 
 const { AggressiveMergingPlugin } = optimize;
 
+const getEntryPoint = (): string => {
+  return path.join(__dirname, "src", "index.tsx");
+};
+
+const getBabelTarget = (targetToModern: boolean): string => {
+  return targetToModern
+    ? "last 2 Chrome versions, last 2 Firefox versions"
+    : "> 0.25%, not dead";
+};
+
 const setupConfig = (
   _environment: unknown,
   { mode }: { mode: string },
 ): Configuration[] => {
   const getConfig = (targetToModern: boolean): Configuration => {
-    const entryPoint: string = path.join(__dirname, "src", "index.tsx");
-    const babelTarget: string = targetToModern
-      ? "last 2 Chrome versions, last 2 Firefox versions"
-      : "> 0.25%, not dead";
+    const entryPoint: string = getEntryPoint();
+    const babelTarget: string = getBabelTarget(targetToModern);
     return {
       mode: mode === "development" ? mode : "production",
       entry: entryPoint,
