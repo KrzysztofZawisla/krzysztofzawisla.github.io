@@ -41,7 +41,7 @@ const AppProvider: FC<AppProviderProperties> = ({
   useEffect(() => {
     const resizeHandler = (): void => {
       const isMobile: boolean = window.innerWidth < 768;
-      !isMobile && setIsMenuOpenOnMobileLocal(false)
+      !isMobile && setIsMenuOpenOnMobileLocal(false);
       setIsMobileLocal(isMobile);
     };
     const resizeLinstenerHandler = debounce(resizeHandler, 25);
