@@ -143,6 +143,14 @@ const setupConfig = (
       },
       resolve: {
         extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
+        alias: {
+          "@babel/runtime": path.resolve(
+            __dirname,
+            "node_modules",
+            "@babel",
+            "runtime",
+          ),
+        },
       },
       experiments: {
         topLevelAwait: true,

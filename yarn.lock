@@ -1738,6 +1738,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.14.0":
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
+  integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.12.13", "@babel/template@^7.3.3":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.12.13.tgz#530265be8a2589dbb37523844c5bcb55947fb327"
@@ -1956,6 +1963,16 @@
   integrity sha512-tAag0jEcjwH+P2quUfipd7liWCNX2F8NvYjQp2wtInsZxnMlypdw0FtAOLxtvvkO+GSRRbmNi8m/5y42PQJYCQ==
   dependencies:
     "@hapi/hoek" "^8.3.0"
+
+"@hookstate/core@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@hookstate/core/-/core-3.0.7.tgz#aa91c3ca93771abda4a9729302c088d35bb7abaa"
+  integrity sha512-9aOGwD4tezrXJ7AkiPg0MJ8d9TiRCusf537zPOV4vOJmNn/tyMDMDxd1T4OlqKvNurVTzs9BEIMOuq5OduV7/w==
+
+"@hookstate/persistence@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@hookstate/persistence/-/persistence-3.0.0.tgz#973b30d3a3bb1b29f4f59b1afe0d914e71a23882"
+  integrity sha512-xiN22IW0Wjw/uTV1OEUpTtqB8DAJyRobYR3+iv1TyMf72o98KpaZqQrLPvXkfrjlZac5s052BypjpkttX/Cmhw==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -5067,10 +5084,10 @@ core-js@^2.4.0, core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.11.1:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.11.1.tgz#f920392bf8ed63a0ec8e4e729857bfa3d121c525"
-  integrity sha512-k93Isqg7e4txZWMGNYwevZL9MiogLk8pd1PtwrmFmi8IBq4GXqUaVW/a33Llt6amSI36uSjd0GWwc9pTT9ALlQ==
+core-js@^3.11.2:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.11.2.tgz#af087a43373fc6e72942917c4a4c3de43ed574d6"
+  integrity sha512-3tfrrO1JpJSYGKnd9LKTBPqgUES/UYiCzMKeqwR1+jF16q4kD1BY2NvqkfuzXwQ6+CIWm55V9cjD7PQd+hijdw==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -6075,10 +6092,10 @@ eslint-plugin-sonarjs@^0.7.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.7.0.tgz#2dbad45e03a6a4de687756b659e88bf3f977383f"
   integrity sha512-vi6zGkd5Eznc32AQlleWUOMrMeDiUih9wR7nPPfrDCyVRmwYNHIBRPZGv1EgXwELwaPghCSvoAoHoR7uSbBF/Q==
 
-eslint-plugin-testing-library@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-4.1.2.tgz#f986bea35059118f3f37fb750b230b6a0fb0aa52"
-  integrity sha512-eJR1drH2yFcGM9As3C5Q17lyOolMPKalQA3l8pD61sAIt8+8w/KjHe7u9Sa4eYy7r76UikCoP9CAtVkGdGCZ/w==
+eslint-plugin-testing-library@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-4.2.0.tgz#80a95b86538901ce256aafef9090320bfbc42a1c"
+  integrity sha512-do+F2gQPLHjzXRl8E4/5WwXZSAOvSvuewxCO/Km6aLk4g0UVFDy5CtlpmDT83q3Hx2urR9Cvb02ai9cPQbbXHQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.21.0"
 
@@ -10085,10 +10102,10 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^11.5.9:
-  version "11.5.9"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.5.9.tgz#b7036e6f3f74220fe211d6f5e6ef94aee4425688"
-  integrity sha512-D+FgrBNtBJHl+D1n364CsQy/o6JIrh+7v+SXngNzAeyOVvc8w/1yr5pvqguVQWIvduC3HcRI87amkDp7ipzH7A==
+npm-check-updates@^11.5.10:
+  version "11.5.10"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-11.5.10.tgz#73c5037757c227b3133b46f0fea3828b713f3137"
+  integrity sha512-+nKrlBaDglNQWEV5+bx6ZMJAc6VA/aKbqtKs+fr6ewcedF2hfMxHMZe5b8mW9SUu+bjtt/SrPHxkoAiepZIFpA==
   dependencies:
     chalk "^4.1.1"
     cint "^8.2.1"
