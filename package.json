@@ -152,7 +152,7 @@
     "react-helmet-async": "^1.0.9",
     "react-i18next": "^11.8.15",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.3.0",
     "use-error-boundary": "^2.0.4",
     "workbox-window": "^6.1.5"
   }
