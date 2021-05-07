@@ -100,14 +100,21 @@ const setupConfig = (
                       },
                     ],
                     "@babel/preset-typescript",
-                    [
+                    /*[
                       "@babel/preset-react",
                       {
                         runtime: "automatic",
                       },
-                    ],
+                    ],*/
                   ],
                   plugins: [
+                    [
+                      "@babel/transform-react-jsx",
+                      {
+                        runtime: "automatic",
+                        importSource: "preact",
+                      },
+                    ],
                     "lodash",
                     [
                       "babel-plugin-styled-components",
