@@ -50,6 +50,7 @@
       }
     },
     "projects": {
+      "heading": "Projects",
       "usedTechnologies": "Used technologies",
       "SnowyYouTubeDownloaderContent": "Outdated YouTube video downloader.",
       "SnowyUpdaterContent": "Simple app updater.",

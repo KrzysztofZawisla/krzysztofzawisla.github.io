@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styled, { css, StyledComponent } from "styled-components";
 
 interface LanguagePickerWrapperProperties {
@@ -12,7 +13,7 @@ export type LanguagePickerWrapperType = StyledComponent<
   never
 >;
 
-const LanguagePickerWrapper: LanguagePickerWrapperType = styled.div<LanguagePickerWrapperProperties>`
+const LanguagePickerWrapper = memo(styled.div<LanguagePickerWrapperProperties>`
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -46,6 +47,6 @@ const LanguagePickerWrapper: LanguagePickerWrapperType = styled.div<LanguagePick
         isLanguageMenuOpen ? "visible" : "hidden"};
     }
   }
-`;
+`);
 
 export default LanguagePickerWrapper;

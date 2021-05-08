@@ -9,6 +9,7 @@ import {
   WebpackPluginInstance,
   optimize,
   DefinePlugin,
+  ProvidePlugin,
 } from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -100,21 +101,21 @@ const setupConfig = (
                       },
                     ],
                     "@babel/preset-typescript",
-                    /*[
+                    [
                       "@babel/preset-react",
                       {
                         runtime: "automatic",
                       },
-                    ],*/
+                    ],
                   ],
                   plugins: [
-                    [
+                    /*[
                       "@babel/transform-react-jsx",
                       {
                         runtime: "automatic",
                         importSource: "preact",
                       },
-                    ],
+                    ],*/
                     "lodash",
                     [
                       "babel-plugin-styled-components",
@@ -203,6 +204,9 @@ const setupConfig = (
             minRatio: 0.8,
             deleteOriginalAssets: false,
           }),
+        new ProvidePlugin({
+          process: "process/browser",
+        }),
         new CleanWebpackPlugin({
           dry: true,
           dangerouslyAllowCleanPatternsOutsideProject: true,

@@ -1,4 +1,9 @@
-import { AnchorHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
+import {
+  AnchorHTMLAttributes,
+  DetailedHTMLProps,
+  memo,
+  ReactNode,
+} from "react";
 
 export interface ExternalLinkProperties
   extends DetailedHTMLProps<
@@ -8,15 +13,15 @@ export interface ExternalLinkProperties
   children: ReactNode;
 }
 
-const ExternalLink: FC<ExternalLinkProperties> = ({
-  children,
-  ...rest
-}: ExternalLinkProperties): JSX.Element => {
-  return (
-    <a rel="noopener noreferrer" {...rest}>
-      {children}
-    </a>
-  );
-};
+// eslint-disable-next-line react/display-name
+const ExternalLink = memo(
+  ({ children, ...rest }: ExternalLinkProperties): JSX.Element => {
+    return (
+      <a rel="noopener noreferrer" {...rest}>
+        {children}
+      </a>
+    );
+  },
+);
 
 export default ExternalLink;

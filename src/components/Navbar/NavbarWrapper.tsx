@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styled, { css } from "styled-components";
 
 interface NavbarWrapperProperties {
@@ -5,7 +6,7 @@ interface NavbarWrapperProperties {
   isMobile: boolean;
 }
 
-const NavbarWrapper = styled.nav<NavbarWrapperProperties>`
+const NavbarWrapper = memo(styled.nav<NavbarWrapperProperties>`
   color: #111;
   background: #eee;
   width: 210px;
@@ -29,6 +30,6 @@ const NavbarWrapper = styled.nav<NavbarWrapperProperties>`
       animation-timing-function: 1s ease-in;
     }
   }
-`;
+`);
 
 export default NavbarWrapper;

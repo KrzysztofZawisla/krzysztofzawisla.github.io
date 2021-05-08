@@ -10,9 +10,10 @@ const Projects: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();
   const usedTechnologies: string = t("pages.projects.usedTechnologies");
   const andManyOther: string = t("pages.shared.andManyOther");
+  const heading: string = t("pages.projects.heading");
   return (
-    <Page title="Projects">
-      <h1>Projects:</h1>
+    <Page title={heading}>
+      <h1>{heading}:</h1>
       <Article>
         <h2>
           <ExternalLink href="https://github.com/ZSBRybnik/ZSBRybnik">

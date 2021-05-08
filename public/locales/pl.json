@@ -18,7 +18,6 @@
       "heading": "Kontakt",
       "qrCodeHeading": "Chciałbyś udostępnić moje portofolio przez kod QR?",
       "qrCodeContent": "Udostępnij ten kod QR lub wygeneruj na własną rękę przez menu kontekstowe Google Chrome."
-      
     },
     "experience": {
       "heading": "Doświadczenie",
@@ -51,6 +50,7 @@
       }
     },
     "projects": {
+      "heading": "Projekty",
       "usedTechnologies": "Użyte technologie",
       "SnowyYouTubeDownloaderContent": "Przestarzały downloader do filmów z YouTube.",
       "SnowyUpdaterContent": "Prosty aktualizator aplikacji.",
