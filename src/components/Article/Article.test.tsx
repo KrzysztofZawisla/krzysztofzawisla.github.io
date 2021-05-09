@@ -1,4 +1,4 @@
-import Article, { ArticleType } from "./Article";
+import Article, { ArticleType } from "@root/components/Article/Article";
 import { render, cleanup, RenderResult } from "@testing-library/react";
 import { ReactElement } from "react";
 import { expectType } from "tsd";

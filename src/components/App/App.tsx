@@ -1,6 +1,6 @@
 import { FC } from "react";
-import AppWrapper from "../AppWrapper/AppWrapper";
-import AppProvider from "../AppProvider/AppProvider";
+import AppWrapper from "@root/components/AppWrapper/AppWrapper";
+import AppProvider from "@root/components/AppProvider/AppProvider";
 import { i18n } from "i18next";
 
 export interface AppProperties {

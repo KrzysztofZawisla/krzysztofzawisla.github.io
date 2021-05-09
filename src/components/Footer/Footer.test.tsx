@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+import Footer from "@root/components/Footer/Footer";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 
 afterEach(cleanup);

@@ -11,27 +11,27 @@ import {
 } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import useErrorBoundary, { UseErrorBoundaryState } from "use-error-boundary";
-import { isMenuOpenOnMobileGlobal } from "../../other/globalStates/globalStates";
-import handleMenuClose from "../../other/handleMenuClose";
-import AboutMe from "../../pages/AboutMe/AboutMe";
-import ErrorLoading from "../../pages/ErrorLoading/ErrorLoading";
-import Footer from "../Footer/Footer";
-import GlobalStyle from "../GlobalStyle/GlobalStyle";
-import LanguagePicker from "../LanguagePicker/LanguagePicker";
-import MainWrapper from "../MainWrapper/MainWrapper";
-import Navbar from "../Navbar/Navbar";
+import { isMenuOpenOnMobileGlobal } from "@root/other/globalStates/globalStates";
+import handleMenuClose from "@root/other/handleMenuClose";
+import AboutMe from "@root/pages/AboutMe/AboutMe";
+import ErrorLoading from "@root/pages/ErrorLoading/ErrorLoading";
+import Footer from "@root/components/Footer/Footer";
+import GlobalStyle from "@root/components/GlobalStyle/GlobalStyle";
+import LanguagePicker from "@root/components/LanguagePicker/LanguagePicker";
+import MainWrapper from "@root/components/MainWrapper/MainWrapper";
+import Navbar from "@root/components/Navbar/Navbar";
 
 const Projects: LazyExoticComponent<FC> = lazy(
-  () => import("../../pages/Projects/Projects"),
+  () => import("@root/pages/Projects/Projects"),
 );
 const Skills: LazyExoticComponent<FC> = lazy(
-  () => import("../../pages/Skills/Skills"),
+  () => import("@root/pages/Skills/Skills"),
 );
 const Experience: LazyExoticComponent<FC> = lazy(
-  () => import("../../pages/Experience/Experience"),
+  () => import("@root/pages/Experience/Experience"),
 );
 const Contact: LazyExoticComponent<FC> = lazy(
-  () => import("../../pages/Contact/Contact"),
+  () => import("@root/pages/Contact/Contact"),
 );
 
 // eslint-disable-next-line react/display-name

@@ -1,4 +1,6 @@
-import GlobalStyle, { GlobalStyleType } from "./GlobalStyle";
+import GlobalStyle, {
+  GlobalStyleType,
+} from "@root/components/GlobalStyle/GlobalStyle";
 import { render, cleanup, RenderResult } from "@testing-library/react";
 import { expectType } from "tsd";
 

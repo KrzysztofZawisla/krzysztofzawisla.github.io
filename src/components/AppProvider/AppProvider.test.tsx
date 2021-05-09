@@ -1,9 +1,11 @@
-import AppProvider, { AppProviderProperties } from "./AppProvider";
+import AppProvider, {
+  AppProviderProperties,
+} from "@root/components/AppProvider/AppProvider";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { FC } from "react";
 import { expectType } from "tsd";
 import { i18n } from "i18next";
-import initTranslations from "../../other/translation/translation";
+import initTranslations from "@root/other/translation/translation";
 
 afterEach(cleanup);
 

@@ -1,4 +1,4 @@
-import Image from "./Image";
+import Image from "@root/components/Image/Image";
 import { render, cleanup, RenderResult } from "@testing-library/react";
 
 afterEach(cleanup);

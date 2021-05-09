@@ -1,4 +1,4 @@
-import Flag, { FlagType } from "./Flag";
+import Flag, { FlagType } from "@root/components/Flag/Flag";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { expectType } from "tsd";
 

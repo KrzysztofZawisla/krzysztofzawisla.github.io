@@ -1,6 +1,6 @@
 import { i18n } from "i18next";
-import App, { AppProperties } from "./App";
-import initTranslations from "../../other/translation/translation";
+import App, { AppProperties } from "@root/components/App/App";
+import initTranslations from "@root/other/translation/translation";
 import { cleanup, render } from "@testing-library/react";
 import { FC } from "react";
 import { expectType } from "tsd";

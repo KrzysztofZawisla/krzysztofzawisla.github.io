@@ -1,7 +1,9 @@
 import {
   AnchorHTMLAttributes,
   DetailedHTMLProps,
+  FC,
   memo,
+  MemoExoticComponent,
   ReactNode,
 } from "react";
 
@@ -14,7 +16,7 @@ export interface ExternalLinkProperties
 }
 
 // eslint-disable-next-line react/display-name
-const ExternalLink = memo(
+const ExternalLink: MemoExoticComponent<FC<ExternalLinkProperties>> = memo(
   ({ children, ...rest }: ExternalLinkProperties): JSX.Element => {
     return (
       <a rel="noopener noreferrer" {...rest}>

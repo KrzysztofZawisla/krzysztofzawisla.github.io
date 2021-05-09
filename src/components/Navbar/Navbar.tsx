@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/tabindex-no-positive */
 import { FC, useRef, KeyboardEvent as ReactKeyboardEvent, memo } from "react";
 import { Link } from "react-router-dom";
-import NavbarSpliter from "./NavbarSpliter";
-import NavbarWrapper from "./NavbarWrapper";
-import NavbarTitle from "./NavbarTitle";
-import NavbarMenu from "./NavbarMenu";
-import NavbarItem from "./NavbarItem";
+import NavbarSpliter from "@root/components/Navbar/NavbarSpliter";
+import NavbarWrapper from "@root/components/Navbar/NavbarWrapper";
+import NavbarTitle from "@root/components/Navbar/NavbarTitle";
+import NavbarMenu from "@root/components/Navbar/NavbarMenu";
+import NavbarItem from "@root/components/Navbar/NavbarItem";
 import { useTranslation } from "react-i18next";
-import handleMenuClose from "../../other/handleMenuClose";
+import handleMenuClose from "@root/other/handleMenuClose";
 import { useState } from "@hookstate/core";
 import {
   isMenuOpenOnMobileGlobal,
   isMobileGlobal,
-} from "../../other/globalStates/globalStates";
+} from "@root/other/globalStates/globalStates";
 
 // eslint-disable-next-line react/display-name
 const Navbar: FC = memo(

@@ -1,12 +1,12 @@
 import { FC, memo, useCallback, useEffect, useRef } from "react";
-import LanguagePickerWrapper from "../LanguagePickerWrapper/LanguagePickerWrapper";
+import LanguagePickerWrapper from "@root/components/LanguagePickerWrapper/LanguagePickerWrapper";
 import { useTranslation } from "react-i18next";
-import Flag from "../Flag/Flag";
+import Flag from "@root/components/Flag/Flag";
 import {
   isMenuOpenOnMobileGlobal,
   isMobileGlobal,
   languageGlobal,
-} from "../../other/globalStates/globalStates";
+} from "@root/other/globalStates/globalStates";
 import { useState } from "@hookstate/core";
 
 // eslint-disable-next-line sonarjs/cognitive-complexity

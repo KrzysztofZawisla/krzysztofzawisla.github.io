@@ -8,7 +8,7 @@ import {
   isMenuOpenOnMobileGlobal,
   isMobileGlobal,
   languageGlobal,
-} from "../../other/globalStates/globalStates";
+} from "@root/other/globalStates/globalStates";
 import { useState } from "@hookstate/core";
 
 export interface AppProviderProperties {
@@ -16,38 +16,38 @@ export interface AppProviderProperties {
   translation: i18n;
 }
 
-// eslint-disable-next-line react/display-name
-const AppProvider: FC<AppProviderProperties> = memo(
-  ({ children, translation }: AppProviderProperties): JSX.Element => {
-    const isMobile = useState(isMobileGlobal);
-    const isMenuOpenOnMobile = useState(isMenuOpenOnMobileGlobal);
-    const language = useState(languageGlobal);
-    useEffect(() => {
-      const resizeHandler = (): void => {
-        const isMobileSize: boolean = window.innerWidth < 768;
-        !isMobileSize && isMenuOpenOnMobile.set(false);
-        isMobile.set(isMobileSize);
-      };
-      const resizeLinstenerHandler = debounce(resizeHandler, 25);
-      addEventListener("resize", resizeLinstenerHandler);
-      return (): void => {
-        removeEventListener("resize", resizeLinstenerHandler);
-      };
-    }, [isMobile.get()]);
-    useEffect(() => {
-      !isMobile.get() && isMenuOpenOnMobile.set(false);
-    }, [isMobile.get()]);
-    useEffect(() => {
-      translation.changeLanguage(language.get());
-    }, [language.get()]);
-    return (
-      <I18nextProvider i18n={translation}>
-        <HelmetProvider>
-          <BrowserRouter>{children}</BrowserRouter>
-        </HelmetProvider>
-      </I18nextProvider>
-    );
-  },
-);
+const AppProvider: FC<AppProviderProperties> = ({
+  children,
+  translation,
+}: AppProviderProperties): JSX.Element => {
+  const isMobile = useState(isMobileGlobal);
+  const isMenuOpenOnMobile = useState(isMenuOpenOnMobileGlobal);
+  const language = useState(languageGlobal);
+  useEffect(() => {
+    const resizeHandler = (): void => {
+      const isMobileSize: boolean = window.innerWidth < 768;
+      !isMobileSize && isMenuOpenOnMobile.set(false);
+      isMobile.set(isMobileSize);
+    };
+    const resizeLinstenerHandler = debounce(resizeHandler, 25);
+    addEventListener("resize", resizeLinstenerHandler);
+    return (): void => {
+      removeEventListener("resize", resizeLinstenerHandler);
+    };
+  }, [isMobile.get()]);
+  useEffect(() => {
+    !isMobile.get() && isMenuOpenOnMobile.set(false);
+  }, [isMobile.get()]);
+  useEffect(() => {
+    translation.changeLanguage(language.get());
+  }, [language.get()]);
+  return (
+    <I18nextProvider i18n={translation}>
+      <HelmetProvider>
+        <BrowserRouter>{children}</BrowserRouter>
+      </HelmetProvider>
+    </I18nextProvider>
+  );
+};
 
-export default AppProvider;
+export default memo(AppProvider);

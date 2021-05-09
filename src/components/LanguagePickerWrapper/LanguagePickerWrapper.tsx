@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, MemoExoticComponent } from "react";
 import styled, { css, StyledComponent } from "styled-components";
 
 interface LanguagePickerWrapperProperties {
@@ -6,14 +6,11 @@ interface LanguagePickerWrapperProperties {
   numberOfNotMainFlags: number;
 }
 
-export type LanguagePickerWrapperType = StyledComponent<
-  "div",
-  never,
-  LanguagePickerWrapperProperties,
-  never
+export type LanguagePickerWrapperType = MemoExoticComponent<
+  StyledComponent<"div", never, LanguagePickerWrapperProperties, never>
 >;
 
-const LanguagePickerWrapper = memo(styled.div<LanguagePickerWrapperProperties>`
+const LanguagePickerWrapper: LanguagePickerWrapperType = memo(styled.div<LanguagePickerWrapperProperties>`
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -27,7 +24,6 @@ const LanguagePickerWrapper = memo(styled.div<LanguagePickerWrapperProperties>`
       z-index: 1;
     }
     ${({ numberOfNotMainFlags, isLanguageMenuOpen }) => {
-      // eslint-disable-next-line sonarjs/no-unused-collection
       const styles = [];
       for (let index = 2; index < 2 + numberOfNotMainFlags; index++) {
         styles.push(css`

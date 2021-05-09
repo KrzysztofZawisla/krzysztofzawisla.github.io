@@ -1,4 +1,4 @@
-import Bold from "./Bold";
+import Bold from "@root/components/Bold/Bold";
 import { render, cleanup, screen, RenderResult } from "@testing-library/react";
 import { ReactElement } from "react";
 
