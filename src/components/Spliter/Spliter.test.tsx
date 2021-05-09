@@ -1,5 +1,6 @@
 import Spliter, { SpliterType } from "@root/components/Spliter/Spliter";
 import { cleanup, render, RenderResult } from "@testing-library/react";
+import { MemoExoticComponent } from "react";
 import { expectType } from "tsd";
 
 afterEach(cleanup);
@@ -10,6 +11,6 @@ describe("Spliter", () => {
     expect(container).toMatchSnapshot();
   });
   it("Has correct type", () => {
-    expectType<SpliterType>(Spliter);
+    expectType<MemoExoticComponent<SpliterType>>(Spliter);
   });
 });

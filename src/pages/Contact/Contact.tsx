@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
 import Page from "@root/components/Page/Page";
 import Article from "@root/components/Article/Article";

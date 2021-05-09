@@ -1,6 +1,6 @@
 import Article, { ArticleType } from "@root/components/Article/Article";
 import { render, cleanup, RenderResult } from "@testing-library/react";
-import { ReactElement } from "react";
+import { MemoExoticComponent, ReactElement } from "react";
 import { expectType } from "tsd";
 
 afterEach(cleanup);
@@ -14,6 +14,6 @@ describe("Article", (): void => {
     expect(container).toMatchSnapshot();
   });
   it("Has correct type", () => {
-    expectType<ArticleType>(Article);
+    expectType<MemoExoticComponent<ArticleType>>(Article);
   });
 });

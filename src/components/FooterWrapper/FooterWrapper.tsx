@@ -9,7 +9,7 @@ export type FooterWrapperType = StyledComponent<
 >;
 
 const FooterWrapper = styled.footer`
-  background: $fff;
+  background: #fff;
   text-align: center;
   position: relative;
   width: calc(100vw - 50px);

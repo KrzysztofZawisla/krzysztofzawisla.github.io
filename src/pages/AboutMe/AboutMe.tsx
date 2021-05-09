@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import Page from "@root/components/Page/Page";
 import Image from "@root/components/Image/Image";
 import Article from "@root/components/Article/Article";

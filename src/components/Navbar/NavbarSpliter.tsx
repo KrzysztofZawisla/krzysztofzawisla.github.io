@@ -1,7 +1,14 @@
 import { memo } from "react";
-import styled from "styled-components";
+import styled, { StyledComponent } from "styled-components";
 
-const NavbarSpliter = styled.div`
+export type NavbarSpliterType = StyledComponent<
+  "div",
+  never,
+  Record<string, unknown>,
+  never
+>;
+
+const NavbarSpliter: NavbarSpliterType = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

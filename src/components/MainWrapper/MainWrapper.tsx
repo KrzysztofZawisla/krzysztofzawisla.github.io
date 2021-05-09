@@ -4,7 +4,7 @@ import styled, { StyledComponent } from "styled-components";
 export type MainWrapperType = StyledComponent<
   "main",
   never,
-  Record<string, never>,
+  Record<string, unknown>,
   never
 >;
 

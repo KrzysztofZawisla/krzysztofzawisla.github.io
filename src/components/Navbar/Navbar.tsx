@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/tabindex-no-positive */
 import { FC, useRef, KeyboardEvent as ReactKeyboardEvent, memo } from "react";
 import { Link } from "react-router-dom";
 import NavbarSpliter from "@root/components/Navbar/NavbarSpliter";

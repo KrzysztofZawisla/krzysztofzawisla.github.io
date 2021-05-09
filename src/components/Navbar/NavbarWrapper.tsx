@@ -1,12 +1,19 @@
 import { memo } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, StyledComponent } from "styled-components";
 
 interface NavbarWrapperProperties {
   isMenuOpenOnMobile: boolean;
   isMobile: boolean;
 }
 
-const NavbarWrapper = styled.nav<NavbarWrapperProperties>`
+export type NavbarWrapperType = StyledComponent<
+  "nav",
+  never,
+  NavbarWrapperProperties,
+  never
+>;
+
+const NavbarWrapper: NavbarWrapperType = styled.nav<NavbarWrapperProperties>`
   color: #111;
   background: #eee;
   width: 210px;

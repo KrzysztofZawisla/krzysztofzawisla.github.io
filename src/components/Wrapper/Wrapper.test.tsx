@@ -1,5 +1,6 @@
 import Wrapper, { WrapperType } from "@root/components/Wrapper/Wrapper";
 import { cleanup, render, RenderResult } from "@testing-library/react";
+import { MemoExoticComponent } from "react";
 import { expectType } from "tsd";
 
 afterEach(cleanup);
@@ -10,6 +11,6 @@ describe("Wrapper", (): void => {
     expect(container).toMatchSnapshot();
   });
   it("Has correct type", () => {
-    expectType<WrapperType>(Wrapper);
+    expectType<MemoExoticComponent<WrapperType>>(Wrapper);
   });
 });

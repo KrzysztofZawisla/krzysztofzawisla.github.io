@@ -2,6 +2,7 @@ import LanguagePickerWrapper, {
   LanguagePickerWrapperType,
 } from "@root/components/LanguagePickerWrapper/LanguagePickerWrapper";
 import { render, cleanup, RenderResult } from "@testing-library/react";
+import { MemoExoticComponent } from "react";
 import { expectType } from "tsd";
 
 afterEach(cleanup);
@@ -16,6 +17,8 @@ describe("LanguagePickerWrapper", (): void => {
     expect(container).toMatchSnapshot();
   });
   it("Has correct type", () => {
-    expectType<LanguagePickerWrapperType>(LanguagePickerWrapper);
+    expectType<MemoExoticComponent<LanguagePickerWrapperType>>(
+      LanguagePickerWrapper,
+    );
   });
 });

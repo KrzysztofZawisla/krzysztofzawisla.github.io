@@ -2,7 +2,7 @@ import ExternalLink, {
   ExternalLinkProperties,
 } from "@root/components/ExternalLink/ExternalLink";
 import { render, cleanup, RenderResult } from "@testing-library/react";
-import { FC, MemoExoticComponent, ReactElement } from "react";
+import { NamedExoticComponent, ReactElement } from "react";
 import { expectType } from "tsd";
 
 afterEach(cleanup);
@@ -15,7 +15,7 @@ describe("ExternalLink", (): void => {
     expect(container).toMatchSnapshot();
   });
   it("Has correct type", () => {
-    expectType<MemoExoticComponent<FC<ExternalLinkProperties>>>(ExternalLink);
+    expectType<NamedExoticComponent<ExternalLinkProperties>>(ExternalLink);
   });
 });
 
