@@ -34,49 +34,43 @@ const Contact: LazyExoticComponent<FC> = lazy(
   () => import("@root/pages/Contact/Contact"),
 );
 
-// eslint-disable-next-line react/display-name
-const AppWrapper: FC = memo(
-  (): JSX.Element => {
-    const isMenuOpenOnMobile = useState(isMenuOpenOnMobileGlobal);
-    const {
-      ErrorBoundary,
-      didCatch,
-    }: UseErrorBoundaryState = useErrorBoundary();
-    return (
-      <>
-        <GlobalStyle />
-        <Navbar />
-        <div
-          onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) => {
-            handleMenuClose(event, isMenuOpenOnMobile.set);
-          }}
-          tabIndex={0}
-          onClick={(): void => isMenuOpenOnMobile.set(false)}
-        >
-          <MainWrapper>
-            {didCatch ? (
-              <ErrorLoading />
-            ) : (
-              <ErrorBoundary>
-                <Suspense fallback={<></>}>
-                  <Switch>
-                    <Route exact path="/" component={AboutMe} />
-                    <Route exact path="/projects" component={Projects} />
-                    <Route exact path="/skills" component={Skills} />
-                    <Route exact path="/experience" component={Experience} />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route render={() => <Redirect to="/" />} />
-                  </Switch>
-                </Suspense>
-              </ErrorBoundary>
-            )}
-          </MainWrapper>
-          <Footer />
-        </div>
-        <LanguagePicker />
-      </>
-    );
-  },
-);
+const AppWrapper: FC = (): JSX.Element => {
+  const isMenuOpenOnMobile = useState(isMenuOpenOnMobileGlobal);
+  const { ErrorBoundary, didCatch }: UseErrorBoundaryState = useErrorBoundary();
+  return (
+    <>
+      <GlobalStyle />
+      <Navbar />
+      <div
+        onKeyPress={(event: ReactKeyboardEvent<HTMLDivElement>) => {
+          handleMenuClose(event, isMenuOpenOnMobile.set);
+        }}
+        tabIndex={0}
+        onClick={(): void => isMenuOpenOnMobile.set(false)}
+      >
+        <MainWrapper>
+          {didCatch ? (
+            <ErrorLoading />
+          ) : (
+            <ErrorBoundary>
+              <Suspense fallback={<></>}>
+                <Switch>
+                  <Route exact path="/" component={AboutMe} />
+                  <Route exact path="/projects" component={Projects} />
+                  <Route exact path="/skills" component={Skills} />
+                  <Route exact path="/experience" component={Experience} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route render={() => <Redirect to="/" />} />
+                </Switch>
+              </Suspense>
+            </ErrorBoundary>
+          )}
+        </MainWrapper>
+        <Footer />
+      </div>
+      <LanguagePicker />
+    </>
+  );
+};
 
-export default AppWrapper;
+export default memo(AppWrapper);

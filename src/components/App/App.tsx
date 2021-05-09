@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import AppWrapper from "@root/components/AppWrapper/AppWrapper";
 import AppProvider from "@root/components/AppProvider/AppProvider";
 import { i18n } from "i18next";
@@ -17,4 +17,4 @@ const App: FC<AppProperties> = ({
   );
 };
 
-export default App;
+export default memo(App);
