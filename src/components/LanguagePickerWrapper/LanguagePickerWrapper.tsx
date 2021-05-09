@@ -1,4 +1,4 @@
-import { memo, MemoExoticComponent } from "react";
+import { memo } from "react";
 import styled, { css, StyledComponent } from "styled-components";
 
 interface LanguagePickerWrapperProperties {
@@ -6,11 +6,14 @@ interface LanguagePickerWrapperProperties {
   numberOfNotMainFlags: number;
 }
 
-export type LanguagePickerWrapperType = MemoExoticComponent<
-  StyledComponent<"div", never, LanguagePickerWrapperProperties, never>
+export type LanguagePickerWrapperType = StyledComponent<
+  "div",
+  never,
+  LanguagePickerWrapperProperties,
+  never
 >;
 
-const LanguagePickerWrapper: LanguagePickerWrapperType = memo(styled.div<LanguagePickerWrapperProperties>`
+const LanguagePickerWrapper: LanguagePickerWrapperType = styled.div<LanguagePickerWrapperProperties>`
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -43,6 +46,6 @@ const LanguagePickerWrapper: LanguagePickerWrapperType = memo(styled.div<Languag
         isLanguageMenuOpen ? "visible" : "hidden"};
     }
   }
-`);
+`;
 
-export default LanguagePickerWrapper;
+export default memo(LanguagePickerWrapper);

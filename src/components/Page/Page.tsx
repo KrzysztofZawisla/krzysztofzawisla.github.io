@@ -1,4 +1,4 @@
-import { FC, memo, MemoExoticComponent, ReactNode } from "react";
+import { FC, memo, ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "@hookstate/core";
 import { languageGlobal } from "@root/other/globalStates/globalStates";
@@ -9,28 +9,28 @@ interface PageProperties {
   children: ReactNode;
 }
 
-// eslint-disable-next-line react/display-name
-const Page: MemoExoticComponent<FC<PageProperties>> = memo(
-  ({ title, children }: PageProperties): JSX.Element => {
-    const language = useState(languageGlobal);
-    const fixedTitle: string = `Krzysztof Zawisła${
-      title !== "" ? ` - ${title}` : ""
-    }`;
-    return (
-      <>
-        <Helmet
-          htmlAttributes={{
-            lang: language.get(),
-            translate: language.get() === ("pl" || "en") ? "no" : "yes",
-          }}
-        >
-          <title>{fixedTitle}</title>
-          <meta name="og:title" content={fixedTitle} />
-        </Helmet>
-        <Wrapper>{children}</Wrapper>
-      </>
-    );
-  },
-);
+const Page: FC<PageProperties> = ({
+  title,
+  children,
+}: PageProperties): JSX.Element => {
+  const language = useState(languageGlobal);
+  const fixedTitle: string = `Krzysztof Zawisła${
+    title !== "" ? ` - ${title}` : ""
+  }`;
+  return (
+    <>
+      <Helmet
+        htmlAttributes={{
+          lang: language.get(),
+          translate: language.get() === ("pl" || "en") ? "no" : "yes",
+        }}
+      >
+        <title>{fixedTitle}</title>
+        <meta name="og:title" content={fixedTitle} />
+      </Helmet>
+      <Wrapper>{children}</Wrapper>
+    </>
+  );
+};
 
-export default Page;
+export default memo(Page);

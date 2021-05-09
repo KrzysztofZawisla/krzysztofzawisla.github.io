@@ -27,4 +27,4 @@ const AboutMe: FC = (): JSX.Element => {
   );
 };
 
-export default AboutMe;
+export default memo(AboutMe);

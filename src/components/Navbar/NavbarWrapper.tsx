@@ -6,7 +6,7 @@ interface NavbarWrapperProperties {
   isMobile: boolean;
 }
 
-const NavbarWrapper = memo(styled.nav<NavbarWrapperProperties>`
+const NavbarWrapper = styled.nav<NavbarWrapperProperties>`
   color: #111;
   background: #eee;
   width: 210px;
@@ -30,6 +30,6 @@ const NavbarWrapper = memo(styled.nav<NavbarWrapperProperties>`
       animation-timing-function: 1s ease-in;
     }
   }
-`);
+`;
 
-export default NavbarWrapper;
+export default memo(NavbarWrapper);

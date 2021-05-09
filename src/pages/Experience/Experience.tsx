@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import Page from "@root/components/Page/Page";
 import Article from "@root/components/Article/Article";
 import Section from "@root/components/Section/Section";
@@ -38,4 +38,4 @@ const Experience: FC = (): JSX.Element => {
   );
 };
 
-export default Experience;
+export default memo(Experience);

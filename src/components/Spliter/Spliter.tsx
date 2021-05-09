@@ -1,12 +1,14 @@
-import { memo, MemoExoticComponent } from "react";
+import { memo } from "react";
 import styled, { StyledComponent } from "styled-components";
 
-export type SpliterType = MemoExoticComponent<
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  StyledComponent<"div", never, {}, never>
+export type SpliterType = StyledComponent<
+  "div",
+  never,
+  Record<string, unknown>,
+  never
 >;
 
-const Spliter: SpliterType = memo(styled.div`
+const Spliter: SpliterType = styled.div`
   background: linear-gradient(
     to right,
     #ffdc7d,
@@ -16,6 +18,6 @@ const Spliter: SpliterType = memo(styled.div`
     #c32aa3
   );
   height: 1.75px;
-`);
+`;
 
-export default Spliter;
+export default memo(Spliter);

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import Page from "@root/components/Page/Page";
 import Section from "@root/components/Section/Section";
 import Article from "@root/components/Article/Article";
@@ -252,4 +252,4 @@ const Projects: FC = (): JSX.Element => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

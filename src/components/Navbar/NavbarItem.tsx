@@ -1,7 +1,7 @@
 import { memo } from "react";
 import styled from "styled-components";
 
-const NavbarItem = memo(styled.li`
+const NavbarItem = styled.li`
   padding-bottom: 30px;
   padding-left: 10px;
   list-style-type: none;
@@ -10,6 +10,6 @@ const NavbarItem = memo(styled.li`
   a {
     display: block;
   }
-`);
+`;
 
-export default NavbarItem;
+export default memo(NavbarItem);

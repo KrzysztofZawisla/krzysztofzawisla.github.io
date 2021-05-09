@@ -1,11 +1,18 @@
 import { memo } from "react";
-import styled from "styled-components";
+import styled, { StyledComponent } from "styled-components";
 
-const Image = memo(styled.img`
+export type ImageType = StyledComponent<
+  "img",
+  never,
+  Record<string, unknown>,
+  never
+>;
+
+const Image: ImageType = styled.img`
   border-radius: 7.5px;
   width: 100%;
   max-width: 100px;
   height: auto;
-`);
+`;
 
-export default Image;
+export default memo(Image);

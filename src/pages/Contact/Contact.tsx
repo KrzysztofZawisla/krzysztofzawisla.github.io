@@ -72,4 +72,4 @@ const Contact: FC = (): JSX.Element => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

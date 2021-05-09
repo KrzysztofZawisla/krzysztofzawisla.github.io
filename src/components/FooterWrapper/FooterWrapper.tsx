@@ -1,7 +1,14 @@
 import { memo } from "react";
-import styled from "styled-components";
+import styled, { StyledComponent } from "styled-components";
 
-const FooterWrapper = memo(styled.footer`
+export type FooterWrapperType = StyledComponent<
+  "footer",
+  never,
+  Record<string, unknown>,
+  never
+>;
+
+const FooterWrapper = styled.footer`
   background: $fff;
   text-align: center;
   position: relative;
@@ -11,6 +18,6 @@ const FooterWrapper = memo(styled.footer`
     font-size: 22px;
     text-decoration: none;
   }
-`);
+`;
 
-export default FooterWrapper;
+export default memo(FooterWrapper);
