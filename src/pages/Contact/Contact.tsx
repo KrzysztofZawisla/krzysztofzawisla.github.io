@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
-import Page from "../../components/Page";
-import Article from "../../components/Article/Article";
-import Section from "../../components/Section/Section";
-import ExternalLink from "../../components/ExternalLink/ExternalLink";
-import Image from "../../components/Image/Image";
+import Page from "@root/components/Page/Page";
+import Article from "@root/components/Article/Article";
+import Section from "@root/components/Section/Section";
+import ExternalLink from "@root/components/ExternalLink/ExternalLink";
+import Image from "@root/components/Image/Image";
 
 const Contact: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();

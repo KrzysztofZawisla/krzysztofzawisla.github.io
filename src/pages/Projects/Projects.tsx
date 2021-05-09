@@ -1,9 +1,9 @@
 import { FC } from "react";
-import Page from "../../components/Page";
-import Section from "../../components/Section/Section";
-import Article from "../../components/Article/Article";
-import Bold from "../../components/Bold/Bold";
-import ExternalLink from "../../components/ExternalLink/ExternalLink";
+import Page from "@root/components/Page/Page";
+import Section from "@root/components/Section/Section";
+import Article from "@root/components/Article/Article";
+import Bold from "@root/components/Bold/Bold";
+import ExternalLink from "@root/components/ExternalLink/ExternalLink";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const Projects: FC = (): JSX.Element => {

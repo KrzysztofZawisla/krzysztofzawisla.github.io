@@ -1,4 +1,4 @@
-import Spliter, { SpliterType } from "./Spliter";
+import Spliter, { SpliterType } from "@root/components/Spliter/Spliter";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { expectType } from "tsd";
 

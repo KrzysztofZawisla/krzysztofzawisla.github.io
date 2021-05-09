@@ -1,10 +1,10 @@
-import AboutMe from "./AboutMe";
+import AboutMe from "@root/pages/AboutMe/AboutMe";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { FC } from "react";
 import { expectType } from "tsd";
-import AppProvider from "../../components/AppProvider/AppProvider";
+import AppProvider from "@root/components/AppProvider/AppProvider";
 import { i18n } from "i18next";
-import initTranslations from "../../other/translation/translation";
+import initTranslations from "@root/other/translation/translation";
 
 afterEach(cleanup);
 

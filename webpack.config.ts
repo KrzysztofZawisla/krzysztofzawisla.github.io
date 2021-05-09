@@ -109,13 +109,6 @@ const setupConfig = (
                     ],
                   ],
                   plugins: [
-                    /*[
-                      "@babel/transform-react-jsx",
-                      {
-                        runtime: "automatic",
-                        importSource: "preact",
-                      },
-                    ],*/
                     "lodash",
                     [
                       "babel-plugin-styled-components",
@@ -158,6 +151,7 @@ const setupConfig = (
             "@babel",
             "runtime",
           ),
+          "@root": path.join(__dirname, "src"),
         },
       },
       experiments: {

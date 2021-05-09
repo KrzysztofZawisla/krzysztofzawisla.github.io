@@ -1,5 +1,5 @@
 import { InitOptions, InterpolationOptions } from "i18next";
-import translationsOptions from "./translationOptions";
+import translationsOptions from "@root/other/translationOptions/translationOptions";
 import { expectType } from "tsd";
 import { isEmpty } from "lodash";
 

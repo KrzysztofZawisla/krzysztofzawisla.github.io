@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Page from "../../components/Page";
-import Article from "../../components/Article/Article";
-import Section from "../../components/Section/Section";
+import Page from "@root/components/Page/Page";
+import Article from "@root/components/Article/Article";
+import Section from "@root/components/Section/Section";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
 
 const Skills: FC = (): JSX.Element => {

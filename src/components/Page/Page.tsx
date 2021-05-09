@@ -1,8 +1,8 @@
 import { FC, memo, MemoExoticComponent, ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "@hookstate/core";
-import { languageGlobal } from "../other/globalStates/globalStates";
-import Wrapper from "./Wrapper/Wrapper";
+import { languageGlobal } from "@root/other/globalStates/globalStates";
+import Wrapper from "@root/components/Wrapper/Wrapper";
 
 interface PageProperties {
   title: string;

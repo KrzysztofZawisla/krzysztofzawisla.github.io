@@ -1,4 +1,6 @@
-import consoleGreetings, { consoleGreetingsArgument } from "./consoleGreetings";
+import consoleGreetings, {
+  consoleGreetingsArgument,
+} from "@root/other/consoleGreetings/consoleGreetings";
 type Spy = jasmine.Spy;
 
 describe("consoleGreetings", () => {

@@ -1,9 +1,9 @@
 import { FC } from "react";
-import Page from "../../components/Page";
-import Article from "../../components/Article/Article";
-import Section from "../../components/Section/Section";
+import Page from "@root/components/Page/Page";
+import Article from "@root/components/Article/Article";
+import Section from "@root/components/Section/Section";
 import { useTranslation, UseTranslationResponse } from "react-i18next";
-import ExternalLink from "../../components/ExternalLink/ExternalLink";
+import ExternalLink from "@root/components/ExternalLink/ExternalLink";
 
 const Experience: FC = (): JSX.Element => {
   const { t }: UseTranslationResponse<string> = useTranslation();

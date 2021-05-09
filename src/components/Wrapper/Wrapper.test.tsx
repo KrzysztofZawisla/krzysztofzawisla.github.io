@@ -1,4 +1,4 @@
-import Wrapper, { WrapperType } from "./Wrapper";
+import Wrapper, { WrapperType } from "@root/components/Wrapper/Wrapper";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { expectType } from "tsd";
 

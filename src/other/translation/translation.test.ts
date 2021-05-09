@@ -1,5 +1,5 @@
 import { i18n } from "i18next";
-import initTranslations from "./translation";
+import initTranslations from "@root/other/translation/translation";
 import { expectType } from "tsd";
 import { isEmpty } from "lodash";
 

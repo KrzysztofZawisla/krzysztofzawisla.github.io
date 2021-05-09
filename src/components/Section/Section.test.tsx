@@ -1,4 +1,4 @@
-import Section from "./Section";
+import Section from "@root/components/Section/Section";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 
 afterEach(cleanup);
