@@ -1,4 +1,4 @@
-import { i18n } from "i18next";
+import { i18n as TranslationType } from "i18next";
 import { StrictMode } from "react";
 import { render } from "react-dom";
 import App from "./components/App/App";
@@ -26,7 +26,7 @@ consoleGreetings();
 
 const root: HTMLElement | null = document.querySelector("#root");
 
-const translation: i18n = await initTranslations();
+const translation: TranslationType = await initTranslations();
 render(
   <StrictMode>
     <App translation={translation} />

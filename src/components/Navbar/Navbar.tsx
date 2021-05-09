@@ -1,4 +1,9 @@
-import { FC, useRef, KeyboardEvent as ReactKeyboardEvent, memo } from "react";
+import {
+  FC,
+  useRef as useReference,
+  KeyboardEvent as ReactKeyboardEvent,
+  memo,
+} from "react";
 import { Link } from "react-router-dom";
 import NavbarSpliter from "@root/components/Navbar/NavbarSpliter";
 import NavbarWrapper from "@root/components/Navbar/NavbarWrapper";
@@ -16,7 +21,7 @@ import {
 const Navbar: FC = (): JSX.Element => {
   const isMobile = useState(isMobileGlobal);
   const isMenuOpenOnMobile = useState(isMenuOpenOnMobileGlobal);
-  const NavbarReference = useRef(null);
+  const NavbarReference = useReference(null);
   const adjustWebsiteOnMenuItemClick = () => {
     isMobile.get() &&
       ((NavbarReference?.current as unknown) as HTMLElement).blur();

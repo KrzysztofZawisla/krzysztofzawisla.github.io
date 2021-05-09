@@ -1,23 +1,28 @@
-import i18next, { i18n, InitOptions, Module, ThirdPartyModule } from "i18next";
+import i18next, {
+  i18n as TranslationType,
+  InitOptions,
+  Module,
+  ThirdPartyModule,
+} from "i18next";
 import i18nextDetector from "i18next-browser-languagedetector";
 import i18nextBackend from "i18next-xhr-backend";
 import translationsOptions from "@root/other/translationOptions/translationOptions";
 
-type InitTranslations = () => Promise<i18n>;
+type InitTranslations = () => Promise<TranslationType>;
 type SetupTranslation = <T extends Module>(
-  translation: i18n,
+  translation: TranslationType,
   options: InitOptions,
   ...modules: T[]
-) => Promise<i18n>;
+) => Promise<TranslationType>;
 
 const fixedI18NextDetector: ThirdPartyModule = (i18nextDetector as unknown) as ThirdPartyModule;
 const fixedI18NextBackend: ThirdPartyModule = (i18nextBackend as unknown) as ThirdPartyModule;
 
 export const setupTranslation: SetupTranslation = async <T extends Module>(
-  translation: i18n,
+  translation: TranslationType,
   options: InitOptions,
   ...modules: T[]
-): Promise<i18n> => {
+): Promise<TranslationType> => {
   modules.forEach((module: T) => {
     translation = translation.use(module);
   });
@@ -25,7 +30,7 @@ export const setupTranslation: SetupTranslation = async <T extends Module>(
   return translation;
 };
 
-const initTranslations: InitTranslations = async (): Promise<i18n> => {
+const initTranslations: InitTranslations = async (): Promise<TranslationType> => {
   return await setupTranslation(
     i18next,
     translationsOptions,

@@ -1,10 +1,10 @@
 import { FC, memo } from "react";
 import AppWrapper from "@root/components/AppWrapper/AppWrapper";
 import AppProvider from "@root/components/AppProvider/AppProvider";
-import { i18n } from "i18next";
+import { i18n as TranslationType } from "i18next";
 
 export interface AppProperties {
-  translation: i18n;
+  translation: TranslationType;
 }
 
 const App: FC<AppProperties> = ({

@@ -1,4 +1,10 @@
-import { FC, memo, useCallback, useEffect, useRef } from "react";
+import {
+  FC,
+  memo,
+  useCallback,
+  useEffect,
+  useRef as useReference,
+} from "react";
 import LanguagePickerWrapper from "@root/components/LanguagePickerWrapper/LanguagePickerWrapper";
 import { useTranslation } from "react-i18next";
 import Flag from "@root/components/Flag/Flag";
@@ -18,7 +24,7 @@ const LanguagePicker: FC = (): JSX.Element => {
   const isEnglish = useState(language.get() !== "pl" ? true : false);
   const childElementCount = useState(0);
   const isMouseOverLanguageMenu = useState(false);
-  const languagePickerWrapperReference = useRef(null);
+  const languagePickerWrapperReference = useReference(null);
   const changeLanguage = (setEnglish: boolean) => {
     isLanguageMenuOpen.set((previousValue) => {
       return !previousValue;
