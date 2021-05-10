@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./watchtower/config.json:/config.json
+    command: --cleanup --interval 300
+    restart: always
+    networks:
+      - fullstack
+  website:
+    container_name: website
+    image: ghcr.io/krzysztofzawisla/krzysztofzawisla.github.io:latest
+    ports:
+      - "5000:5000"
+    networks:
+      - fullstack
+    restart: on-failure
+    depends_on:
+      - watchtower
+    volumes:
+      - ./:/home/website
+      - /home/website/node_modules
+      - ./dist
+networks:
+  fullstack:
+    driver: bridge

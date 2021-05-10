@@ -7,4 +7,4 @@ FROM mhart/alpine-node:latest
 COPY --from=build /home/website/dist /home/website
 RUN yarn global add serve
 EXPOSE 5000
-CMD ["serve", "-s", "/home/website"]
+CMD ["serve", "-s", "/home/website/dist"]
