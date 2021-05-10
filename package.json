@@ -114,7 +114,7 @@
     "minify-json-webpack-plugin": "^1.0.5",
     "npm-check": "^5.9.2",
     "npm-check-updates": "^11.5.10",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "react-refresh": "^0.10.0",
     "rimraf": "^3.0.2",
     "robotstxt-webpack-plugin": "^7.0.0",
