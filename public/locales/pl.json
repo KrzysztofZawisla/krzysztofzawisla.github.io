@@ -52,6 +52,7 @@
     "projects": {
       "heading": "Projekty",
       "usedTechnologies": "Użyte technologie",
+      "GrexJSContent": "Biblioteka bindująca Rustową bibliotekę grex (https://github.com/pemistahl/grex) do JavaScriptu.",
       "SnowyYouTubeDownloaderContent": "Przestarzały downloader do filmów z YouTube.",
       "SnowyUpdaterContent": "Prosty aktualizator aplikacji.",
       "SnowySimpleLoggerNodejsContent": "Biblioteka udostępniają do NodeJS prosty i szybki logger.",

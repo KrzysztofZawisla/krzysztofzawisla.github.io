@@ -89,6 +89,17 @@ const Projects: FC = (): JSX.Element => {
       </Article>
       <Article>
         <h2>
+          <ExternalLink href="https://github.com/KrzysztofZawisla/grex.js">
+            Grex.js
+          </ExternalLink>
+        </h2>
+        {t("pages.projects.GrexJSContent")}
+        <div>
+          <Bold>{usedTechnologies}: TypeScript, Rust, WebAssembly</Bold>
+        </div>
+      </Article>
+      <Article>
+        <h2>
           <ExternalLink href="https://github.com/KrzysztofZawisla/SnowyMonitor">
             SnowyMonitor
           </ExternalLink>

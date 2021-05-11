@@ -53,6 +53,7 @@
       "heading": "Projects",
       "usedTechnologies": "Used technologies",
       "SnowyYouTubeDownloaderContent": "Outdated YouTube video downloader.",
+      "GrexJSContent": "JavaScript's bindings to Rust grex library - https://github.com/pemistahl/grex.",
       "SnowyUpdaterContent": "Simple app updater.",
       "SnowySimpleLoggerNodejsContent": "Library that shares to NodeJS simple and fast logger.",
       "SnowySimpleLoggerPythonContent": "Library that shares to Python simple and fast logger.",
