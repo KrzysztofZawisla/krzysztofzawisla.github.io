@@ -55,7 +55,7 @@ const Skills: FC = (): JSX.Element => {
         <h3>Advanced:</h3>
         <Section>Docker, Podman</Section>
         <h3>Regular:</h3>
-        <Section>Git, Github, Gitlab, Github Actions</Section>
+        <Section>Git, Github, Gitlab, Github Actions, GraalVM</Section>
       </Article>
       <Article>
         <h2>{t("pages.skills.frameworksAndLibraries")}:</h2>
