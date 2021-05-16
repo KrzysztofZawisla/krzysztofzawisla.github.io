@@ -8,7 +8,7 @@
     "strict": true,
     "sourceMap": true,
     "alwaysStrict": true,
-    "module": "commonjs",
+    "module": "umd",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "strictNullChecks": true,

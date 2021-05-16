@@ -1,4 +1,4 @@
-import { i18n as TranslationType } from "i18next";
+import { i18n as TranlationType } from "i18next";
 import { debounce } from "lodash";
 import { FC, memo, ReactNode, useEffect } from "react";
 import { I18nextProvider } from "react-i18next";
@@ -13,7 +13,7 @@ import { useState } from "@hookstate/core";
 
 export interface AppProviderProperties {
   children: ReactNode;
-  translation: TranslationType;
+  translation: TranlationType;
 }
 
 const AppProvider: FC<AppProviderProperties> = ({
