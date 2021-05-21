@@ -24,35 +24,8 @@ const Contact: FC = (): JSX.Element => {
       <Article>
         <Section>
           <h2>
-            <ExternalLink href="https://www.linkedin.com/in/krzysztof-zawisła">
+            <ExternalLink href="https://www.linkedin.com/in/krzysztof-zawisla">
               LinkedIn
-            </ExternalLink>
-          </h2>
-        </Section>
-      </Article>
-      <Article>
-        <Section>
-          <h2>
-            <ExternalLink href="https://twitter.com/Krzysztof_zaw">
-              Twitter
-            </ExternalLink>
-          </h2>
-        </Section>
-      </Article>
-      <Article>
-        <Section>
-          <h2>
-            <ExternalLink href="https://www.facebook.com/profile.php?id=100006723130084">
-              Facebook
-            </ExternalLink>
-          </h2>
-        </Section>
-      </Article>
-      <Article>
-        <Section>
-          <h2>
-            <ExternalLink href="https://www.instagram.com/krzysztof_zawisla/">
-              Instagram
             </ExternalLink>
           </h2>
         </Section>
