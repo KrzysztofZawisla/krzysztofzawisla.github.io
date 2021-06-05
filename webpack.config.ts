@@ -59,7 +59,7 @@ const setupConfig = (
       target: "web",
       optimization: {
         minimize: mode !== "development",
-        minimizer: [(new TerserPlugin() as unknown) as WebpackPluginInstance],
+        minimizer: [new TerserPlugin() as unknown as WebpackPluginInstance],
         usedExports: true,
       },
       devtool: "source-map",
@@ -85,7 +85,7 @@ const setupConfig = (
           {
             test: /\.(ts|tsx)$/,
             include: path.join(__dirname, "src"),
-            exclude: [/(node_modules|bower_components)/, /\.test\.(ts|tsx)$/],
+            exclude: [/(node_modules|bower_components)/],
             use: [
               {
                 loader: "babel-loader",
@@ -158,7 +158,7 @@ const setupConfig = (
         topLevelAwait: true,
         outputModule: targetToModern,
       },
-      plugins: ([
+      plugins: [
         targetToModern &&
           new PreloadWebpackPlugin({
             rel: "prefetch",
@@ -289,7 +289,7 @@ const setupConfig = (
           new ReactRefreshWebpackPlugin(),
         new AggressiveMergingPlugin(),
         new MinifyJSONWebpackPlugin(),
-      ].filter(Boolean) as unknown) as WebpackPluginInstance[],
+      ].filter(Boolean) as unknown as WebpackPluginInstance[],
       devServer: targetToModern
         ? {
             historyApiFallback: true,
