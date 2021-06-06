@@ -1,12 +1,5 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
-
-export type FooterWrapperType = StyledComponent<
-  "footer",
-  never,
-  Record<string, unknown>,
-  never
->;
+import styled from "@emotion/styled";
 
 const FooterWrapper = styled.footer`
   background: #fff;

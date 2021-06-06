@@ -1,4 +1,4 @@
-import Wrapper, { WrapperType } from "@root/components/Wrapper/Wrapper";
+/*import Wrapper, { WrapperType } from "@root/components/Wrapper/Wrapper";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 import { MemoExoticComponent } from "react";
 import { expectType } from "tsd";
@@ -14,3 +14,5 @@ describe("Wrapper", (): void => {
     expectType<MemoExoticComponent<WrapperType>>(Wrapper);
   });
 });
+*/
+export {};

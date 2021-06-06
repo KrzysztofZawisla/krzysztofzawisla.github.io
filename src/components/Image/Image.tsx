@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type ImageType = StyledComponent<
-  "img",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const Image: ImageType = styled.img`
+const Image = styled.img`
   border-radius: 7.5px;
   width: 100%;
   max-width: 100px;

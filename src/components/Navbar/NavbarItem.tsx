@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type NavbarItemType = StyledComponent<
-  "li",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const NavbarItem: NavbarItemType = styled.li`
+const NavbarItem = styled.li`
   padding-bottom: 30px;
   padding-left: 10px;
   list-style-type: none;

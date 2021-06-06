@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type MainWrapperType = StyledComponent<
-  "main",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const MainWrapper: MainWrapperType = styled.main`
+const MainWrapper = styled.main`
   position: relative;
   min-height: 100vh;
   width: calc(100vw - 50px);

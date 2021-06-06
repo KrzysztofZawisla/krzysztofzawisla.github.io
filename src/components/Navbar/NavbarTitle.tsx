@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type NavbarWrapperType = StyledComponent<
-  "div",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const NavbarTitle: NavbarWrapperType = styled.div`
+const NavbarTitle = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

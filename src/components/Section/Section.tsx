@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type SectionType = StyledComponent<
-  "section",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const Section: SectionType = styled.section`
+const Section = styled.section`
   text-align: left;
   @media screen and (min-width: 768px) {
     text-align: justify;

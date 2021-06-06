@@ -1,4 +1,4 @@
-import GlobalStyle, {
+/*import GlobalStyle, {
   GlobalStyleType,
 } from "@root/components/GlobalStyle/GlobalStyle";
 import { render, cleanup, RenderResult } from "@testing-library/react";
@@ -15,4 +15,6 @@ describe("GlobalStyle", (): void => {
   it("Has correct type", () => {
     expectType<MemoExoticComponent<GlobalStyleType>>(GlobalStyle);
   });
-});
+});*/
+
+export {};

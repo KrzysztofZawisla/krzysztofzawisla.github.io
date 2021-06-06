@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type SpliterType = StyledComponent<
-  "div",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const Spliter: SpliterType = styled.div`
+const Spliter = styled.div`
   background: linear-gradient(
     to right,
     #ffdc7d,
