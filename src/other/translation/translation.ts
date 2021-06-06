@@ -15,10 +15,8 @@ type SetupTranslation = <T extends Module>(
   ...modules: T[]
 ) => Promise<TranslationType>;
 
-const fixedI18NextDetector: ThirdPartyModule =
-  i18nextDetector as unknown as ThirdPartyModule;
-const fixedI18NextBackend: ThirdPartyModule =
-  i18nextBackend as unknown as ThirdPartyModule;
+const fixedI18NextDetector: ThirdPartyModule = (i18nextDetector as unknown) as ThirdPartyModule;
+const fixedI18NextBackend: ThirdPartyModule = (i18nextBackend as unknown) as ThirdPartyModule;
 
 export const setupTranslation: SetupTranslation = async <T extends Module>(
   translation: TranslationType,
@@ -32,14 +30,13 @@ export const setupTranslation: SetupTranslation = async <T extends Module>(
   return translation;
 };
 
-const initTranslations: InitTranslations =
-  async (): Promise<TranslationType> => {
-    return await setupTranslation(
-      i18next,
-      translationsOptions,
-      fixedI18NextDetector,
-      fixedI18NextBackend,
-    );
-  };
+const initTranslations: InitTranslations = async (): Promise<TranslationType> => {
+  return await setupTranslation(
+    i18next,
+    translationsOptions,
+    fixedI18NextDetector,
+    fixedI18NextBackend,
+  );
+};
 
 export default initTranslations;

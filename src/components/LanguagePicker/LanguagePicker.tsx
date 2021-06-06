@@ -36,7 +36,7 @@ const LanguagePicker: FC = (): JSX.Element => {
   const getChildElementCount = useCallback((): void => {
     if (languagePickerWrapperReference.current !== null) {
       childElementCount.set(
-        (languagePickerWrapperReference.current as unknown as HTMLElement)
+        ((languagePickerWrapperReference.current as unknown) as HTMLElement)
           .childElementCount - 1,
       );
     } else {

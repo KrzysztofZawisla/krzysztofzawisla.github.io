@@ -24,7 +24,7 @@ const Navbar: FC = (): JSX.Element => {
   const NavbarReference = useReference(null);
   const adjustWebsiteOnMenuItemClick = () => {
     isMobile.get() &&
-      (NavbarReference?.current as unknown as HTMLElement).blur();
+      ((NavbarReference?.current as unknown) as HTMLElement).blur();
     window.scrollTo(0, 0);
   };
   const { t } = useTranslation();
