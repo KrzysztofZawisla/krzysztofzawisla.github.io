@@ -33,7 +33,8 @@
     "build-local-production-cli": "docker-compose -f docker-compose.local.yml build",
     "build-local-production-cli-no-cache": "yarn run build-local-production-cli --no-cache",
     "start-local-production": "docker-compose -f docker-compose.local.yml -p websitelocal up",
-    "start-remote-production": "docker-compose -f docker-compose.remote.yml -p websiteremote up"
+    "start-remote-production": "docker-compose -f docker-compose.remote.yml -p websiteremote up",
+    "postinstall": "husky install && husky add .husky/pre-commit \"yarn run lint\""
   },
   "repository": {
     "type": "git",
