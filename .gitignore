@@ -5,3 +5,4 @@ lighthouse.html
 legacy-analyzer-report.html
 modern-analyzer-report.html
 yarn-error.log
+.husky

@@ -24,9 +24,8 @@ describe("Translation Options", () => {
   });
   it("Has disabled escapeValue interpolation", () => {
     const { interpolation }: InitOptions = translationsOptions;
-    const {
-      escapeValue,
-    }: InterpolationOptions = interpolation as InterpolationOptions;
+    const { escapeValue }: InterpolationOptions =
+      interpolation as InterpolationOptions;
     expect(escapeValue).toBe(false);
   });
   it("Exists", () => {
