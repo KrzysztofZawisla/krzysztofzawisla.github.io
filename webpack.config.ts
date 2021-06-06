@@ -29,6 +29,7 @@ import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plu
 import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
 import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
 import { Configuration as WebpackDevelopmentServerConfiguration } from "webpack-dev-server";
+import UnusedWebpackPlugin from "unused-webpack-plugin";
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevelopmentServerConfiguration;
@@ -110,15 +111,7 @@ const setupConfig = (
                   ],
                   plugins: [
                     "lodash",
-                    [
-                      "babel-plugin-styled-components",
-                      {
-                        ssr: false,
-                        displayName: mode === "development",
-                        minify: mode !== "development",
-                        pure: true,
-                      },
-                    ],
+                    "@emotion",
                     "@babel/plugin-syntax-top-level-await",
                     targetToModern &&
                       mode === "development" &&
@@ -163,6 +156,11 @@ const setupConfig = (
           new PreloadWebpackPlugin({
             rel: "prefetch",
           }),
+        new UnusedWebpackPlugin({
+          directories: [path.join(__dirname, "src")],
+          exclude: ["*.test.ts", "*.test.tsx", "setupTests.ts"],
+          root: __dirname,
+        }),
         targetToModern &&
           new ScriptExtHtmlWebpackPlugin({
             async: "index.mjs",

@@ -1,19 +1,12 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type ArticleType = StyledComponent<
-  "article",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const Article: ArticleType = styled.article`
+const Article = styled.article`
   background: #eee;
   padding: 7.5px;
   border-radius: 7.5px;
   margin-bottom: 15px;
-  &:nth-last-child(1) {
+  &:nth-last-of-type(1) {
     margin-bottom: 0;
   }
 `;

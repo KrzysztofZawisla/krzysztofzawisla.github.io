@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type FlagType = StyledComponent<
-  "img",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const Flag: FlagType = styled.img`
+const Flag = styled.img`
   border-radius: 100%;
   display: flex;
   justify-content: center;

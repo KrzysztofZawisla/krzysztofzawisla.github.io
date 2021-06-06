@@ -1,4 +1,4 @@
-import FooterWrapper from "@root/components/FooterWrapper/FooterWrapper";
+/*import FooterWrapper from "@root/components/FooterWrapper/FooterWrapper";
 import { cleanup, render, RenderResult } from "@testing-library/react";
 
 afterEach(cleanup);
@@ -10,4 +10,6 @@ describe("FooterWrapper", (): void => {
     );
     expect(container).toMatchSnapshot();
   });
-});
+});*/
+
+export {};

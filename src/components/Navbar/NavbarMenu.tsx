@@ -1,14 +1,7 @@
 import { memo } from "react";
-import styled, { StyledComponent } from "styled-components";
+import styled from "@emotion/styled";
 
-export type NavbarMenuType = StyledComponent<
-  "ul",
-  never,
-  Record<string, unknown>,
-  never
->;
-
-const NavbarMenu: NavbarMenuType = styled.ul`
+const NavbarMenu = styled.ul`
   position: absolute;
   top: 50%;
   padding-left: 10px;
