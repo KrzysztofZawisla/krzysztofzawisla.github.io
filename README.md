@@ -32,6 +32,10 @@ yarn run
 
 ![lighthouse score](https://i.imgur.com/xN0Ijd2.png)
 
+## Carbon results
+
+<https://www.websitecarbon.com/website/krzysztofzawisla-github-io/>
+
 ## Licenses
 
 Information about used packages and their license you can find under this path src/(modern|legacy)/index.(mjs|js).LICENSE.txt on deploy branch.
