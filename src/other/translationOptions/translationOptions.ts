@@ -1,9 +1,16 @@
-import { InitOptions } from "i18next";
+import i18nextBackend from "i18next-xhr-backend";
+import LocalStorageBackend from "i18next-localstorage-backend";
 
-const translationsOptions: InitOptions = {
+const translationsOptions = {
   load: "languageOnly",
   backend: {
-    loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}.json`,
+    backends: [LocalStorageBackend, i18nextBackend],
+    backendOptions: [
+      {},
+      {
+        loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}.json`,
+      },
+    ],
   },
   fallbackLng: "en",
   interpolation: {
