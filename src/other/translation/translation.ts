@@ -1,17 +1,18 @@
 import i18next, {
   i18n as TranslationType,
-  InitOptions,
   Module,
   ThirdPartyModule,
 } from "i18next";
 import i18nextDetector from "i18next-browser-languagedetector";
-import translationsOptions from "@root/other/translationOptions/translationOptions";
+import translationsOptions, {
+  TranslationOptions,
+} from "@root/other/translationOptions/translationOptions";
 import chainedBackend from "i18next-chained-backend";
 
 type InitTranslations = () => Promise<TranslationType>;
 type SetupTranslation = <T extends Module>(
   translation: TranslationType,
-  options: InitOptions,
+  options: TranslationOptions,
   ...modules: T[]
 ) => Promise<TranslationType>;
 
@@ -22,7 +23,7 @@ const fixedChainedBackend: ThirdPartyModule =
 
 export const setupTranslation: SetupTranslation = async <T extends Module>(
   translation: TranslationType,
-  options: InitOptions,
+  options: TranslationOptions,
   ...modules: T[]
 ): Promise<TranslationType> => {
   modules.forEach((module: T) => {
@@ -36,7 +37,7 @@ const initTranslations: InitTranslations =
   async (): Promise<TranslationType> => {
     return await setupTranslation(
       i18next,
-      translationsOptions as any,
+      translationsOptions,
       fixedChainedBackend,
       fixedI18NextDetector,
     );

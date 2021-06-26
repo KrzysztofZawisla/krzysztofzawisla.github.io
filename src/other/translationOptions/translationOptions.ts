@@ -1,7 +1,12 @@
 import i18nextBackend from "i18next-xhr-backend";
 import LocalStorageBackend from "i18next-localstorage-backend";
+import { InitOptions } from "i18next";
 
-const translationsOptions = {
+export interface TranslationOptions extends InitOptions {
+  backend: Record<string, unknown>;
+}
+
+const translationsOptions: TranslationOptions = {
   load: "languageOnly",
   backend: {
     backends: [LocalStorageBackend, i18nextBackend],
