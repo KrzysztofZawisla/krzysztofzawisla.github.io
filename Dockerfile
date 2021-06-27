@@ -1,7 +1,8 @@
 FROM mhart/alpine-node:latest AS build
 ADD . /home/website
 WORKDIR /home/website
-RUN yarn
+RUN yarn --ignore-engines
+RUN yarn run test
 RUN yarn run build
 FROM mhart/alpine-node:latest
 COPY --from=build /home/website/dist /home/website
