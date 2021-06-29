@@ -114,7 +114,7 @@
     "html-webpack-plugin": "^5.3.2",
     "husky": "^6.0.0",
     "interpolate-html-plugin": "^4.0.0",
-    "jest": "^27.0.5",
+    "jest": "^27.0.6",
     "jest-extended": "^0.11.5",
     "jsdoc": "^3.6.7",
     "lighthouse": "^8.0.0",
