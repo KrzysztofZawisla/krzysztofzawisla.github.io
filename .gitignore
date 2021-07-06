@@ -7,3 +7,4 @@ modern-analyzer-report.html
 yarn-error.log
 .husky
 tsconfig.tsbuildinfo
+android
