@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.krzysztofzawislaportfolio",
+	"appName": "Krzysztof Zawisła - Portfolio",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
