@@ -1,0 +1,7 @@
+{
+  "name": "Krzysztof Zawisła - Portfolio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

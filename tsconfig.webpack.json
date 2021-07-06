@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "jsx": "react-jsx",
     "target": "esnext",
     "lib": ["esnext", "dom", "dom.iterable"],
@@ -21,6 +22,15 @@
     "noUnusedParameters": true,
     "removeComments": true,
     "skipLibCheck": true,
+    "checkJs": true,
+    "strictFunctionTypes": true,
+    "importHelpers": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
   },
   "include": ["."],
   "exclude": ["node_modules"]
