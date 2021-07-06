@@ -19,12 +19,12 @@ import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { GenerateSW } from "workbox-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-import { constants } from "zlib";
+//import { constants } from "zlib";
 import RobotstxtPlugin from "robotstxt-webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
 import InterpolateHtmlPlugin from "interpolate-html-plugin";
 import MinifyJSONWebpackPlugin from "minify-json-webpack-plugin";
-import CompressionPlugin from "compression-webpack-plugin";
+//import CompressionPlugin from "compression-webpack-plugin";
 import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
 import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
 import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
@@ -177,7 +177,7 @@ const setupConfig = (
           "process.env.PUBLIC_URL": JSON.stringify("/static"),
           "process.env.MODERN": JSON.stringify(targetToModern),
         }),
-        new CompressionPlugin({
+        /*new CompressionPlugin({
           filename: "[path][base].gz",
           test: /\.(js|mjs|css|html|svg)$/,
           deleteOriginalAssets: false,
@@ -195,7 +195,7 @@ const setupConfig = (
             threshold: 10240,
             minRatio: 0.8,
             deleteOriginalAssets: false,
-          }),
+          }),*/
         new ProvidePlugin({
           process: "process/browser",
         }),

@@ -34,7 +34,7 @@
     "build-local-production-cli-no-cache": "yarn run build-local-production-cli --no-cache",
     "start-local-production": "docker-compose -f docker-compose.local.yml -p websitelocal up",
     "start-remote-production": "docker-compose -f docker-compose.remote.yml -p websiteremote up",
-    "build-android": "yarn run build && cap add android & cap run android",
+    "build-android": "yarn run build && cap run android",
     "postinstall": "ionic config set -g npmClient yarn && husky install && husky add .husky/pre-commit \"yarn run lint\""
   },
   "repository": {

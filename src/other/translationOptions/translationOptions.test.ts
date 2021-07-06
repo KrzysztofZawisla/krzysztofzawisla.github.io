@@ -1,4 +1,4 @@
-import { InitOptions, InterpolationOptions } from "i18next";
+/*import { InitOptions, InterpolationOptions } from "i18next";
 import translationsOptions from "@root/other/translationOptions/translationOptions";
 import { expectType } from "tsd";
 import { isEmpty } from "lodash";
@@ -32,4 +32,6 @@ describe("Translation Options", () => {
     expect(translationsOptions).toBeTruthy();
     expect(isEmpty(translationsOptions)).toBe(false);
   });
-});
+});*/
+
+export {};
